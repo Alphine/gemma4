@@ -1,0 +1,80 @@
+{
+ "overall": "PASS",
+ "checks": {
+  "manager_is_emulated_ContainerManager": {
+   "ok": true
+  },
+  "containerA_grader_path(base wheels injected + setup.py --fast-path, no host pth)": {
+   "ok": true
+  },
+  "containerB_grader_path": {
+   "ok": true
+  },
+  "agent_sees_no_host_site_packages_and_no_PYTHONPATH": {
+   "ok": true
+  },
+  "fastapi_task_agent_sees_typing_inspection_collection_error": {
+   "ok": true
+  },
+  "fastapi_task_early_exit": {
+   "ok": true
+  },
+  "parity_solvable_tasks_resolved_with_gold (gold-control: 40/40)": {
+   "ok": true
+  },
+  "gold_resolves_every_solvable_task (40/40 under this sandbox python; mock or direct verify_task)": {
+   "ok": true
+  },
+  "free_tasks_resolved_with_nonempty_gold_patch": {
+   "ok": true
+  },
+  "empty_submission_scores_0_like_grader (Evaluator alone would score it)": {
+   "ok": true
+  },
+  "parity_dead_tasks_not_resolved (gold-control: 0/10)": {
+   "ok": true
+  },
+  "parity_typing_inspection_tasks_show_error_to_agent": {
+   "ok": true
+  },
+  "rich_gold_fix_resolved_through_full_pipeline": {
+   "ok": true
+  },
+  "budgets_from_each_arms_eval_config (identical across arms in the paired A/B)": {
+   "ok": true
+  },
+  "recorder_captured_primary_requests_for_every_run": {
+   "ok": true
+  },
+  "request_matches_each_arms_sampling_yaml (client side, recorder)": {
+   "ok": true
+  },
+  "request_matches_each_arms_sampling_yaml (server side ground truth of the mock)": {
+   "ok": true
+  },
+  "arms_have_distinct_sampling_in_requests": {
+   "ok": true
+  },
+  "trace_mechanism_fields_present (ATIF digest, ct_atif, first_edit_idx key)": {
+   "ok": true
+  },
+  "arm_position_rotation (each task group has distinct positions; >1 arm leads across tasks)": {
+   "ok": true
+  },
+  "m1_reasoning_tokens_counted (mock reasoning words -> tokens)": {
+   "ok": true
+  },
+  "err_class_present_and_config_error_false_and_no_instrumentation_error": {
+   "ok": true
+  },
+  "metrics_files_written": {
+   "ok": true
+  }
+ },
+ "info": {
+  "sandbox_python_is_3.13": {
+   "ok": false
+  },
+  "mock_gold_apply_failed (excluded from parity)": []
+ }
+}

@@ -1,0 +1,57 @@
+{
+ "n_runs": 99,
+ "n_resolved_non_timeout_10min": 61,
+ "speedup_to_resolve": {
+  "0%_faster": {
+   "equiv_budget_min": 5.5,
+   "resolved": 53,
+   "resolve_rate": 0.5353535353535354,
+   "gain_pts_vs_now": 0.0,
+   "not_finished": 35
+  },
+  "10%_faster": {
+   "equiv_budget_min": 6.111111111111111,
+   "resolved": 55,
+   "resolve_rate": 0.5555555555555556,
+   "gain_pts_vs_now": 2.0202020202020203,
+   "not_finished": 30
+  },
+  "20%_faster": {
+   "equiv_budget_min": 6.875,
+   "resolved": 58,
+   "resolve_rate": 0.5858585858585859,
+   "gain_pts_vs_now": 5.05050505050505,
+   "not_finished": 26
+  },
+  "30%_faster": {
+   "equiv_budget_min": 7.857142857142858,
+   "resolved": 60,
+   "resolve_rate": 0.6060606060606061,
+   "gain_pts_vs_now": 7.070707070707071,
+   "not_finished": 22
+  },
+  "40%_faster": {
+   "equiv_budget_min": 9.166666666666668,
+   "resolved": 61,
+   "resolve_rate": 0.6161616161616161,
+   "gain_pts_vs_now": 8.080808080808081,
+   "not_finished": 15
+  },
+  "50%_faster": {
+   "equiv_budget_min": 11.0,
+   "resolved": 61,
+   "resolve_rate": 0.6161616161616161,
+   "gain_pts_vs_now": 8.080808080808081,
+   "not_finished": 14
+  }
+ },
+ "pts_per_extra_budget_minute_at_5_5": 2.525252525252525,
+ "required_teacher_speed_gap_pct": {
+  "transfer_0.2": 31.41611314608398,
+  "transfer_0.3": 20.944075430722656,
+  "transfer_0.5": 12.566445258433593,
+  "transfer_0.75": 8.377630172289061,
+  "transfer_1.0": 6.283222629216796
+ },
+ "mde_minutes_pct_n144": 6.283222629216796
+}

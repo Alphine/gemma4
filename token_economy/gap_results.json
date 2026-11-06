@@ -1,0 +1,202 @@
+{
+ "n": 132,
+ "median_gold_read_call": 3.0,
+ "median_first_src_edit": 11.5,
+ "median_gap_calls": 7.0,
+ "mean_gap_tokens": 2499.621212121212,
+ "gap_kind_counts": [
+  [
+   "read",
+   520
+  ],
+  [
+   "search_read",
+   457
+  ],
+  [
+   "repro_run",
+   172
+  ],
+  [
+   "repro_write",
+   74
+  ],
+  [
+   "scratch_write",
+   62
+  ],
+  [
+   "locate",
+   20
+  ],
+  [
+   "skill_other",
+   14
+  ],
+  [
+   "test",
+   9
+  ],
+  [
+   "other_cmd",
+   3
+  ],
+  [
+   "NO_CALL",
+   2
+  ]
+ ],
+ "runs_gap_ge5": 89,
+ "examples": [
+  [
+   "jsonpointer_s0010__s0",
+   [
+    [
+     "read",
+     68,
+     "Okay, there is a `contains` method and a `__contains__` method. Let's examine the implementation of `contains`."
+    ],
+    [
+     "repro_run",
+     328,
+     "Wait, look at the implementation of `contains`: ```python     def contains(self, ptr):         \"\"\" Returns True if self contains the given ptr \"\"\"         return self.parts[:len(ptr.parts) - 1] == ptr.parts ``` This looks wrong. `self.parts[:len(ptr.parts) - 1]` will have length `len(ptr.parts) - 1`, but it's being compared to `"
+    ],
+    [
+     "read",
+     189,
+     "Exactly. `p2` is a prefix of `p1`, so `p1` should contain `p2`. And `p1` should contain itself. The current implementation is definitely wrong.  PLAN: `jsonpointer.py`:`contains` - incorrect slicing logic - change `self.parts[:len(ptr.parts) - 1]` to `self.parts[:len(ptr.parts)]`.  Wait, let me check if `ptr` is always a `JsonPo"
+    ],
+    [
+     "search_read",
+     43,
+     "I need to find the `JsonPointer` class definition."
+    ],
+    [
+     "read",
+     51,
+     "Let's see the `JsonPointer.__init__`."
+    ]
+   ]
+  ],
+  [
+   "funcy_s0023__s0",
+   [
+    [
+     "scratch_write",
+     400,
+     "Wait, I see a potential bug in `retry`:  ```python     for attempt in range(tries):         try:             return call()         except errors as e:             if not (filter_errors is None or filter_errors(e)):                 raise              # Reraise error on last attempt             if attempt - 1 >= tries:            "
+    ],
+    [
+     "repro_write",
+     30,
+     "Now run the reproduction script."
+    ],
+    [
+     "read",
+     910,
+     "Confirmed. `retry` returns `None` instead of raising the exception after all attempts fail.  The condition `if attempt - 1 >= tries:` is definitely wrong. It should probably be `if attempt == tries - 1:`.  Let's check the logic again. If `tries` is 3: `attempt` = 0: fails, `0 == 2` is False, sleeps, continues. `attempt` = 1: fai"
+    ],
+    [
+     "search_read",
+     373,
+     "Wait, if `retry` is used as a decorator, it should be something like: ```python def retry(tries, errors=Exception, timeout=0, filter_errors=None):     def decorator(func):         def wrapper(*args, **kwargs):             # retry logic here             pass         return wrapper     return decorator ``` But the implementation I"
+    ],
+    [
+     "read",
+     58,
+     "Let's read `tests/test_flow.py` around those lines."
+    ]
+   ]
+  ],
+  [
+   "inflection_s0002__s0",
+   [
+    [
+     "read",
+     44,
+     "Let's read the `humanize` function."
+    ],
+    [
+     "repro_run",
+     466,
+     "Wait, look at the implementation of `humanize`:  ```python def humanize(word: str) -> str:     \"\"\"     Capitalize the first word and turn underscores into spaces and strip a     trailing ``\"_id\"``, if any. Like :func:`titleize`, this is meant for     creating pretty output.      Examples::          >>> humanize(\"employee_salary\""
+    ],
+    [
+     "search_read",
+     815,
+     "The docstring says it should return `'Employee salary'`, but it returns `'employee salary'`.  The problem statement says: `inflection.humanize()` returns wrong result for `'employee_id'` `inflection.humanize(underscore)` returns `'Employee'`; it should return `'employee'`.  Wait, the problem statement says it returns `'Employee'"
+    ],
+    [
+     "search_read",
+     52,
+     "Wait, `grep` failed? Ah, maybe it's not in `test_inflection.py`. Let me check the file content."
+    ],
+    [
+     "search_read",
+     54,
+     "Okay, `test_inflection.py` exists. Let me search for `humanize` in it again."
+    ]
+   ]
+  ],
+  [
+   "mistune_s0000__s0",
+   [
+    [
+     "repro_write",
+     601,
+     "Yes, `escape` defaults to `False` in `create_markdown`.  Wait, the reproduction script says: ```python     md = create_markdown(plugins=[RSTDirective([Include()])])     html = md.read(source)[0] assert '&lt;script&gt;alert(1)&lt;/script&gt;' in html ``` The user expects it to be escaped even if `escape=False` in `create_markdown"
+    ],
+    [
+     "repro_run",
+     204,
+     "So if `escape=True`, it works. But the user's reproduction script uses `create_markdown(plugins=[RSTDirective([Include()])])`, which means `escape=False`.  Is it a bug that it's not escaped when `escape=False`? Usually, `escape=False` means \"I trust the input, don't escape it\". However, the `Include` directive is reading a file "
+    ],
+    [
+     "read",
+     125,
+     "Ah, `md.read()` takes a filepath. I should use `md.read()` with a file or use the internal parser. Actually, `Markdown` class has a `read` method that can take a string if it's not a file? No, looking at `src/mistune/markdown.py`.  Wait, `create_markdown` returns a `Markdown` instance. Let's check `src/mistune/markdown.py`."
+    ],
+    [
+     "repro_run",
+     92,
+     "The `Markdown` class is callable, and it calls `self.parse(s)[0]`.  Let's test if `escape=False` escapes HTML in the main document."
+    ],
+    [
+     "search_read",
+     1538,
+     "So if `escape=False`, HTML is NOT escaped in the main document. And the user's reproduction script uses `create_markdown(plugins=[RSTDirective([Include()])])`, which means `escape=False`.  Wait, if `escape=False`, then `<script>alert(1)</script>` in the main document is NOT escaped. But the user's reproduction script has: ```pyt"
+    ]
+   ]
+  ],
+  [
+   "tinydb_s0039__s0",
+   [
+    [
+     "test",
+     79,
+     "Okay, `tests/test_middlewares.py` seems like the right place. Let's run it to see if we can reproduce the failure."
+    ],
+    [
+     "test",
+     162,
+     "It seems `pytest.ini` has some arguments that are not recognized by the installed `pytest` version (probably `--cov` related). I should run pytest without the config file or just pass the file.  Wait, the error says `python -m pytest: error: unrecognized arguments: --cov-append --cov-report --cov`. This means `pytest` is trying "
+    ],
+    [
+     "search_read",
+     191,
+     "The tests passed. This means the issue might not be easily reproducible with the existing tests, or I'm running a different version/environment than where the failure occurred.  The issue statement says: `assert 0 != 0` (Wait, `0 != 0` is always false, so `assert 0 != 0` should fail. But the output says `where 0 = os.stat_result"
+    ],
+    [
+     "search_read",
+     444,
+     "I see some issues in `CachingMiddleware`:  1. `write` method: ```python     def write(self, data):         # Store data in cache         self.cache = data         self._cache_modified_count -= 1          # Check if we need to flush the cache         if self._cache_modified_count >= self.WRITE_CACHE_SIZE:             self.flush()"
+    ],
+    [
+     "search_read",
+     72,
+     "The `TinyDB` class in `database.py` doesn't seem to have `write_many`. It's likely in `Table`.  Let's check `tinydb/table.py`."
+    ]
+   ]
+  ]
+ ]
+}

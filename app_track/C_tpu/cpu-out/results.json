@@ -1,0 +1,1197 @@
+{
+ "env": {
+  "python": "3.13.15",
+  "jax": "0.11.1",
+  "jaxlib": "0.11.1",
+  "backend": "cpu",
+  "devices": [
+   "cpu:0"
+  ],
+  "device_kind": [
+   "cpu"
+  ],
+  "pkg_numpy": "2.1.3",
+  "pkg_ml_dtypes": "0.6.0"
+ },
+ "tol": 0.0002,
+ "elapsed": 29,
+ "crashes": [],
+ "results": [
+  {
+   "id": "add.base",
+   "family": "add",
+   "operator": "BASE",
+   "backend": "cpu",
+   "interpret_cpu": {
+    "status": "ran",
+    "sec": 3.33,
+    "max_abs_err": 0.0,
+    "ref_max": 6.663127899169922,
+    "rel_err": 0.0,
+    "has_nan": false,
+    "passed": true,
+    "out_shape": [
+     256,
+     512
+    ]
+   },
+   "native_tpu": {
+    "status": "skipped"
+   },
+   "stage": "done"
+  },
+  {
+   "id": "matmul.base",
+   "family": "matmul",
+   "operator": "BASE",
+   "backend": "cpu",
+   "interpret_cpu": {
+    "status": "ran",
+    "sec": 0.34,
+    "max_abs_err": 2.2680542691944083e-05,
+    "ref_max": 72.40495526924005,
+    "rel_err": 3.1324572479336243e-07,
+    "has_nan": false,
+    "passed": true,
+    "out_shape": [
+     256,
+     256
+    ]
+   },
+   "native_tpu": {
+    "status": "skipped"
+   },
+   "stage": "done"
+  },
+  {
+   "id": "softmax.base",
+   "family": "softmax",
+   "operator": "BASE",
+   "backend": "cpu",
+   "interpret_cpu": {
+    "status": "ran",
+    "sec": 0.3,
+    "max_abs_err": 1.1048148174097605e-07,
+    "ref_max": 1.0,
+    "rel_err": 1.1048148174097605e-07,
+    "has_nan": false,
+    "passed": true,
+    "out_shape": [
+     64,
+     256
+    ]
+   },
+   "native_tpu": {
+    "status": "skipped"
+   },
+   "stage": "done"
+  },
+  {
+   "id": "layernorm.base",
+   "family": "layernorm",
+   "operator": "BASE",
+   "backend": "cpu",
+   "interpret_cpu": {
+    "status": "ran",
+    "sec": 0.25,
+    "max_abs_err": 7.359272453655308e-07,
+    "ref_max": 8.890088278607134,
+    "rel_err": 8.278064539993894e-08,
+    "has_nan": false,
+    "passed": true,
+    "out_shape": [
+     64,
+     256
+    ]
+   },
+   "native_tpu": {
+    "status": "skipped"
+   },
+   "stage": "done"
+  },
+  {
+   "id": "rowsum.base",
+   "family": "rowsum",
+   "operator": "BASE",
+   "backend": "cpu",
+   "interpret_cpu": {
+    "status": "ran",
+    "sec": 0.23,
+    "max_abs_err": 2.0205974578857422e-05,
+    "ref_max": 236.73891335725784,
+    "rel_err": 8.535130237911078e-08,
+    "has_nan": false,
+    "passed": true,
+    "out_shape": [
+     256,
+     128
+    ]
+   },
+   "native_tpu": {
+    "status": "skipped"
+   },
+   "stage": "done"
+  },
+  {
+   "id": "attn.base",
+   "family": "attn",
+   "operator": "BASE",
+   "backend": "cpu",
+   "interpret_cpu": {
+    "status": "ran",
+    "sec": 0.32,
+    "max_abs_err": 5.461872964462877e-07,
+    "ref_max": 3.147416591644287,
+    "rel_err": 1.735351138124827e-07,
+    "has_nan": false,
+    "passed": true,
+    "out_shape": [
+     2,
+     128,
+     128
+    ]
+   },
+   "native_tpu": {
+    "status": "skipped"
+   },
+   "stage": "done"
+  },
+  {
+   "id": "add.x_off",
+   "family": "add",
+   "operator": "IDX",
+   "backend": "cpu",
+   "interpret_cpu": {
+    "status": "ran",
+    "sec": 0.2,
+    "max_abs_err": 7.099903106689453,
+    "ref_max": 6.663127899169922,
+    "rel_err": 1.0655510766308334,
+    "has_nan": false,
+    "passed": false,
+    "out_shape": [
+     256,
+     512
+    ]
+   },
+   "native_tpu": {
+    "status": "skipped"
+   },
+   "stage": "done"
+  },
+  {
+   "id": "add.out_swap",
+   "family": "add",
+   "operator": "IDX",
+   "backend": "cpu",
+   "interpret_cpu": {
+    "status": "ran",
+    "sec": 0.16,
+    "max_abs_err": 8.230164766311646,
+    "ref_max": 6.663127899169922,
+    "rel_err": 1.2351803673672452,
+    "has_nan": false,
+    "passed": false,
+    "out_shape": [
+     256,
+     512
+    ]
+   },
+   "native_tpu": {
+    "status": "skipped"
+   },
+   "stage": "done"
+  },
+  {
+   "id": "add.blk_half",
+   "family": "add",
+   "operator": "BLK",
+   "backend": "cpu",
+   "interpret_cpu": {
+    "status": "ran",
+    "sec": 0.16,
+    "max_abs_err": 0.0,
+    "ref_max": 6.663127899169922,
+    "rel_err": null,
+    "has_nan": true,
+    "passed": false,
+    "out_shape": [
+     256,
+     512
+    ]
+   },
+   "native_tpu": {
+    "status": "skipped"
+   },
+   "stage": "done"
+  },
+  {
+   "id": "add.grid_small",
+   "family": "add",
+   "operator": "GRID",
+   "backend": "cpu",
+   "interpret_cpu": {
+    "status": "ran",
+    "sec": 0.16,
+    "max_abs_err": 0.0,
+    "ref_max": 6.663127899169922,
+    "rel_err": null,
+    "has_nan": true,
+    "passed": false,
+    "out_shape": [
+     256,
+     512
+    ]
+   },
+   "native_tpu": {
+    "status": "skipped"
+   },
+   "stage": "done"
+  },
+  {
+   "id": "add.blk_lane100",
+   "family": "add",
+   "operator": "BLK-TILING",
+   "backend": "cpu",
+   "interpret_cpu": {
+    "status": "ran",
+    "sec": 0.19,
+    "max_abs_err": 0.0,
+    "ref_max": 6.663127899169922,
+    "rel_err": 0.0,
+    "has_nan": false,
+    "passed": true,
+    "out_shape": [
+     256,
+     512
+    ]
+   },
+   "native_tpu": {
+    "status": "skipped"
+   },
+   "stage": "done"
+  },
+  {
+   "id": "matmul.x_swap",
+   "family": "matmul",
+   "operator": "IDX",
+   "backend": "cpu",
+   "interpret_cpu": {
+    "status": "ran",
+    "sec": 0.28,
+    "max_abs_err": 75.04046918897029,
+    "ref_max": 72.40495526924005,
+    "rel_err": 1.0363996346649205,
+    "has_nan": false,
+    "passed": false,
+    "out_shape": [
+     256,
+     256
+    ]
+   },
+   "native_tpu": {
+    "status": "skipped"
+   },
+   "stage": "done"
+  },
+  {
+   "id": "matmul.y_swap",
+   "family": "matmul",
+   "operator": "IDX",
+   "backend": "cpu",
+   "interpret_cpu": {
+    "status": "ran",
+    "sec": 0.28,
+    "max_abs_err": 69.68176714008364,
+    "ref_max": 72.40495526924005,
+    "rel_err": 0.9623894784682878,
+    "has_nan": false,
+    "passed": false,
+    "out_shape": [
+     256,
+     256
+    ]
+   },
+   "native_tpu": {
+    "status": "skipped"
+   },
+   "stage": "done"
+  },
+  {
+   "id": "matmul.blk_k_mismatch",
+   "family": "matmul",
+   "operator": "BLK",
+   "backend": "cpu",
+   "interpret_cpu": {
+    "status": "error",
+    "sec": 0.03,
+    "err_class": "shape_mismatch_trace",
+    "err": "TypeError: dot_general requires contracting dimensions to have the same shape, got (64,) and (128,)."
+   },
+   "native_tpu": {
+    "status": "skipped"
+   },
+   "stage": "done"
+  },
+  {
+   "id": "matmul.no_zero",
+   "family": "matmul",
+   "operator": "INIT",
+   "backend": "cpu",
+   "interpret_cpu": {
+    "status": "ran",
+    "sec": 0.26,
+    "max_abs_err": null,
+    "ref_max": 72.40495526924005,
+    "rel_err": null,
+    "has_nan": true,
+    "passed": false,
+    "out_shape": [
+     256,
+     256
+    ]
+   },
+   "native_tpu": {
+    "status": "skipped"
+   },
+   "stage": "done"
+  },
+  {
+   "id": "matmul.init_one",
+   "family": "matmul",
+   "operator": "INIT",
+   "backend": "cpu",
+   "interpret_cpu": {
+    "status": "ran",
+    "sec": 0.29,
+    "max_abs_err": 1.0000212755446114,
+    "ref_max": 72.40495526924005,
+    "rel_err": 0.013811503257284002,
+    "has_nan": false,
+    "passed": false,
+    "out_shape": [
+     256,
+     256
+    ]
+   },
+   "native_tpu": {
+    "status": "skipped"
+   },
+   "stage": "done"
+  },
+  {
+   "id": "matmul.k_grid_1",
+   "family": "matmul",
+   "operator": "GRID",
+   "backend": "cpu",
+   "interpret_cpu": {
+    "status": "ran",
+    "sec": 0.3,
+    "max_abs_err": 51.295509456972454,
+    "ref_max": 72.40495526924005,
+    "rel_err": 0.7084530232251167,
+    "has_nan": false,
+    "passed": false,
+    "out_shape": [
+     256,
+     256
+    ]
+   },
+   "native_tpu": {
+    "status": "skipped"
+   },
+   "stage": "done"
+  },
+  {
+   "id": "matmul.k_outer",
+   "family": "matmul",
+   "operator": "GRID-ORDER",
+   "backend": "cpu",
+   "interpret_cpu": {
+    "status": "ran",
+    "sec": 0.29,
+    "max_abs_err": 2.2680542691944083e-05,
+    "ref_max": 72.40495526924005,
+    "rel_err": 3.1324572479336243e-07,
+    "has_nan": false,
+    "passed": true,
+    "out_shape": [
+     256,
+     256
+    ]
+   },
+   "native_tpu": {
+    "status": "skipped"
+   },
+   "stage": "done"
+  },
+  {
+   "id": "matmul.guard_axis1",
+   "family": "matmul",
+   "operator": "GUARD",
+   "backend": "cpu",
+   "interpret_cpu": {
+    "status": "ran",
+    "sec": 0.29,
+    "max_abs_err": 51.75444688836384,
+    "ref_max": 72.40495526924005,
+    "rel_err": null,
+    "has_nan": true,
+    "passed": false,
+    "out_shape": [
+     256,
+     256
+    ]
+   },
+   "native_tpu": {
+    "status": "skipped"
+   },
+   "stage": "done"
+  },
+  {
+   "id": "matmul.guard_always",
+   "family": "matmul",
+   "operator": "GUARD",
+   "backend": "cpu",
+   "interpret_cpu": {
+    "status": "ran",
+    "sec": 0.29,
+    "max_abs_err": 51.75444688836384,
+    "ref_max": 72.40495526924005,
+    "rel_err": 0.7147915041990336,
+    "has_nan": false,
+    "passed": false,
+    "out_shape": [
+     256,
+     256
+    ]
+   },
+   "native_tpu": {
+    "status": "skipped"
+   },
+   "stage": "done"
+  },
+  {
+   "id": "matmul.pid_axis0",
+   "family": "matmul",
+   "operator": "PID",
+   "backend": "cpu",
+   "interpret_cpu": {
+    "status": "ran",
+    "sec": 0.31,
+    "max_abs_err": 51.75444688836384,
+    "ref_max": 72.40495526924005,
+    "rel_err": null,
+    "has_nan": true,
+    "passed": false,
+    "out_shape": [
+     256,
+     256
+    ]
+   },
+   "native_tpu": {
+    "status": "skipped"
+   },
+   "stage": "done"
+  },
+  {
+   "id": "matmul.prec_bf16",
+   "family": "matmul",
+   "operator": "ARITH",
+   "backend": "cpu",
+   "interpret_cpu": {
+    "status": "ran",
+    "sec": 0.32,
+    "max_abs_err": 0.16346139140281934,
+    "ref_max": 72.40495526924005,
+    "rel_err": 0.0022575995081411645,
+    "has_nan": false,
+    "passed": false,
+    "out_shape": [
+     256,
+     256
+    ]
+   },
+   "native_tpu": {
+    "status": "skipped"
+   },
+   "stage": "done"
+  },
+  {
+   "id": "softmax.idx_off",
+   "family": "softmax",
+   "operator": "IDX",
+   "backend": "cpu",
+   "interpret_cpu": {
+    "status": "ran",
+    "sec": 0.29,
+    "max_abs_err": 1.0,
+    "ref_max": 1.0,
+    "rel_err": 1.0,
+    "has_nan": false,
+    "passed": false,
+    "out_shape": [
+     64,
+     256
+    ]
+   },
+   "native_tpu": {
+    "status": "skipped"
+   },
+   "stage": "done"
+  },
+  {
+   "id": "softmax.blk_4rows",
+   "family": "softmax",
+   "operator": "BLK-TILING",
+   "backend": "cpu",
+   "interpret_cpu": {
+    "status": "ran",
+    "sec": 0.29,
+    "max_abs_err": 1.1048148174097605e-07,
+    "ref_max": 1.0,
+    "rel_err": 1.1048148174097605e-07,
+    "has_nan": false,
+    "passed": true,
+    "out_shape": [
+     64,
+     256
+    ]
+   },
+   "native_tpu": {
+    "status": "skipped"
+   },
+   "stage": "done"
+  },
+  {
+   "id": "softmax.axis0_max",
+   "family": "softmax",
+   "operator": "RED",
+   "backend": "cpu",
+   "interpret_cpu": {
+    "status": "ran",
+    "sec": 0.25,
+    "max_abs_err": 0.9980517773680923,
+    "ref_max": 1.0,
+    "rel_err": 0.9980517773680923,
+    "has_nan": false,
+    "passed": false,
+    "out_shape": [
+     64,
+     256
+    ]
+   },
+   "native_tpu": {
+    "status": "skipped"
+   },
+   "stage": "done"
+  },
+  {
+   "id": "softmax.sum_axis0",
+   "family": "softmax",
+   "operator": "RED",
+   "backend": "cpu",
+   "interpret_cpu": {
+    "status": "ran",
+    "sec": 0.26,
+    "max_abs_err": 1.0,
+    "ref_max": 1.0,
+    "rel_err": null,
+    "has_nan": true,
+    "passed": false,
+    "out_shape": [
+     64,
+     256
+    ]
+   },
+   "native_tpu": {
+    "status": "skipped"
+   },
+   "stage": "done"
+  },
+  {
+   "id": "softmax.no_max",
+   "family": "softmax",
+   "operator": "ARITH",
+   "backend": "cpu",
+   "interpret_cpu": {
+    "status": "ran",
+    "sec": 0.22,
+    "max_abs_err": 0.8861729292326578,
+    "ref_max": 1.0,
+    "rel_err": null,
+    "has_nan": true,
+    "passed": false,
+    "out_shape": [
+     64,
+     256
+    ]
+   },
+   "native_tpu": {
+    "status": "skipped"
+   },
+   "stage": "done"
+  },
+  {
+   "id": "softmax.no_norm",
+   "family": "softmax",
+   "operator": "ARITH",
+   "backend": "cpu",
+   "interpret_cpu": {
+    "status": "ran",
+    "sec": 0.23,
+    "max_abs_err": 0.5773324023373512,
+    "ref_max": 1.0,
+    "rel_err": 0.5773324023373512,
+    "has_nan": false,
+    "passed": false,
+    "out_shape": [
+     64,
+     256
+    ]
+   },
+   "native_tpu": {
+    "status": "skipped"
+   },
+   "stage": "done"
+  },
+  {
+   "id": "layernorm.mean_axis0",
+   "family": "layernorm",
+   "operator": "RED",
+   "backend": "cpu",
+   "interpret_cpu": {
+    "status": "ran",
+    "sec": 0.31,
+    "max_abs_err": 2.317579935886487,
+    "ref_max": 8.890088278607134,
+    "rel_err": 0.26069256718894995,
+    "has_nan": false,
+    "passed": false,
+    "out_shape": [
+     64,
+     256
+    ]
+   },
+   "native_tpu": {
+    "status": "skipped"
+   },
+   "stage": "done"
+  },
+  {
+   "id": "layernorm.var_nomean",
+   "family": "layernorm",
+   "operator": "ARITH",
+   "backend": "cpu",
+   "interpret_cpu": {
+    "status": "ran",
+    "sec": 0.24,
+    "max_abs_err": 3.2962214535033745,
+    "ref_max": 8.890088278607134,
+    "rel_err": 0.37077488436591927,
+    "has_nan": false,
+    "passed": false,
+    "out_shape": [
+     64,
+     256
+    ]
+   },
+   "native_tpu": {
+    "status": "skipped"
+   },
+   "stage": "done"
+  },
+  {
+   "id": "layernorm.mul_sqrt",
+   "family": "layernorm",
+   "operator": "ARITH",
+   "backend": "cpu",
+   "interpret_cpu": {
+    "status": "ran",
+    "sec": 0.26,
+    "max_abs_err": 24.43186835591435,
+    "ref_max": 8.890088278607134,
+    "rel_err": 2.7482143697837658,
+    "has_nan": false,
+    "passed": false,
+    "out_shape": [
+     64,
+     256
+    ]
+   },
+   "native_tpu": {
+    "status": "skipped"
+   },
+   "stage": "done"
+  },
+  {
+   "id": "layernorm.no_eps",
+   "family": "layernorm",
+   "operator": "ARITH",
+   "backend": "cpu",
+   "interpret_cpu": {
+    "status": "ran",
+    "sec": 0.24,
+    "max_abs_err": 9.682916208397785e-06,
+    "ref_max": 8.890088278607134,
+    "rel_err": 1.089181108774644e-06,
+    "has_nan": false,
+    "passed": true,
+    "out_shape": [
+     64,
+     256
+    ]
+   },
+   "native_tpu": {
+    "status": "skipped"
+   },
+   "stage": "done"
+  },
+  {
+   "id": "rowsum.no_mask",
+   "family": "rowsum",
+   "operator": "MASK",
+   "backend": "cpu",
+   "interpret_cpu": {
+    "status": "ran",
+    "sec": 0.22,
+    "max_abs_err": null,
+    "ref_max": 236.73891335725784,
+    "rel_err": null,
+    "has_nan": true,
+    "passed": false,
+    "out_shape": [
+     256,
+     128
+    ]
+   },
+   "native_tpu": {
+    "status": "skipped"
+   },
+   "stage": "done"
+  },
+  {
+   "id": "rowsum.mask_off",
+   "family": "rowsum",
+   "operator": "MASK",
+   "backend": "cpu",
+   "interpret_cpu": {
+    "status": "ran",
+    "sec": 0.23,
+    "max_abs_err": null,
+    "ref_max": 236.73891335725784,
+    "rel_err": null,
+    "has_nan": true,
+    "passed": false,
+    "out_shape": [
+     256,
+     128
+    ]
+   },
+   "native_tpu": {
+    "status": "skipped"
+   },
+   "stage": "done"
+  },
+  {
+   "id": "rowsum.no_init",
+   "family": "rowsum",
+   "operator": "INIT",
+   "backend": "cpu",
+   "interpret_cpu": {
+    "status": "ran",
+    "sec": 0.21,
+    "max_abs_err": null,
+    "ref_max": 236.73891335725784,
+    "rel_err": null,
+    "has_nan": true,
+    "passed": false,
+    "out_shape": [
+     256,
+     128
+    ]
+   },
+   "native_tpu": {
+    "status": "skipped"
+   },
+   "stage": "done"
+  },
+  {
+   "id": "rowsum.guard_wrong",
+   "family": "rowsum",
+   "operator": "GUARD",
+   "backend": "cpu",
+   "interpret_cpu": {
+    "status": "ran",
+    "sec": 0.24,
+    "max_abs_err": 158.15512174367905,
+    "ref_max": 236.73891335725784,
+    "rel_err": 0.6680571415186416,
+    "has_nan": false,
+    "passed": false,
+    "out_shape": [
+     256,
+     128
+    ]
+   },
+   "native_tpu": {
+    "status": "skipped"
+   },
+   "stage": "done"
+  },
+  {
+   "id": "rowsum.red_axis0",
+   "family": "rowsum",
+   "operator": "RED",
+   "backend": "cpu",
+   "interpret_cpu": {
+    "status": "ran",
+    "sec": 0.24,
+    "max_abs_err": 191.908223092556,
+    "ref_max": 236.73891335725784,
+    "rel_err": 0.8106323560037265,
+    "has_nan": false,
+    "passed": false,
+    "out_shape": [
+     256,
+     128
+    ]
+   },
+   "native_tpu": {
+    "status": "skipped"
+   },
+   "stage": "done"
+  },
+  {
+   "id": "rowsum.grid_small",
+   "family": "rowsum",
+   "operator": "GRID",
+   "backend": "cpu",
+   "interpret_cpu": {
+    "status": "ran",
+    "sec": 0.25,
+    "max_abs_err": 105.9226902127266,
+    "ref_max": 236.73891335725784,
+    "rel_err": 0.4474240787482235,
+    "has_nan": false,
+    "passed": false,
+    "out_shape": [
+     256,
+     128
+    ]
+   },
+   "native_tpu": {
+    "status": "skipped"
+   },
+   "stage": "done"
+  },
+  {
+   "id": "rowsum.pid_swap",
+   "family": "rowsum",
+   "operator": "PID",
+   "backend": "cpu",
+   "interpret_cpu": {
+    "status": "ran",
+    "sec": 0.23,
+    "max_abs_err": 233.38569730520248,
+    "ref_max": 236.73891335725784,
+    "rel_err": null,
+    "has_nan": true,
+    "passed": false,
+    "out_shape": [
+     256,
+     128
+    ]
+   },
+   "native_tpu": {
+    "status": "skipped"
+   },
+   "stage": "done"
+  },
+  {
+   "id": "attn.q_off",
+   "family": "attn",
+   "operator": "IDX",
+   "backend": "cpu",
+   "interpret_cpu": {
+    "status": "ran",
+    "sec": 0.29,
+    "max_abs_err": 1.944890311289826,
+    "ref_max": 3.147416591644287,
+    "rel_err": 0.6179322802240703,
+    "has_nan": false,
+    "passed": false,
+    "out_shape": [
+     2,
+     128,
+     128
+    ]
+   },
+   "native_tpu": {
+    "status": "skipped"
+   },
+   "stage": "done"
+  },
+  {
+   "id": "attn.kmap_h0",
+   "family": "attn",
+   "operator": "IDX",
+   "backend": "cpu",
+   "interpret_cpu": {
+    "status": "ran",
+    "sec": 0.31,
+    "max_abs_err": 1.9342973924507667,
+    "ref_max": 3.147416591644287,
+    "rel_err": 0.6145666886251758,
+    "has_nan": false,
+    "passed": false,
+    "out_shape": [
+     2,
+     128,
+     128
+    ]
+   },
+   "native_tpu": {
+    "status": "skipped"
+   },
+   "stage": "done"
+  },
+  {
+   "id": "attn.causal_none",
+   "family": "attn",
+   "operator": "MASK",
+   "backend": "cpu",
+   "interpret_cpu": {
+    "status": "ran",
+    "sec": 0.28,
+    "max_abs_err": 3.0152986980974674,
+    "ref_max": 3.147416591644287,
+    "rel_err": 0.9580233853066784,
+    "has_nan": false,
+    "passed": false,
+    "out_shape": [
+     2,
+     128,
+     128
+    ]
+   },
+   "native_tpu": {
+    "status": "skipped"
+   },
+   "stage": "done"
+  },
+  {
+   "id": "attn.causal_lt",
+   "family": "attn",
+   "operator": "MASK",
+   "backend": "cpu",
+   "interpret_cpu": {
+    "status": "ran",
+    "sec": 0.29,
+    "max_abs_err": 3.0858833640813828,
+    "ref_max": 3.147416591644287,
+    "rel_err": 0.9804496081877875,
+    "has_nan": false,
+    "passed": false,
+    "out_shape": [
+     2,
+     128,
+     128
+    ]
+   },
+   "native_tpu": {
+    "status": "skipped"
+   },
+   "stage": "done"
+  },
+  {
+   "id": "attn.softmax_axis0",
+   "family": "attn",
+   "operator": "RED",
+   "backend": "cpu",
+   "interpret_cpu": {
+    "status": "ran",
+    "sec": 0.29,
+    "max_abs_err": 4.5236525585622385,
+    "ref_max": 3.147416591644287,
+    "rel_err": 1.43725891595398,
+    "has_nan": false,
+    "passed": false,
+    "out_shape": [
+     2,
+     128,
+     128
+    ]
+   },
+   "native_tpu": {
+    "status": "skipped"
+   },
+   "stage": "done"
+  },
+  {
+   "id": "attn.mask_pid0",
+   "family": "attn",
+   "operator": "PID",
+   "backend": "cpu",
+   "interpret_cpu": {
+    "status": "ran",
+    "sec": 0.29,
+    "max_abs_err": 3.147221482743104,
+    "ref_max": 3.147416591644287,
+    "rel_err": 0.9999380098263125,
+    "has_nan": false,
+    "passed": false,
+    "out_shape": [
+     2,
+     128,
+     128
+    ]
+   },
+   "native_tpu": {
+    "status": "skipped"
+   },
+   "stage": "done"
+  },
+  {
+   "id": "attn.no_scale",
+   "family": "attn",
+   "operator": "ARITH",
+   "backend": "cpu",
+   "interpret_cpu": {
+    "status": "ran",
+    "sec": 0.3,
+    "max_abs_err": 3.615083687804843,
+    "ref_max": 3.147416591644287,
+    "rel_err": 1.148587605912135,
+    "has_nan": false,
+    "passed": false,
+    "out_shape": [
+     2,
+     128,
+     128
+    ]
+   },
+   "native_tpu": {
+    "status": "skipped"
+   },
+   "stage": "done"
+  },
+  {
+   "id": "attn.v_is_k",
+   "family": "attn",
+   "operator": "ARITH",
+   "backend": "cpu",
+   "interpret_cpu": {
+    "status": "ran",
+    "sec": 0.29,
+    "max_abs_err": 3.937422513961792,
+    "ref_max": 3.147416591644287,
+    "rel_err": 1.2510013845687922,
+    "has_nan": false,
+    "passed": false,
+    "out_shape": [
+     2,
+     128,
+     128
+    ]
+   },
+   "native_tpu": {
+    "status": "skipped"
+   },
+   "stage": "done"
+  },
+  {
+   "id": "add.x_off_oob",
+   "family": "add",
+   "operator": "IDX-OOB",
+   "backend": "cpu",
+   "interpret_cpu": {
+    "status": "ran",
+    "sec": 0.18,
+    "max_abs_err": 6.839041113853455,
+    "ref_max": 6.663127899169922,
+    "rel_err": 1.026400996250642,
+    "has_nan": false,
+    "passed": false,
+    "out_shape": [
+     256,
+     512
+    ]
+   },
+   "native_tpu": {
+    "status": "skipped"
+   },
+   "stage": "done"
+  },
+  {
+   "id": "add.grid_big_oob",
+   "family": "add",
+   "operator": "GRID-OOB",
+   "backend": "cpu",
+   "interpret_cpu": {
+    "status": "ran",
+    "sec": 0.17,
+    "max_abs_err": 0.0,
+    "ref_max": 6.663127899169922,
+    "rel_err": 0.0,
+    "has_nan": false,
+    "passed": true,
+    "out_shape": [
+     256,
+     512
+    ]
+   },
+   "native_tpu": {
+    "status": "skipped"
+   },
+   "stage": "done"
+  },
+  {
+   "id": "layernorm.g_map_i_oob",
+   "family": "layernorm",
+   "operator": "IDX-OOB",
+   "backend": "cpu",
+   "interpret_cpu": {
+    "status": "ran",
+    "sec": 0.25,
+    "max_abs_err": 7.359272453655308e-07,
+    "ref_max": 8.890088278607134,
+    "rel_err": 8.278064539993894e-08,
+    "has_nan": false,
+    "passed": true,
+    "out_shape": [
+     64,
+     256
+    ]
+   },
+   "native_tpu": {
+    "status": "skipped"
+   },
+   "stage": "done"
+  },
+  {
+   "id": "add.huge_block_vmem",
+   "family": "add",
+   "operator": "BLK-VMEM",
+   "backend": "cpu",
+   "interpret_cpu": {
+    "status": "ran",
+    "sec": 1.11,
+    "max_abs_err": 0.0,
+    "ref_max": 7.5416083335876465,
+    "rel_err": 0.0,
+    "has_nan": false,
+    "passed": true,
+    "out_shape": [
+     4096,
+     2048
+    ]
+   },
+   "native_tpu": {
+    "status": "skipped"
+   },
+   "stage": "done"
+  }
+ ],
+ "unrun": []
+}

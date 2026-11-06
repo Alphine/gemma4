@@ -1,0 +1,25 @@
+| seed | candidates | verified | survived | crash | shape | timeout | flaky |
+|---|---|---|---|---|---|---|---|
+| L01_tpu_matmul | 30 | 23 | 1 | 6 | 0 | 0 | 0 |
+| L02_tpu_flash_attention | 16 | 5 | 5 | 6 | 0 | 0 | 0 |
+| L03_gpu_mha | 31 | 8 | 16 | 7 | 0 | 0 | 0 |
+| L04_gpu_softmax | 2 | 0 | 0 | 2 | 0 | 0 | 0 |
+| k01_vadd | 10 | 7 | 0 | 3 | 0 | 0 | 0 |
+| k02_matmul | 30 | 24 | 0 | 6 | 0 | 0 | 0 |
+| k03_softmax | 15 | 9 | 0 | 6 | 0 | 0 | 0 |
+| k04_layernorm | 18 | 9 | 1 | 8 | 0 | 0 | 0 |
+| k05_rmsnorm | 16 | 9 | 1 | 6 | 0 | 0 | 0 |
+| k06_attention | 20 | 10 | 0 | 10 | 0 | 0 | 0 |
+| k07_flash_online | 26 | 16 | 4 | 6 | 0 | 0 | 0 |
+| k08_colsum_ragged | 14 | 9 | 1 | 4 | 0 | 0 | 0 |
+| k09_transpose | 17 | 13 | 0 | 4 | 0 | 0 | 0 |
+| k10_bmm | 28 | 21 | 0 | 7 | 0 | 0 | 0 |
+| k11_swiglu | 27 | 19 | 0 | 8 | 0 | 0 | 0 |
+| k12_rope | 21 | 13 | 0 | 8 | 0 | 0 | 0 |
+| k13_window_conv1d | 7 | 6 | 0 | 1 | 0 | 0 | 0 |
+| k14_cumsum_carry | 18 | 11 | 1 | 6 | 0 | 0 | 0 |
+| k15_gather_prefetch | 8 | 6 | 0 | 2 | 0 | 0 | 0 |
+| k16_l2norm_residual | 18 | 11 | 0 | 7 | 0 | 0 | 0 |
+| k17_masked_softmax_len | 22 | 13 | 2 | 7 | 0 | 0 | 0 |
+| k18_matmul_ragged_k | 34 | 27 | 1 | 6 | 0 | 0 | 0 |
+| k19_tril_matmul_skip | 35 | 27 | 2 | 6 | 0 | 0 | 0 |

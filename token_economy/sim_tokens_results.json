@@ -1,0 +1,272 @@
+{
+ "n_runs": 243,
+ "calls": 8478,
+ "ct_mean": 229.3145789101203,
+ "ct_pctl": {
+  "50": 89,
+  "75": 221,
+  "90": 546,
+  "95": 880,
+  "99": 2063
+ },
+ "calls_capped_4096": 20,
+ "capped_with_no_tool_call": 20,
+ "R_share": 0.8198442261873514,
+ "budget": {
+  "4096": {
+   "calls_clipped": 0,
+   "frac_calls": 0.0
+  },
+  "3072": {
+   "calls_clipped": 34,
+   "frac_calls": 0.004010379806558151
+  },
+  "2048": {
+   "calls_clipped": 76,
+   "frac_calls": 0.008964378391129983
+  },
+  "1536": {
+   "calls_clipped": 146,
+   "frac_calls": 0.017221042698749706
+  },
+  "1024": {
+   "calls_clipped": 303,
+   "frac_calls": 0.03573956121726822
+  },
+  "768": {
+   "calls_clipped": 470,
+   "frac_calls": 0.05543760320830385
+  },
+  "512": {
+   "calls_clipped": 790,
+   "frac_calls": 0.09318235432885115
+  },
+  "384": {
+   "calls_clipped": 1065,
+   "frac_calls": 0.1256192498230715
+  },
+  "256": {
+   "calls_clipped": 1544,
+   "frac_calls": 0.18211842415664073
+  }
+ },
+ "sim_budget": {
+  "3072": {
+   "tok_saved_per_run": 107.893089069117,
+   "tok_saved_ci": [
+    67.12735706308361,
+    158.51654197556442
+   ],
+   "tok_saved_pct": 1.348574124648901,
+   "min_saved_kaggle": 0.05337111472618987,
+   "min_saved_kaggle_ci": [
+    0.03320566596053872,
+    0.07841284943057918
+   ],
+   "min_saved_modal": 0.03970465677743506,
+   "pct_llm_time_kaggle": 1.1661041594183643,
+   "calls_hit_total": 34,
+   "runs_with_hit": 27,
+   "resolved_runs_with_hit": 10,
+   "runs_with_hit_pct": 11.11111111111111
+  },
+  "2048": {
+   "tok_saved_per_run": 309.37325752490307,
+   "tok_saved_ci": [
+    214.14679565328612,
+    428.9633592788831
+   ],
+   "tok_saved_pct": 3.866909118610517,
+   "min_saved_kaggle": 0.15303663805565207,
+   "min_saved_kaggle_ci": [
+    0.10593128158315886,
+    0.21219387505662085
+   ],
+   "min_saved_modal": 0.11384935876916433,
+   "pct_llm_time_kaggle": 3.34369370202657,
+   "calls_hit_total": 76,
+   "runs_with_hit": 52,
+   "resolved_runs_with_hit": 17,
+   "runs_with_hit_pct": 21.39917695473251
+  },
+  "1536": {
+   "tok_saved_per_run": 523.0684877312133,
+   "tok_saved_ci": [
+    382.29818252955823,
+    694.1014594602569
+   ],
+   "tok_saved_pct": 6.537922253033869,
+   "min_saved_kaggle": 0.25874454526437357,
+   "min_saved_kaggle_ci": [
+    0.18911016762462154,
+    0.34334885527967385
+   ],
+   "min_saved_modal": 0.1924892034850865,
+   "pct_llm_time_kaggle": 5.653303139863779,
+   "calls_hit_total": 146,
+   "runs_with_hit": 74,
+   "resolved_runs_with_hit": 23,
+   "runs_with_hit_pct": 30.45267489711934
+  },
+  "1024": {
+   "tok_saved_per_run": 962.6025164345693,
+   "tok_saved_ci": [
+    752.8079204104413,
+    1204.5117681587317
+   ],
+   "tok_saved_pct": 12.03173305339308,
+   "min_saved_kaggle": 0.47616737812963367,
+   "min_saved_kaggle_ci": [
+    0.3723889846296984,
+    0.5958318213158527
+   ],
+   "min_saved_modal": 0.35423772604792153,
+   "pct_llm_time_kaggle": 10.403769212334428,
+   "calls_hit_total": 303,
+   "runs_with_hit": 134,
+   "resolved_runs_with_hit": 50,
+   "runs_with_hit_pct": 55.1440329218107
+  },
+  "768": {
+   "tok_saved_per_run": 1361.9069395894414,
+   "tok_saved_ci": [
+    1102.4939226369734,
+    1649.3355949224813
+   ],
+   "tok_saved_pct": 17.022707151646536,
+   "min_saved_kaggle": 0.6736899661169105,
+   "min_saved_kaggle_ci": [
+    0.5453669937310895,
+    0.8158713409549876
+   ],
+   "min_saved_modal": 0.5011817537689145,
+   "pct_llm_time_kaggle": 14.71943532897292,
+   "calls_hit_total": 470,
+   "runs_with_hit": 167,
+   "resolved_runs_with_hit": 70,
+   "runs_with_hit_pct": 68.72427983539094
+  },
+  "512": {
+   "tok_saved_per_run": 2007.1905038341201,
+   "tok_saved_ci": [
+    1686.0898079872215,
+    2345.9815290141005
+   ],
+   "tok_saved_pct": 25.08821649343697,
+   "min_saved_kaggle": 0.9928902358966115,
+   "min_saved_kaggle_ci": [
+    0.834052425017679,
+    1.160478863018975
+   ],
+   "min_saved_modal": 0.7386461054109562,
+   "pct_llm_time_kaggle": 21.693634091490427,
+   "calls_hit_total": 790,
+   "runs_with_hit": 208,
+   "resolved_runs_with_hit": 101,
+   "runs_with_hit_pct": 85.59670781893004
+  },
+  "384": {
+   "tok_saved_per_run": 2488.972620718757,
+   "tok_saved_ci": [
+    2129.2314833746036,
+    2857.487019885711
+   ],
+   "tok_saved_pct": 31.110093354641485,
+   "min_saved_kaggle": 1.2312117897155452,
+   "min_saved_kaggle_ci": [
+    1.0532598404426374,
+    1.413503579170132
+   ],
+   "min_saved_modal": 0.9159419244245026,
+   "pct_llm_time_kaggle": 26.90071579875957,
+   "calls_hit_total": 1065,
+   "runs_with_hit": 220,
+   "resolved_runs_with_hit": 112,
+   "runs_with_hit_pct": 90.53497942386831
+  }
+ },
+ "sim_cap": {
+  "3072": {
+   "tok_saved_per_run": 91.10296561232687,
+   "tok_saved_ci": [
+    55.34455428107689,
+    134.53351428731293
+   ],
+   "tok_saved_pct": 1.1387115075077545,
+   "min_saved_kaggle": 0.042582061228247516,
+   "min_saved_kaggle_ci": [
+    0.025822719549875892,
+    0.06323340995210915
+   ],
+   "min_saved_modal": 0.032495164322016684,
+   "pct_llm_time_kaggle": 0.9303743976421107,
+   "calls_hit_total": 34,
+   "runs_with_hit": 27,
+   "resolved_runs_with_hit": 10,
+   "runs_with_hit_pct": 11.11111111111111
+  },
+  "2048": {
+   "tok_saved_per_run": 259.67156170121774,
+   "tok_saved_ci": [
+    172.64829989955444,
+    365.1736240944071
+   ],
+   "tok_saved_pct": 3.2456791444084168,
+   "min_saved_kaggle": 0.12216897285075383,
+   "min_saved_kaggle_ci": [
+    0.07979410735220643,
+    0.17286117345851112
+   ],
+   "min_saved_modal": 0.09295200164706321,
+   "pct_llm_time_kaggle": 2.669266852004226,
+   "calls_hit_total": 86,
+   "runs_with_hit": 56,
+   "resolved_runs_with_hit": 19,
+   "runs_with_hit_pct": 23.045267489711936
+  },
+  "1500": {
+   "tok_saved_per_run": 456.2747037200075,
+   "tok_saved_ci": [
+    328.29547211734916,
+    613.9605122053299
+   ],
+   "tok_saved_pct": 5.703055353012162,
+   "min_saved_kaggle": 0.21335923656773575,
+   "min_saved_kaggle_ci": [
+    0.15213224139482862,
+    0.2890638377406953
+   ],
+   "min_saved_modal": 0.16278577135305056,
+   "pct_llm_time_kaggle": 4.661680657943511,
+   "calls_hit_total": 169,
+   "runs_with_hit": 83,
+   "resolved_runs_with_hit": 29,
+   "runs_with_hit_pct": 34.15637860082305
+  },
+  "1024": {
+   "tok_saved_per_run": 791.0380190252846,
+   "tok_saved_ci": [
+    599.5044705668923,
+    1016.0176453398014
+   ],
+   "tok_saved_pct": 9.887319134848777,
+   "min_saved_kaggle": 0.3671952018062358,
+   "min_saved_kaggle_ci": [
+    0.27487979105044524,
+    0.4764017984278593
+   ],
+   "min_saved_modal": 0.28109787577496725,
+   "pct_llm_time_kaggle": 8.022838839725418,
+   "calls_hit_total": 330,
+   "runs_with_hit": 139,
+   "resolved_runs_with_hit": 54,
+   "runs_with_hit_pct": 57.20164609053498
+  }
+ },
+ "baseline": {
+  "tokens_per_run": 8000.530864197531,
+  "calls_per_run": 34.888888888888886,
+  "llm_min_kaggle": 4.576873711934157,
+  "llm_min_modal": 3.2012101728395064
+ }
+}

@@ -1,0 +1,36 @@
+{
+ "n": 815,
+ "levels": {
+  "1": {
+   "gold_leak_tasks": 0,
+   "leaked_ids": [],
+   "names_all_files": 815,
+   "strip_roundtrip_ok": 815,
+   "mean_words": 21.1
+  },
+  "2": {
+   "gold_leak_tasks": 0,
+   "leaked_ids": [],
+   "names_all_files": 815,
+   "strip_roundtrip_ok": 815,
+   "mean_words": 23.7
+  },
+  "3": {
+   "gold_leak_tasks": 0,
+   "leaked_ids": [],
+   "names_all_files": 815,
+   "strip_roundtrip_ok": 815,
+   "mean_words": 30.8
+  },
+  "4": {
+   "gold_leak_tasks": 810,
+   "leaked_ids": [],
+   "names_all_files": 815,
+   "strip_roundtrip_ok": 815,
+   "mean_words": 69.7
+  }
+ },
+ "statement_mentions_gold_file_or_module": 140,
+ "statement_mentions_gold_func_name": 247,
+ "pairs": 136
+}

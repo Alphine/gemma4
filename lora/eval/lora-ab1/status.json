@@ -1,0 +1,212 @@
+{
+ "session": "20261007-181956-2",
+ "tag": "lora-ab1",
+ "mode": "real",
+ "gpu": "H100",
+ "kind": "paired-eval",
+ "started": "2026-10-07 18:19:56",
+ "config": {
+  "tag": "lora-ab1",
+  "mode": "real",
+  "gpu": "H100",
+  "cpu": 16.0,
+  "mem_gib": 48.0,
+  "concurrency": 8,
+  "n_samples": 1,
+  "temperatures": [
+   0.2,
+   0.6
+  ],
+  "top_p": 0.95,
+  "seed_base": 1000,
+  "budget": {
+   "max_time_minutes": 5.5,
+   "max_tool_calls": 60,
+   "max_turns": 120,
+   "timeout_seconds": 300
+  },
+  "short_calls": 45,
+  "stop_after_short": 1,
+  "max_attempts": 2,
+  "max_consec_infra": 4,
+  "gate_min_runs": 12,
+  "gate_zero_resolved": true,
+  "gate_zero_patch_runs": 8,
+  "gate_infra_frac": 0.5,
+  "max_usd": 19.0,
+  "reserve_s": 120.0,
+  "setup_verify_s": 300.0,
+  "max_runs": null,
+  "arm": "edit-early-v4",
+  "mock_policy": {},
+  "adapter_arm": "rft-pilot1-sft-full",
+  "adapter_name": "rft_lora",
+  "adapter_sha": "a3d7ba481eb3789b0880995f3ed8ea4e19f4f9e88e0aa3fa3a2b3098104e7927",
+  "gate_k": 8,
+  "gate_infra_margin": 0.25,
+  "gate_empty_margin": 0.3,
+  "keep_calls": false,
+  "boot_probe": true,
+  "reservation": {
+   "gpu": "H100",
+   "n_gpu": 1,
+   "cpu": 16.0,
+   "mem_gib": 48.0
+  },
+  "rate_per_h": 5.0874
+ },
+ "guard_start": {
+  "max_usd": 19.0,
+  "prior_usd": 5.7523,
+  "session_usd": 0.0851,
+  "spent_usd": 5.8375,
+  "rate_per_h": 5.0874,
+  "refused_launches": 0
+ },
+ "n_tasks": 144,
+ "todo_at_start": 192,
+ "arm_check": {
+  "ok": true,
+  "problems": []
+ },
+ "budgets": {
+  "base": {
+   "max_time_minutes": 5.5,
+   "max_tool_calls": 60,
+   "max_turns": 120,
+   "timeout_seconds": 300
+  },
+  "adapter": {
+   "max_time_minutes": 5.5,
+   "max_tool_calls": 60,
+   "max_turns": 120,
+   "timeout_seconds": 300
+  }
+ },
+ "sampling": {
+  "path": "configs/sampling.yaml",
+  "temperature": 0.2,
+  "top_p": 0.95,
+  "seed": 0,
+  "max_output_tokens": 4096,
+  "thinking_config": {
+   "thinking_budget": 4096,
+   "include_thoughts": true
+  }
+ },
+ "adapter_manifest": {
+  "name": "rft_lora",
+  "rank": 32,
+  "bytes": 489841632,
+  "path": "/root/hv_work/agents/adapter-s0/adapters/rft_lora/adapter_model.safetensors"
+ },
+ "probe": {
+  "ok": true,
+  "reason": null,
+  "base_id": "/vol/models/gemma-4-31b-it-qat-w4a16-ct/files",
+  "adapter_id": "rft_lora",
+  "prompts": [
+   {
+    "prompt": "In two sentences: what does `git diff --stat` print? Then na",
+    "base": "`git diff --stat` prints a summary of the changes made to files, showing the number of insertions and deletions for each. It provides a high-level overview of which files were modified without showing",
+    "adapter": "`git diff --stat` prints a summary of the changes made to files, showing the number of insertions and deletions for each. It provides a high-level overview of which files were modified without listing",
+    "effect": true,
+    "text_differs": true,
+    "lp_delta": 0.2809137486910913,
+    "base_noise": 0.05344188213348389,
+    "why": "ok"
+   },
+   {
+    "prompt": "You are a software engineering agent working in a git reposi",
+    "base": "pytest tests/test_core.py::test_parse --tb=short",
+    "adapter": "pytest tests/test_core.py::test_parse --tb=short",
+    "effect": true,
+    "text_differs": false,
+    "lp_delta": 0.1705639250576496,
+    "base_noise": 0.0,
+    "why": "ok"
+   }
+  ],
+  "models": [
+   "/vol/models/gemma-4-31b-it-qat-w4a16-ct/files",
+   "rft_lora"
+  ]
+ },
+ "vllm_cmd": "/usr/local/bin/python -m vllm.entrypoints.openai.api_server --model /vol/models/gemma-4-31b-it-qat-w4a16-ct/files --host 127.0.0.1 --port 8000 --max-model-len 32768 --dtype bfloat16 --gpu-memory-utilization 0.8 --enable-auto-tool-choice --tool-call-parser gemma4 --reasoning-parser gemma4 --reasoning-config {\"reasoning_start_str\": \"<|channel>\", \"reasoning_end_str\": \"<channel|>\"} --default-chat-template-kwargs {\"enable_thinking\": true} --no-scheduler-reserve-full-isl --enable-lora --max-loras 1 --max-lora-rank 32 --lora-modules rft_lora=/root/hv_work/agents/adapter-s0/adapters/rft_lora",
+ "env": {
+  "host_python": "3.12.1",
+  "sandbox_python": "/usr/local/bin/python3.13",
+  "sandbox_python_is_313": true,
+  "wheels_dir": "/root/hv_work/data/wheels",
+  "wheels_symlink": true,
+  "neutralized_sitecustomize": []
+ },
+ "vllm_start_s": 254.6,
+ "guard": {
+  "max_usd": 19.0,
+  "prior_usd": 5.7523,
+  "session_usd": 9.352,
+  "spent_usd": 15.1043,
+  "rate_per_h": 5.0874,
+  "refused_launches": 0
+ },
+ "log_tail": [
+  "[  97.5 min] done jmespath_s0001 s0 adapter: resolved=True calls=20 agent=5.067m err=None | pairs=132 both=59 only_adapter=8 only_base=7 spent=$14.103",
+  "[  97.5 min] launch pycodestyle_s0027 s0 base; running=8 spent=$14.106 projected=$15.166",
+  "[  97.9 min] done voluptuous_s0022 s0 adapter: resolved=False calls=35 agent=5.5m err=Agent exceeded session timeout (5.5 min) | pairs=132 both=59 only_adapter=8 only_base=7 spent=$14.135",
+  "[  97.9 min] launch pycodestyle_s0027 s0 adapter; running=8 spent=$14.137 projected=$15.196",
+  "[  98.5 min] done voluptuous_s0007 s0 base: resolved=True calls=33 agent=3.135m err=None | pairs=133 both=60 only_adapter=8 only_base=7 spent=$14.188",
+  "[  98.5 min] launch marshmallow_s0043 s0 adapter; running=8 spent=$14.190 projected=$15.250",
+  "[  98.5 min] done voluptuous_s0022 s0 base: resolved=False calls=31 agent=5.5m err=Agent exceeded session timeout (5.5 min) | pairs=134 both=60 only_adapter=8 only_base=7 spent=$14.192",
+  "[  98.6 min] launch marshmallow_s0043 s0 base; running=8 spent=$14.194 projected=$15.254",
+  "[  98.9 min] done pycodestyle_s0028 s0 base: resolved=False calls=23 agent=3.227m err=None | pairs=134 both=60 only_adapter=8 only_base=7 spent=$14.224",
+  "[  98.9 min] launch schedule_s0003 s0 base; running=8 spent=$14.227 projected=$15.286",
+  "[ 102.3 min] done pycodestyle_s0028 s0 adapter: resolved=False calls=29 agent=5.5m err=Agent exceeded session timeout (5.5 min) | pairs=135 both=60 only_adapter=8 only_base=7 spent=$14.509",
+  "[ 102.3 min] launch schedule_s0003 s0 adapter; running=8 spent=$14.511 projected=$15.570",
+  "[ 102.5 min] done schedule_s0046 s0 adapter: resolved=False calls=55 agent=5.5m err=Agent exceeded session timeout (5.5 min) | pairs=135 both=60 only_adapter=8 only_base=7 spent=$14.529",
+  "[ 102.5 min] launch pycodestyle_s0012 s0 adapter; running=8 spent=$14.531 projected=$15.591",
+  "[ 102.7 min] done schedule_s0046 s0 base: resolved=False calls=29 agent=5.5m err=Agent exceeded session timeout (5.5 min) | pairs=136 both=60 only_adapter=8 only_base=7 spent=$14.549",
+  "[ 102.8 min] launch pycodestyle_s0012 s0 base; running=8 spent=$14.551 projected=$15.611",
+  "[ 103.2 min] done pycodestyle_s0027 s0 base: resolved=False calls=48 agent=5.5m err=Agent exceeded session timeout (5.5 min) | pairs=136 both=60 only_adapter=8 only_base=7 spent=$14.589",
+  "[ 103.2 min] launch pydash_s0014 s0 base; running=8 spent=$14.591 projected=$15.651",
+  "[ 103.8 min] done pycodestyle_s0027 s0 adapter: resolved=True calls=57 agent=5.5m err=None | pairs=137 both=60 only_adapter=9 only_base=7 spent=$14.642",
+  "[ 103.9 min] launch pydash_s0014 s0 adapter; running=8 spent=$14.644 projected=$15.704",
+  "[ 104.2 min] done marshmallow_s0043 s0 adapter: resolved=False calls=60 agent=5.387m err=None | pairs=137 both=60 only_adapter=9 only_base=7 spent=$14.671",
+  "[ 104.2 min] launch voluptuous_s0015 s0 adapter; running=8 spent=$14.674 projected=$15.734",
+  "[ 104.4 min] done marshmallow_s0043 s0 base: resolved=False calls=52 agent=5.5m err=Agent exceeded session timeout (5.5 min) | pairs=138 both=60 only_adapter=9 only_base=7 spent=$14.688",
+  "[ 104.4 min] launch voluptuous_s0015 s0 base; running=8 spent=$14.690 projected=$15.750",
+  "[ 104.8 min] done schedule_s0003 s0 base: resolved=False calls=44 agent=5.5m err=Agent exceeded session timeout (5.5 min) | pairs=138 both=60 only_adapter=9 only_base=7 spent=$14.723",
+  "[ 104.8 min] launch jmespath_s0025 s0 base; running=8 spent=$14.725 projected=$15.785",
+  "[ 104.9 min] done pydash_s0014 s0 base: resolved=True calls=14 agent=1.33m err=None | pairs=138 both=60 only_adapter=9 only_base=7 spent=$14.734",
+  "[ 105.0 min] launch jmespath_s0025 s0 adapter; running=8 spent=$14.737 projected=$15.797",
+  "[ 106.1 min] done pydash_s0014 s0 adapter: resolved=True calls=14 agent=1.847m err=None | pairs=139 both=61 only_adapter=9 only_base=7 spent=$14.832",
+  "[ 106.1 min] launch schedule_s0027 s0 adapter; running=8 spent=$14.835 projected=$15.895",
+  "[ 106.8 min] done voluptuous_s0015 s0 adapter: resolved=True calls=23 agent=2.253m err=None | pairs=139 both=61 only_adapter=9 only_base=7 spent=$14.896",
+  "[ 106.9 min] launch schedule_s0027 s0 base; running=8 spent=$14.898 projected=$15.958",
+  "[ 107.1 min] done voluptuous_s0015 s0 base: resolved=True calls=20 agent=2.317m err=None | pairs=140 both=62 only_adapter=9 only_base=7 spent=$14.916",
+  "[ 107.5 min] done pycodestyle_s0012 s0 base: resolved=False calls=60 agent=4.243m err=None | pairs=140 both=62 only_adapter=9 only_base=7 spent=$14.950",
+  "[ 107.8 min] done schedule_s0027 s0 adapter: resolved=True calls=18 agent=1.395m err=None | pairs=140 both=62 only_adapter=9 only_base=7 spent=$14.981",
+  "[ 108.1 min] done schedule_s0003 s0 adapter: resolved=False calls=23 agent=5.5m err=Agent exceeded session timeout (5.5 min) | pairs=141 both=62 only_adapter=9 only_base=7 spent=$15.006",
+  "[ 108.3 min] done jmespath_s0025 s0 base: resolved=False calls=17 agent=2.92m err=None | pairs=141 both=62 only_adapter=9 only_base=7 spent=$15.016",
+  "[ 108.4 min] done pycodestyle_s0012 s0 adapter: resolved=False calls=60 agent=5.36m err=None | pairs=142 both=62 only_adapter=9 only_base=7 spent=$15.028",
+  "[ 109.0 min] done jmespath_s0025 s0 adapter: resolved=False calls=23 agent=3.605m err=None | pairs=143 both=62 only_adapter=9 only_base=7 spent=$15.081",
+  "[ 109.2 min] done schedule_s0027 s0 base: resolved=True calls=18 agent=2.03m err=None | pairs=144 both=63 only_adapter=9 only_base=7 spent=$15.100"
+ ],
+ "runs_per_h_session": 110.02,
+ "session_runs_live": 192,
+ "session_runs": 192,
+ "session_resolved": 95,
+ "session_infra": 0,
+ "stop_reason": "complete",
+ "remaining_todo": 0,
+ "launched": 192,
+ "ended": "2026-10-07 20:09:14",
+ "guard_end": {
+  "max_usd": 19.0,
+  "prior_usd": 5.7523,
+  "session_usd": 9.352,
+  "spent_usd": 15.1043,
+  "rate_per_h": 5.0874,
+  "refused_launches": 0
+ }
+}

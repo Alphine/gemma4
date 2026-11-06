@@ -1,0 +1,10 @@
+# edit-early: as triage-first, but max_output_tokens 8192 -> 4096. thinking_budget is not forwarded to vLLM,
+# so the output cap is the only limit on a thought; failure taxonomy found 1-2.7k-token thoughts eating the budget.
+# 4096 (not ~3000) leaves room for a full edit_file call after a thought; a cut-off tool call is nudged by the harness.
+temperature: 0.2
+top_p: 0.95
+seed: 0
+max_output_tokens: 4096
+thinking_config:
+  thinking_budget: 4096
+  include_thoughts: true

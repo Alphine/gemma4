@@ -1,0 +1,33 @@
+{
+ "session": "20261007-181956-2",
+ "ok": true,
+ "reason": null,
+ "base_id": "/vol/models/gemma-4-31b-it-qat-w4a16-ct/files",
+ "adapter_id": "rft_lora",
+ "prompts": [
+  {
+   "prompt": "In two sentences: what does `git diff --stat` print? Then na",
+   "base": "`git diff --stat` prints a summary of the changes made to files, showing the number of insertions and deletions for each. It provides a high-level overview of which files were modified without showing",
+   "adapter": "`git diff --stat` prints a summary of the changes made to files, showing the number of insertions and deletions for each. It provides a high-level overview of which files were modified without listing",
+   "effect": true,
+   "text_differs": true,
+   "lp_delta": 0.2809137486910913,
+   "base_noise": 0.05344188213348389,
+   "why": "ok"
+  },
+  {
+   "prompt": "You are a software engineering agent working in a git reposi",
+   "base": "pytest tests/test_core.py::test_parse --tb=short",
+   "adapter": "pytest tests/test_core.py::test_parse --tb=short",
+   "effect": true,
+   "text_differs": false,
+   "lp_delta": 0.1705639250576496,
+   "base_noise": 0.0,
+   "why": "ok"
+  }
+ ],
+ "models": [
+  "/vol/models/gemma-4-31b-it-qat-w4a16-ct/files",
+  "rft_lora"
+ ]
+}

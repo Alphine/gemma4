@@ -1,0 +1,13 @@
+# edit-early-v7-lean: edit-early-v6-locate sampling with ONLY thinking_budget / max_output_tokens changed (research/top10/token-economy/REPORT.md).
+# VERIFIED in the wheelhouse (adk_submission 0.2.13 + vllm 0.19.1): thinking_budget IS forwarded as extra_body.thinking_token_budget
+# and vLLM enforces it (adk VllmServer auto-adds --reasoning-config <|channel> / <channel|> for the gemma4 reasoning parser;
+# ThinkingTokenBudgetLogitsProcessor forces the end-of-thought token after the budget). Older notes saying "not forwarded" predate the 2026-09-30 harness.
+# thinking_budget 1024 = the thought ends (forced) after 1024 tokens; max_output_tokens 2560 leaves ~1536 tokens for the tool call
+# (tool args were <= ~1.8k tokens at p99.9). v6 had budget 4096 == cap 4096, so a runaway thought consumed the whole cap (20 calls, ~85 s each, no tool call).
+temperature: 0.2
+top_p: 0.95
+seed: 0
+max_output_tokens: 2560
+thinking_config:
+  thinking_budget: 1024
+  include_thoughts: true

@@ -1,0 +1,45 @@
+{
+ "finished": true,
+ "minutes": 33.9,
+ "n_tasks_in_file": 129,
+ "n_checked": 129,
+ "n_solvable": 40,
+ "n_gold_resolved": 43,
+ "n_empty_resolved": 3,
+ "by_repo": {
+  "fastapi": {
+   "total": 67,
+   "gold_resolved": 1,
+   "empty_resolved": 0,
+   "solvable": 1
+  },
+  "httpx": {
+   "total": 1,
+   "gold_resolved": 0,
+   "empty_resolved": 0,
+   "solvable": 0
+  },
+  "requests": {
+   "total": 13,
+   "gold_resolved": 3,
+   "empty_resolved": 3,
+   "solvable": 0
+  },
+  "rich": {
+   "total": 48,
+   "gold_resolved": 39,
+   "empty_resolved": 0,
+   "solvable": 39
+  }
+ },
+ "gold_failure_reasons": {
+  "ModuleNotFoundError:typing_inspection": 63,
+  "requests_src_layout_shadowed_by_installed_requests_wheel": 9,
+  "rich_pygments_highlight_drift": 7,
+  "ModuleNotFoundError:dirty_equals": 3,
+  "collection_error(other)": 1,
+  "ssl_missing_authority_key_identifier": 1,
+  "required_test_skipped_or_missing(version_gate?)": 1,
+  "ModuleNotFoundError:attr": 1
+ }
+}

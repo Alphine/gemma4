@@ -1,0 +1,84 @@
+== A. failed tool calls by kind (primary calls) ==
+  ('run_command', 'cmd_error')             n= 95  llm_s=   668
+  ('skill:edit_lines(malformed)', 'invalid_args') n= 18  llm_s=   368
+  ('edit_file', 'invalid_args')            n= 25  llm_s=   173
+  ('skill:edit_lines.py', 'skill_soft')    n= 13  llm_s=   122
+  ('edit_file', 'cmd_error')               n=  4  llm_s=    65
+  ('skill:locate.py', 'skill_soft')        n=  4  llm_s=    20
+  ('skill:locate(malformed)', 'invalid_args') n=  1  llm_s=    17
+  ('read_file', 'cmd_error')               n=  5  llm_s=    16
+  ('skill:check.py', 'tool_error')         n=  2  llm_s=    10
+  ('skill:locate.py', 'tool_error')        n=  1  llm_s=     2
+format failures (invalid_args + skill usage): 61 calls, 701 llm-s = 7.0% of all wall; per run mean 17.5 s
+    v6 n_fail 33 sec 302 runs w/ >=1: 6 / 14
+    decide n_fail 10 sec 206 runs w/ >=1: 5 / 13
+    lean n_fail 18 sec 194 runs w/ >=1: 6 / 13
+   runs with >=4 format failures: [('v6', 'T205', 5, 56, True), ('v6', 'T886', 20, 132, False), ('v6', 'T519', 4, 68, False), ('lean', 'T886', 4, 49, False), ('lean', 'T844', 10, 60, False)]
+   edit_file invalid-arg call shapes: [(('filepath', 'new_string'), 13), (('(?', 'filepath', 'new_string'), 7), (('\\n        default', 'filepath', 'new_string', 'show_choices'), 1), (('\\n        stream', 'filepath', 'new_string', 'show_choices'), 1)]
+   edit_file calls: 66 ok: 37 invalid_args: 25
+   after invalid_args call -> [(('edit_file', 'edit_file', 'fail'), 13), (('run_skill_script', 'run_skill_script', 'fail'), 7), (('edit_file', 'run_command', 'ok'), 7), (('run_skill_script', 'run_skill_script', 'ok'), 6), (('run_skill_script', 'edit_file', 'ok'), 5), (('edit_file', 'read_file', 'ok'), 3), (('edit_file', 'edit_file', 'ok'), 1), (('run_skill_script', 'run_command', 'ok'), 1)]
+== B. compaction ==
+  n=41  pt_before mean=15049 (min 14351 max 17164)  at primary call #19.0  lat 21.9 s; pt after 7381
+  runs with >=1 compaction: 27 / 40 ; with >=2: 13
+  first-call prompt tokens mean 5386 (min 4647 max 5984)
+  mean prompt growth per step 593 tokens; by tool of the previous call:
+      read_file          n= 183 mean=  676 sum= 123700
+      grep_find          n= 196 mean=  615 sum= 120592
+      python             n= 153 mean=  419 sum=  64165
+      sed_cat            n=  91 mean=  554 sum=  50418
+      skill:locate.py    n=  40 mean=  898 sum=  35906
+      edit_file          n=  64 mean=  550 sum=  35198
+      pytest             n=  15 mean= 1981 sum=  29720
+      write_file         n=  41 mean=  525 sum=  21544
+  reads after a compaction: 117, >=80% re-reads (path not edited since): 50 (43%, 240 llm-s); before any compaction: 163 reads, 15 re-reads (9%)
+== C. time structure around the first edit ==
+  v6     T205  res=True  none     first_edit@   64s ok_edit@  102s n_pre=10 n_post=16  post={'skill:edit_lines(malformed)': 3, 'sed_cat': 3, 'python': 3, 'grep_find': 2, 'skill:edit_lines.py': 1}
+  v6     T760      res=False time_cap first_edit@  157s ok_edit@  167s n_pre=25 n_post=18  post={'read_file': 8, 'grep_find': 7, 'python': 2, 'edit_file': 1}
+  v6     T386      res=True  none     first_edit@   59s ok_edit@   86s n_pre=12 n_post= 8  post={'skill:edit_lines(malformed)': 1, 'edit_file': 1, 'python': 1, 'grep_find': 1, 'skill:check.py': 1}
+  v6     T354      res=True  none     first_edit@  100s ok_edit@  106s n_pre=14 n_post= 6  post={'python': 1, 'grep_find': 1, 'pytest': 1, 'other_shell': 1, 'submit_patch': 1}
+  v6     T755      res=True  none     first_edit@   24s ok_edit@   50s n_pre= 6 n_post=14  post={'grep_find': 4, 'read_file': 3, 'python': 2, 'edit_file': 1, 'write_file': 1}
+  v6     T886      res=False time_cap first_edit@   15s ok_edit@   78s n_pre= 3 n_post=43  post={'edit_file': 15, 'read_file': 12, 'python': 7, 'skill:edit_lines.py': 4, 'sed_i': 2}
+  v6     T519      res=False time_cap first_edit@  175s ok_edit@  240s n_pre=19 n_post=15  post={'edit_file': 5, 'python': 4, 'read_file': 3, 'skill:edit_lines.py': 2, 'write_file': 1}
+  v6     T768      res=True  none     first_edit@   61s ok_edit@   66s n_pre=18 n_post= 9  post={'grep_find': 3, 'python': 1, 'pytest': 1, 'other_shell': 1, 'git': 1}
+  v6     T844      res=True  time_cap first_edit@  226s ok_edit@  234s n_pre= 4 n_post= 8  post={'python': 5, 'pytest': 2, 'edit_file': 1}
+  v6     T711      res=False time_cap first_edit@   41s ok_edit@  none n_pre= 9 n_post= 1  post={'read_file': 1}
+  decide T059  res=False time_cap first_edit@  237s ok_edit@  299s n_pre=16 n_post= 3  post={'python': 2, 'grep_find': 1}
+  decide T205  res=True  none     first_edit@    7s ok_edit@   23s n_pre= 2 n_post=14  post={'grep_find': 4, 'python': 3, 'skill:check.py': 3, 'sed_cat': 2, 'submit_patch': 1}
+  decide T760      res=True  time_cap first_edit@  155s ok_edit@  191s n_pre= 7 n_post=11  post={'write_file': 4, 'python': 4, 'skill:edit_lines.py': 1, 'edit_file': 1, 'read_file': 1}
+  decide T386      res=True  none     first_edit@  188s ok_edit@  212s n_pre=41 n_post=12  post={'edit_file': 2, 'python': 2, 'grep_find': 2, 'skill:edit_lines.py': 1, 'read_file': 1}
+  decide T354      res=True  none     first_edit@   80s ok_edit@   83s n_pre=12 n_post= 7  post={'grep_find': 2, 'python': 1, 'pytest': 1, 'other_shell': 1, 'submit_patch': 1}
+  decide T755      res=True  none     first_edit@   58s ok_edit@   76s n_pre= 6 n_post= 8  post={'edit_file': 1, 'skill:check.py': 1, 'grep_find': 1, 'pytest': 1, 'sed_cat': 1}
+  decide T886      res=False none     first_edit@   47s ok_edit@   85s n_pre=13 n_post=25  post={'sed_cat': 9, 'edit_file': 4, 'skill:edit_lines.py': 3, 'grep_find': 3, 'write_file': 1}
+  decide T519      res=False time_cap first_edit@  131s ok_edit@  316s n_pre=10 n_post= 7  post={'sed_cat': 3, 'grep_find': 2, 'edit_file': 1, 'python': 1}
+  decide T768      res=True  none     first_edit@   21s ok_edit@   25s n_pre= 5 n_post= 9  post={'read_file': 2, 'grep_find': 2, 'python': 2, 'skill:check.py': 1, 'submit_patch': 1}
+  decide T844      res=True  time_cap first_edit@   66s ok_edit@   82s n_pre= 4 n_post= 7  post={'python': 2, 'edit_file': 1, 'write_file': 1, 'pytest': 1, 'skill:check.py': 1}
+  lean   T059  res=False time_cap first_edit@  275s ok_edit@  298s n_pre=21 n_post= 5  post={'sed_cat': 1, 'grep_find': 1, 'sed_i': 1, 'python': 1, 'read_file': 1}
+  lean   T205  res=True  none     first_edit@   11s ok_edit@   27s n_pre= 2 n_post=11  post={'skill:check.py': 3, 'python': 2, 'grep_find': 2, 'sed_cat': 1, 'other_shell': 1}
+  lean   T760      res=True  time_cap first_edit@  136s ok_edit@  144s n_pre=14 n_post=23  post={'read_file': 7, 'grep_find': 6, 'python': 4, 'git': 2, 'write_file': 2}
+  lean   T386      res=True  none     first_edit@   75s ok_edit@   84s n_pre=16 n_post= 6  post={'python': 1, 'grep_find': 1, 'skill:check.py': 1, 'read_file': 1, 'submit_patch': 1}
+  lean   T354      res=True  none     first_edit@   47s ok_edit@   53s n_pre=10 n_post= 8  post={'grep_find': 3, 'python': 1, 'skill:check.py': 1, 'other_shell': 1, 'submit_patch': 1}
+  lean   T755      res=False time_cap first_edit@   17s ok_edit@   52s n_pre= 3 n_post=20  post={'python': 5, 'read_file': 5, 'pytest': 4, 'grep_find': 3, 'skill:edit_lines.py': 1}
+  lean   T886      res=False none     first_edit@   32s ok_edit@   89s n_pre=10 n_post=16  post={'edit_file': 6, 'read_file': 2, 'skill:edit_lines(malformed)': 2, 'write_file': 1, 'python': 1}
+  lean   T519      res=False none     first_edit@   89s ok_edit@  145s n_pre= 6 n_post= 7  post={'python': 3, 'skill:edit_lines.py': 1, 'skill:check.py': 1, 'submit_patch': 1, 'nocall': 1}
+  lean   T537      res=True  time_cap first_edit@  265s ok_edit@  278s n_pre=24 n_post= 4  post={'python': 3, 'sed_cat': 1}
+  lean   T768      res=True  none     first_edit@   19s ok_edit@   27s n_pre= 5 n_post= 9  post={'python': 4, 'edit_file': 2, 'skill:check.py': 1, 'submit_patch': 1, 'nocall': 1}
+  lean   T927      res=False time_cap first_edit@  290s ok_edit@  324s n_pre=20 n_post= 1  post={'python': 1}
+  lean   T844      res=False time_cap first_edit@  122s ok_edit@  234s n_pre= 8 n_post=29  post={'python': 9, 'sed_cat': 8, 'edit_file': 6, 'skill:edit_lines.py': 2, 'skill:edit_lines(malformed)': 1}
+  resolved with edit: n=19 mean first_edit@ 87s, wall 184; unresolved with edit: n=13 mean first_edit@ 125s, wall 302
+  n_pre calls resolved mean 11.2 vs unresolved 12.5
+== D. mechanical token savings per run (trajectory held fixed; upper bounds) ==
+  cap thinking at 1024 tokens:  25.7 s/run (10.2% of mean wall)
+  cap thinking at  512 tokens:  51.3 s/run (20.4% of mean wall)
+  cap thinking at  256 tokens:  78.2 s/run (31.1% of mean wall)
+  cap thinking at  128 tokens: 101.2 s/run (40.2% of mean wall)
+  [non-lean arms] cap 1024:  38.0 s/run
+  [non-lean arms] cap  512:  59.8 s/run
+  [non-lean arms] cap  256:  84.6 s/run
+  [lean arm]      cap  512:  33.6 s/run
+  [lean arm]      cap  256:  65.1 s/run
+  [lean arm]      cap  128:  92.0 s/run
+  compaction seconds per run: 22.4 ; if compaction replaced by a deterministic 0-token summary: ~22.4 s/run
+  format-failure seconds per run: 17.5
+  finish=length calls: 20.6 s/run
+  calls without any tool call (length/stop): 22.8 s/run, n=26
+  killed in flight at cap: 18.0 s/run; n=23

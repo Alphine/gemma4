@@ -1,0 +1,12 @@
+PRIMARY {"auc_a": 0.9234507630734046, "auc_b": 0.9214716101508554, "gain": 0.0019791529225491322, "ci": [-0.012452142946044714, 0.016101159320133663], "p_one_sided": 0.38780609695152424, "p_two_sided": 0.7756121939030485, "verdict": "NULL"}
+Traceback (most recent call last):
+  File "<repo>\research\app-track\A-difficulty\analyze.py", line 574, in <module>
+    main()
+    ~~~~^^
+  File "<repo>\research\app-track\A-difficulty\analyze.py", line 427, in main
+    make_tables(R, out)
+    ~~~~~~~~~~~^^^^^^^^
+  File "<repo>\research\app-track\A-difficulty\analyze.py", line 499, in make_tables
+    L.append("**%s %s**\n\n| feature set | AUC | 95%% CI |\n|---|---|---|" % (tn, model))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: not enough arguments for format string

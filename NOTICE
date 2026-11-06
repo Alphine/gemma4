@@ -1,0 +1,58 @@
+This package: Copyright (c) 2026 Alphine. Licensed under the BSD 3-Clause License (LICENSE) for
+code; data files and documents are offered under CC-BY-4.0 unless a file says otherwise (see README.md licence table).
+
+=== Third-party material and notices ===
+
+1. Synthetic task repositories (derived data; NOT stored in this package, but shipped in the companion task dataset
+   'synth_tasks' that this package describes). The 25 source projects, their licences and pinned revisions:
+
+  PyCQA/pycodestyle                          MIT           tag 2.15.0    commit 9647851c7c9f  (34 tasks)
+  PyCQA/pyflakes                             MIT           tag 4.0.2     commit 4756a379502d  (47 tasks)
+  Python-Markdown/markdown                   BSD-3-Clause  tag 3.11.0    commit 0ffbf00cf667  (47 tasks)
+  Suor/funcy                                 BSD-3-Clause  tag 2.1       commit 04aafae9a739  (47 tasks)
+  alecthomas/voluptuous                      BSD-3-Clause  tag 0.16.0    commit 87825d6dbdab  (47 tasks)
+  andialbrecht/sqlparse                      BSD-3-Clause  tag 0.6.0     commit 2f40da99b50d  (45 tasks)
+  astanin/python-tabulate                    MIT           tag v0.10.0   commit 3b4cd509820e  (47 tasks)
+  dbader/schedule                            MIT           tag 1.2.2     commit 82a43db1b938  (47 tasks)
+  dgilland/pydash                            MIT           tag v8.1.0    commit f46de3669742  (47 tasks)
+  hukkin/tomli                               MIT           tag 2.4.1     commit c5f44690c68c  (47 tasks)
+  jmespath/jmespath.py                       MIT           tag 1.1.0     commit 6ff419a8b171  (47 tasks)
+  jpvanhal/inflection                        MIT           tag 0.5.1     commit b00d4d348b32  (5 tasks)
+  lepture/mistune                            BSD-3-Clause  tag v3.3.4    commit 69ec2b8a6d5b  (25 tasks)
+  mahmoud/boltons                            BSD-2-Clause  tag 26.2.0    commit 4332b35a278d  (47 tasks)
+  marshmallow-code/marshmallow               MIT           tag 4.3.1     commit c7b559a1fa3a  (47 tasks)
+  martinblech/xmltodict                      MIT           tag v1.0.4    commit 8d7f1fdb2251  (27 tasks)
+  msiemens/tinydb                            MIT           tag v4.9.0    commit 1e39ad3a2d9e  (43 tasks)
+  pyparsing/pyparsing                        MIT           tag 3.3.3     commit d90d38b283ef  (47 tasks)
+  python-poetry/tomlkit                      MIT           tag 0.15.1    commit 1bd7e3bc5bcc  (47 tasks)
+  python-semver/python-semver                BSD-3-Clause  tag 3.1.0     commit 642d1bc8949d  (10 tasks)
+  pytoolz/toolz                              BSD-3-Clause  tag 1.1.0     commit 568c2b839397  (47 tasks)
+  r1chardj0n3s/parse                         MIT           tag 1.22.2    commit 529dc2e01a0d  (37 tasks)
+  scrapy/w3lib                               BSD-3-Clause  tag v2.5.0    commit 537c5d46455a  (23 tasks)
+  stefankoegl/python-json-pointer            BSD-2-Clause  tag v3.1.1    commit ada0cade3bcd  (16 tasks)
+  tkem/cachetools                            MIT           tag v7.2.1    commit 9976f1a80766  (36 tasks)
+
+   Totals: 15 MIT, 8 BSD-3-Clause, 2 BSD-2-Clause. Each project's own LICENSE file (with its copyright notice) is kept
+   unmodified inside its base snapshot archive in the task dataset; redistributing a snapshot or a patch derived from
+   its code must keep that notice. MIT conditions: copyright notice and permission notice included in all copies.
+   BSD conditions: retain the copyright notice, the list of conditions and the disclaimer in redistributions; the names
+   of the project and its contributors may not be used to endorse derived products without permission (BSD-3).
+   Files inside this package that quote short fragments of these projects: synth/tests (toy repo is original),
+   statement templates (original), mutated-function names in app_track/A_difficulty/results (identifiers only).
+
+2. JAX / Pallas (Apache-2.0, Copyright Google LLC and the JAX authors). app_track/C_pallas/seeds/*.py are original
+   programs written against the public jax.experimental.pallas API. Four of the 23 seeds (L01-L04 in the results) are
+   library kernels of jax 0.11.1 (ops/tpu/matmul.py, ops/tpu/flash_attention.py, ops/gpu/attention.py,
+   ops/gpu/softmax.py): they are NOT redistributed here; run_factory.py reads them from the pinned jax installation.
+   The factory output rows contain short code fragments of those files (mutated line, original line) under Apache-2.0.
+
+3. PyPI test dependencies used by the task sandboxes (hypothesis MPL-2.0, more-itertools MIT, railroad-diagrams MIT,
+   simplejson MIT/AFL-2.1, sortedcontainers Apache-2.0, wcwidth MIT, whatever): listed by name and version in the task
+   dataset's staging plan, not shipped (re-download with pip).
+
+4. Gemma 4 model output (checkpoint rows, behaviour tables): Apache-2.0 per the model terms; no restriction applies.
+
+5. Not included on purpose: Kaggle Competition Data (tasks.jsonl and its fields, snapshots, gold and test patches,
+   official graphs and embeddings, wheelhouse wheels, HARNESS_README) and Claude-authored teacher templates.
+
+MIT license text used by the projects above (generic form): Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND.

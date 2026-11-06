@@ -1,0 +1,102 @@
+{
+ "edit_by_4": {
+  "resolved": {
+   "n": 132,
+   "mean_sec_saved": 81.46275940585618,
+   "mean_calls_saved": 9.922727272727274,
+   "pct_of_run_llm_time": 41.97678833646966
+  },
+  "all_with_edit": {
+   "n": 200,
+   "mean_sec_saved": 113.54604320815994,
+   "mean_calls_saved": 13.7265,
+   "pct_of_run_llm_time": 45.0205056331766
+  },
+  "ab1_timeout_edited": {
+   "n": 26,
+   "mean_sec_saved": 190.61060588790664,
+   "mean_calls_saved": 26.446153846153848,
+   "pct_of_run_llm_time": 59.37630657909628
+  }
+ },
+ "edit_by_5": {
+  "resolved": {
+   "n": 132,
+   "mean_sec_saved": 75.06837217936751,
+   "mean_calls_saved": 9.056060606060607,
+   "pct_of_run_llm_time": 38.681836862870995
+  },
+  "all_with_edit": {
+   "n": 200,
+   "mean_sec_saved": 107.06426011867742,
+   "mean_calls_saved": 12.834,
+   "pct_of_run_llm_time": 42.45050720920593
+  },
+  "ab1_timeout_edited": {
+   "n": 26,
+   "mean_sec_saved": 184.09704281098357,
+   "mean_calls_saved": 25.446153846153848,
+   "pct_of_run_llm_time": 57.34729399411397
+  }
+ },
+ "edit_by_6": {
+  "resolved": {
+   "n": 132,
+   "mean_sec_saved": 68.98230072111365,
+   "mean_calls_saved": 8.260606060606062,
+   "pct_of_run_llm_time": 35.54575682744088
+  },
+  "all_with_edit": {
+   "n": 200,
+   "mean_sec_saved": 100.98946909622987,
+   "mean_calls_saved": 11.993500000000001,
+   "pct_of_run_llm_time": 40.04187934583697
+  },
+  "ab1_timeout_edited": {
+   "n": 26,
+   "mean_sec_saved": 172.8255474263682,
+   "mean_calls_saved": 24.446153846153848,
+   "pct_of_run_llm_time": 53.8361579665869
+  }
+ },
+ "edit_by_8": {
+  "resolved": {
+   "n": 132,
+   "mean_sec_saved": 56.18630690320931,
+   "mean_calls_saved": 6.818181818181818,
+   "pct_of_run_llm_time": 28.95213382760016
+  },
+  "all_with_edit": {
+   "n": 200,
+   "mean_sec_saved": 88.21939252707968,
+   "mean_calls_saved": 10.4345,
+   "pct_of_run_llm_time": 34.97860027530563
+  },
+  "ab1_timeout_edited": {
+   "n": 26,
+   "mean_sec_saved": 161.79725511867588,
+   "mean_calls_saved": 22.446153846153848,
+   "pct_of_run_llm_time": 50.40078110465872
+  }
+ },
+ "sensitivity_P_BAD_0.6_edit_by_5": {
+  "resolved": {
+   "n": 132,
+   "mean_sec_saved": 69.40898617691684,
+   "mean_calls_saved": 8.27878787878788,
+   "pct_of_run_llm_time": 35.76562275384864
+  },
+  "all_with_edit": {
+   "n": 200,
+   "mean_sec_saved": 100.86737603735484,
+   "mean_calls_saved": 12.033,
+   "pct_of_run_llm_time": 39.99346998616621
+  },
+  "ab1_timeout_edited": {
+   "n": 26,
+   "mean_sec_saved": 176.54726254504405,
+   "mean_calls_saved": 24.546153846153846,
+   "pct_of_run_llm_time": 54.99549375935234
+  }
+ }
+}

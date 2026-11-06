@@ -1,0 +1,107 @@
+{
+ "tag": "lora-ab1",
+ "mode": "real",
+ "arm_base": "edit-early-v4",
+ "arm_adapter": "rft-pilot1-sft-full",
+ "adapter": "rft_lora",
+ "adapter_sha256": "a3d7ba481eb3789b0880995f3ed8ea4e19f4f9e88e0aa3fa3a2b3098104e7927",
+ "budget": {
+  "max_time_minutes": 5.5,
+  "max_tool_calls": 60,
+  "max_turns": 120,
+  "timeout_seconds": 300
+ },
+ "concurrency": 8,
+ "n_samples": 1,
+ "tasks_in_order": 144,
+ "tasks_with_pair": 144,
+ "paired": {
+  "both": 63,
+  "only_adapter": 9,
+  "only_base": 7,
+  "neither": 65,
+  "pairs": 144,
+  "resolved_base": 70,
+  "resolved_adapter": 72,
+  "rate_base": 0.4861,
+  "rate_adapter": 0.5,
+  "diff": 0.0139,
+  "diff_ci95_bootstrap": [
+   -0.0417,
+   0.0694
+  ],
+  "mcnemar_exact_p": 0.803619,
+  "note": "pairs = (task, sample) with both arms finished; bootstrap resamples tasks; with n_samples > 1 the McNemar p-value ignores within-task correlation (anticonservative)"
+ },
+ "arms": {
+  "base": {
+   "units": 144,
+   "infra": 0,
+   "finished": 144,
+   "resolved": 70,
+   "resolved_rate": 0.4861,
+   "infra_rate": 0.0,
+   "timeouts": 59,
+   "timeout_rate": 0.4097,
+   "empty_patch": 12,
+   "empty_patch_rate": 0.0833,
+   "mean_agent_min": 3.847,
+   "mean_tool_calls": 29.667,
+   "mean_llm_calls": 31.694,
+   "mean_patch_chars": 846.917,
+   "mean_llm_latency_s": 7.212,
+   "mean_inflight_at_start": 7.806,
+   "skill_calls": 277,
+   "skill_malformed": 30,
+   "skill_malformed_rate": 0.1083,
+   "all_calls": 4473,
+   "all_malformed": 30,
+   "all_malformed_rate": 0.0067,
+   "error_types": {
+    "Agent exceeded session timeout (5.5 min)": 54
+   }
+  },
+  "adapter": {
+   "units": 144,
+   "infra": 0,
+   "finished": 144,
+   "resolved": 72,
+   "resolved_rate": 0.5,
+   "infra_rate": 0.0,
+   "timeouts": 57,
+   "timeout_rate": 0.3958,
+   "empty_patch": 9,
+   "empty_patch_rate": 0.0625,
+   "mean_agent_min": 3.985,
+   "mean_tool_calls": 30.146,
+   "mean_llm_calls": 31.799,
+   "mean_patch_chars": 906.174,
+   "mean_llm_latency_s": 7.446,
+   "mean_inflight_at_start": 7.799,
+   "skill_calls": 198,
+   "skill_malformed": 25,
+   "skill_malformed_rate": 0.1263,
+   "all_calls": 4484,
+   "all_malformed": 25,
+   "all_malformed_rate": 0.0056,
+   "error_types": {
+    "Agent exceeded session timeout (5.5 min)": 52
+   }
+  }
+ },
+ "cost": {
+  "spent_usd": 15.104,
+  "units_total": 288,
+  "units_finished": 288,
+  "usd_per_finished_run_marginal": 0.0468,
+  "projected_total_usd": 15.1,
+  "mean_run_wall_min": 4.411
+ },
+ "verdict_hint": "no significant difference: +1.4% (95% CI -4.2%..+6.9%, McNemar p=0.804, 144 pairs)",
+ "extra": {
+  "stop_reason": "complete",
+  "runs_per_h_session": 110.02,
+  "vllm_start_s": 254.6,
+  "probe_ok": true
+ }
+}

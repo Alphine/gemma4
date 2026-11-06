@@ -1,0 +1,460 @@
+{
+ "n": 243,
+ "pilot1_resolved": {
+  "n": 62,
+  "edit_by_6": 10,
+  "edit_later": 52,
+  "never_edited": 0,
+  "first_edit_call_median": 12.0,
+  "late": {
+   "runs": 52,
+   "pre_edit_calls_per_run": 17.057692307692307,
+   "pre_edit_tokens_per_run": 4088.75,
+   "kind_share_calls": {
+    "read": 0.361,
+    "search_read": 0.311,
+    "repro_run": 0.163,
+    "repro_write": 0.069,
+    "scratch_write": 0.034,
+    "locate": 0.032,
+    "test": 0.017,
+    "skill_other": 0.011,
+    "other_cmd": 0.001,
+    "NO_CALL": 0.001
+   },
+   "kind_share_tokens": {
+    "search_read": 0.347,
+    "read": 0.215,
+    "repro_run": 0.203,
+    "scratch_write": 0.094,
+    "repro_write": 0.081,
+    "locate": 0.032,
+    "test": 0.017,
+    "skill_other": 0.01,
+    "NO_CALL": 0.001,
+    "other_cmd": 0.0
+   },
+   "big_thought_calls_ge1000_per_run": 0.6730769230769231
+  },
+  "early": {
+   "runs": 10,
+   "pre_edit_calls_per_run": 3.8,
+   "pre_edit_tokens_per_run": 1391.6,
+   "kind_share_calls": {
+    "read": 0.447,
+    "repro_write": 0.158,
+    "repro_run": 0.105,
+    "locate": 0.105,
+    "search_read": 0.079,
+    "test": 0.053,
+    "NO_CALL": 0.026,
+    "scratch_write": 0.026
+   },
+   "kind_share_tokens": {
+    "NO_CALL": 0.294,
+    "read": 0.183,
+    "repro_run": 0.154,
+    "search_read": 0.129,
+    "repro_write": 0.1,
+    "locate": 0.06,
+    "scratch_write": 0.052,
+    "test": 0.028
+   },
+   "big_thought_calls_ge1000_per_run": 0.2
+  }
+ },
+ "ab1_resolved": {
+  "n": 70,
+  "edit_by_6": 18,
+  "edit_later": 52,
+  "never_edited": 0,
+  "first_edit_call_median": 11.0,
+  "late": {
+   "runs": 52,
+   "pre_edit_calls_per_run": 15.711538461538462,
+   "pre_edit_tokens_per_run": 3474.3846153846152,
+   "kind_share_calls": {
+    "read": 0.356,
+    "search_read": 0.33,
+    "repro_run": 0.11,
+    "repro_write": 0.073,
+    "scratch_write": 0.054,
+    "locate": 0.051,
+    "test": 0.016,
+    "skill_other": 0.005,
+    "other_cmd": 0.002,
+    "NO_CALL": 0.001
+   },
+   "kind_share_tokens": {
+    "search_read": 0.343,
+    "read": 0.205,
+    "repro_run": 0.159,
+    "scratch_write": 0.13,
+    "locate": 0.07,
+    "repro_write": 0.035,
+    "NO_CALL": 0.023,
+    "skill_other": 0.017,
+    "test": 0.015,
+    "other_cmd": 0.002
+   },
+   "big_thought_calls_ge1000_per_run": 0.46153846153846156
+  },
+  "early": {
+   "runs": 18,
+   "pre_edit_calls_per_run": 3.6666666666666665,
+   "pre_edit_tokens_per_run": 936.6666666666666,
+   "kind_share_calls": {
+    "read": 0.333,
+    "locate": 0.167,
+    "repro_write": 0.136,
+    "repro_run": 0.136,
+    "search_read": 0.091,
+    "scratch_write": 0.076,
+    "test": 0.03,
+    "skill_other": 0.015,
+    "NO_CALL": 0.015
+   },
+   "kind_share_tokens": {
+    "NO_CALL": 0.243,
+    "scratch_write": 0.18,
+    "locate": 0.174,
+    "read": 0.127,
+    "repro_run": 0.099,
+    "repro_write": 0.082,
+    "search_read": 0.036,
+    "test": 0.03,
+    "skill_other": 0.03
+   },
+   "big_thought_calls_ge1000_per_run": 0.1111111111111111
+  }
+ },
+ "all_resolved": {
+  "n": 132,
+  "edit_by_6": 28,
+  "edit_later": 104,
+  "never_edited": 0,
+  "first_edit_call_median": 11.5,
+  "late": {
+   "runs": 104,
+   "pre_edit_calls_per_run": 16.384615384615383,
+   "pre_edit_tokens_per_run": 3781.5673076923076,
+   "kind_share_calls": {
+    "read": 0.359,
+    "search_read": 0.32,
+    "repro_run": 0.138,
+    "repro_write": 0.071,
+    "scratch_write": 0.043,
+    "locate": 0.041,
+    "test": 0.016,
+    "skill_other": 0.008,
+    "other_cmd": 0.002,
+    "NO_CALL": 0.001
+   },
+   "kind_share_tokens": {
+    "search_read": 0.345,
+    "read": 0.211,
+    "repro_run": 0.183,
+    "scratch_write": 0.11,
+    "repro_write": 0.06,
+    "locate": 0.049,
+    "test": 0.016,
+    "skill_other": 0.014,
+    "NO_CALL": 0.011,
+    "other_cmd": 0.001
+   },
+   "big_thought_calls_ge1000_per_run": 0.5673076923076923
+  },
+  "early": {
+   "runs": 28,
+   "pre_edit_calls_per_run": 3.7142857142857144,
+   "pre_edit_tokens_per_run": 1099.142857142857,
+   "kind_share_calls": {
+    "read": 0.375,
+    "repro_write": 0.144,
+    "locate": 0.144,
+    "repro_run": 0.125,
+    "search_read": 0.087,
+    "scratch_write": 0.058,
+    "test": 0.038,
+    "NO_CALL": 0.019,
+    "skill_other": 0.01
+   },
+   "kind_share_tokens": {
+    "NO_CALL": 0.266,
+    "read": 0.153,
+    "repro_run": 0.123,
+    "locate": 0.122,
+    "scratch_write": 0.122,
+    "repro_write": 0.09,
+    "search_read": 0.078,
+    "test": 0.029,
+    "skill_other": 0.016
+   },
+   "big_thought_calls_ge1000_per_run": 0.14285714285714285
+  }
+ },
+ "ab1_timeout": {
+  "n": 59,
+  "edit_by_6": 0,
+  "edit_later": 26,
+  "never_edited": 33,
+  "first_edit_call_median": 27.5,
+  "late": {
+   "runs": 26,
+   "pre_edit_calls_per_run": 30.346153846153847,
+   "pre_edit_tokens_per_run": 6211.2692307692305,
+   "kind_share_calls": {
+    "search_read": 0.447,
+    "read": 0.366,
+    "repro_write": 0.051,
+    "repro_run": 0.049,
+    "scratch_write": 0.046,
+    "locate": 0.023,
+    "test": 0.008,
+    "skill_other": 0.005,
+    "other_cmd": 0.003,
+    "other": 0.001,
+    "NO_CALL": 0.001
+   },
+   "kind_share_tokens": {
+    "search_read": 0.438,
+    "read": 0.246,
+    "scratch_write": 0.116,
+    "repro_run": 0.08,
+    "test": 0.046,
+    "locate": 0.028,
+    "skill_other": 0.022,
+    "repro_write": 0.021,
+    "other_cmd": 0.003,
+    "other": 0.001,
+    "NO_CALL": 0.0
+   },
+   "big_thought_calls_ge1000_per_run": 1.1538461538461537
+  },
+  "never": {
+   "runs": 33,
+   "pre_edit_calls_per_run": 36.72727272727273,
+   "pre_edit_tokens_per_run": 8991.818181818182,
+   "kind_share_calls": {
+    "search_read": 0.446,
+    "read": 0.335,
+    "repro_run": 0.089,
+    "scratch_write": 0.049,
+    "repro_write": 0.044,
+    "locate": 0.019,
+    "test": 0.013,
+    "other_cmd": 0.002,
+    "other": 0.001,
+    "NO_CALL": 0.001,
+    "skill_other": 0.001
+   },
+   "kind_share_tokens": {
+    "search_read": 0.437,
+    "read": 0.195,
+    "repro_run": 0.158,
+    "scratch_write": 0.127,
+    "test": 0.028,
+    "locate": 0.025,
+    "NO_CALL": 0.014,
+    "other_cmd": 0.01,
+    "repro_write": 0.007,
+    "skill_other": 0.001,
+    "other": 0.001
+   },
+   "big_thought_calls_ge1000_per_run": 2.0303030303030303
+  }
+ },
+ "pilot1_unresolved": {
+  "n": 37,
+  "edit_by_6": 2,
+  "edit_later": 27,
+  "never_edited": 8,
+  "first_edit_call_median": 24,
+  "late": {
+   "runs": 27,
+   "pre_edit_calls_per_run": 28.333333333333332,
+   "pre_edit_tokens_per_run": 7423.074074074074,
+   "kind_share_calls": {
+    "search_read": 0.348,
+    "read": 0.323,
+    "scratch_write": 0.089,
+    "repro_write": 0.086,
+    "repro_run": 0.08,
+    "locate": 0.026,
+    "test": 0.021,
+    "skill_other": 0.021,
+    "NO_CALL": 0.004,
+    "other_cmd": 0.003
+   },
+   "kind_share_tokens": {
+    "search_read": 0.288,
+    "read": 0.253,
+    "scratch_write": 0.163,
+    "repro_run": 0.142,
+    "repro_write": 0.048,
+    "skill_other": 0.032,
+    "test": 0.028,
+    "NO_CALL": 0.023,
+    "locate": 0.023,
+    "other_cmd": 0.001
+   },
+   "big_thought_calls_ge1000_per_run": 1.4814814814814814
+  },
+  "early": {
+   "runs": 2,
+   "pre_edit_calls_per_run": 4.0,
+   "pre_edit_tokens_per_run": 1903.0,
+   "kind_share_calls": {
+    "repro_run": 0.5,
+    "read": 0.25,
+    "locate": 0.25
+   },
+   "kind_share_tokens": {
+    "locate": 0.621,
+    "repro_run": 0.327,
+    "read": 0.052
+   },
+   "big_thought_calls_ge1000_per_run": 0.5
+  },
+  "never": {
+   "runs": 8,
+   "pre_edit_calls_per_run": 60.75,
+   "pre_edit_tokens_per_run": 21300.625,
+   "kind_share_calls": {
+    "read": 0.358,
+    "search_read": 0.337,
+    "scratch_write": 0.099,
+    "repro_run": 0.084,
+    "repro_write": 0.068,
+    "test": 0.021,
+    "NO_CALL": 0.019,
+    "locate": 0.008,
+    "submit_patch": 0.002,
+    "other": 0.002,
+    "skill_other": 0.002
+   },
+   "kind_share_tokens": {
+    "search_read": 0.257,
+    "scratch_write": 0.226,
+    "NO_CALL": 0.194,
+    "read": 0.168,
+    "repro_write": 0.079,
+    "repro_run": 0.035,
+    "test": 0.02,
+    "locate": 0.019,
+    "skill_other": 0.002,
+    "other": 0.001,
+    "submit_patch": 0.0
+   },
+   "big_thought_calls_ge1000_per_run": 5.0
+  }
+ },
+ "first_call_kind": [
+  [
+   "repro_run",
+   74
+  ],
+  [
+   "locate",
+   63
+  ],
+  [
+   "repro_write",
+   37
+  ],
+  [
+   "search_read",
+   35
+  ],
+  [
+   "test",
+   29
+  ],
+  [
+   "skill_other",
+   3
+  ],
+  [
+   "scratch_write",
+   2
+  ]
+ ],
+ "resolve_by_first_edit": {
+  "edit<=6": [
+   33,
+   28
+  ],
+  "edit7-10": [
+   35,
+   31
+  ],
+  "edit>10": [
+   132,
+   73
+  ],
+  "never": [
+   43,
+   0
+  ]
+ },
+ "resolve_by_repro_before_edit": {
+  "repro_written_before_edit": [
+   152,
+   76
+  ],
+  "no_repro_before_edit": [
+   91,
+   56
+  ]
+ },
+ "resolve_by_first_call": {
+  "repro_write": [
+   37,
+   31
+  ],
+  "test": [
+   29,
+   17
+  ],
+  "search_read": [
+   35,
+   15
+  ],
+  "repro_run": [
+   74,
+   40
+  ],
+  "locate": [
+   63,
+   27
+  ],
+  "scratch_write": [
+   2,
+   2
+  ],
+  "skill_other": [
+   3,
+   0
+  ]
+ },
+ "resolve_by_maxct_ge1024": {
+  "has_call>=B": [
+   139,
+   54
+  ],
+  "none": [
+   104,
+   78
+  ]
+ },
+ "resolve_by_maxct_ge2048": {
+  "has_call>=B": [
+   56,
+   19
+  ],
+  "none": [
+   187,
+   113
+  ]
+ }
+}

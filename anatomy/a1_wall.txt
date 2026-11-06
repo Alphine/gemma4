@@ -1,0 +1,30 @@
+latency fit lat = 0.163 + 0.0287*ct + 0.000025*pt  R2=0.996 n=1009
+v6 {'wall': 269.1, 'llm_primary': 215.1, 'llm_compact': 22.8, 'killed_inflight': 29.2, 'tool': 1.5, 'gap': 0.7, 's_decode_rsn': np.float64(150.4), 's_decode_toolarg': np.float64(52.4), 's_decode_content': np.float64(1.1), 's_fixed': np.float64(4.4), 's_prefill': np.float64(6.8), 'n_prim': 27.0, 'n_compact': 1.2, 'tok_rsn': 5247.6, 'tok_toolarg': 1826.2, 'tok_content': 37.9, 'n': 14, 'tool_pct': 0.5, 'compact_pct': 8.5}
+decide {'wall': 250.7, 'llm_primary': 211.2, 'llm_compact': 18.1, 'killed_inflight': 19.0, 'tool': 1.9, 'gap': 0.5, 's_decode_rsn': np.float64(156.0), 's_decode_toolarg': np.float64(43.7), 's_decode_content': np.float64(1.8), 's_fixed': np.float64(3.8), 's_prefill': np.float64(5.6), 'n_prim': 23.1, 'n_compact': 1.0, 'tok_rsn': 5441.8, 'tok_toolarg': 1524.7, 'tok_content': 61.6, 'n': 13, 'tool_pct': 0.8, 'compact_pct': 7.2}
+lean {'wall': 234.1, 'llm_primary': 200.3, 'llm_compact': 26.4, 'killed_inflight': 4.8, 'tool': 2.1, 'gap': 0.6, 's_decode_rsn': np.float64(147.1), 's_decode_toolarg': np.float64(42.1), 's_decode_content': np.float64(1.2), 's_fixed': np.float64(4.2), 's_prefill': np.float64(6.0), 'n_prim': 25.5, 'n_compact': 1.3, 'tok_rsn': 5130.9, 'tok_toolarg': 1467.3, 'tok_content': 41.7, 'n': 13, 'tool_pct': 0.9, 'compact_pct': 11.3}
+ALL {'wall': 251.8, 'llm_primary': 209.0, 'llm_compact': 22.4, 'killed_inflight': 18.0, 'tool': 1.8, 'gap': 0.6, 's_decode_rsn': np.float64(151.2), 's_decode_toolarg': np.float64(46.2), 's_decode_content': np.float64(1.3), 's_fixed': np.float64(4.1), 's_prefill': np.float64(6.1), 'n_prim': 25.2, 'n_compact': 1.2, 'tok_rsn': 5272.8, 'tok_toolarg': 1611.6, 'tok_content': 46.9, 'n': 40, 'tool_pct': 0.7, 'compact_pct': 8.9}
+TOOL time by sub (all 40 runs):
+  skill:locate.py        n=  40 total=  16.6s mean=0.42s max=0.6s
+  pytest                 n=  19 total=  16.4s mean=0.86s max=1.5s
+  python                 n= 168 total=  13.7s mean=0.08s max=0.3s
+  skill:check.py         n=  18 total=  12.4s mean=0.69s max=1.0s
+  grep_find              n= 211 total=   3.8s mean=0.02s max=0.2s
+  git                    n=  30 total=   2.4s mean=0.08s max=1.7s
+  skill:edit_lines.py    n=  28 total=   2.4s mean=0.09s max=0.1s
+  read_file              n= 194 total=   1.6s mean=0.01s max=1.1s
+  other                  n=   1 total=   1.4s mean=1.42s max=1.4s
+  sed_cat                n=  94 total=   0.5s mean=0.01s max=0.0s
+  write_file             n=  43 total=   0.3s mean=0.01s max=0.0s
+  submit_patch           n=  18 total=   0.3s mean=0.02s max=0.0s
+  edit_file              n=  66 total=   0.2s mean=0.00s max=0.0s
+  other_shell            n=  16 total=   0.1s mean=0.01s max=0.0s
+  ls                     n=  14 total=   0.1s mean=0.01s max=0.0s
+  skill:edit_lines(malformed) n=  18 total=   0.0s mean=0.00s max=0.0s
+  sed_i                  n=   4 total=   0.0s mean=0.01s max=0.0s
+  skill:locate(malformed) n=   1 total=   0.0s mean=0.00s max=0.0s
+total tool 72.3s of 10071s wall = 0.72%
+run_command with timeout prefix: 127 ; exit_code 124: 0 []
+tool calls > 1.5 s: 2
+   (1.7, 'v7-decide-nt', 'T426', 'git', 'git log -S "3104"')
+   (1.5, 'v7-lean-nt', 'T426', 'pytest', 'timeout 60 python3 -m pytest tests/')
+compaction calls: n=41  mean lat=21.9s  ct mean=734  pt mean=3787  at t mean=172s; total 897s

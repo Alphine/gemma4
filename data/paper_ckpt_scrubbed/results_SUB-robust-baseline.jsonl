@@ -1,0 +1,12 @@
+{"instance_id":"T597","arm":"SUB-robust-baseline","resolved":true,"tool_calls":40,"duration_s":148.38953901799994,"patch_chars":2451,"error":null,"test_exit_code":0,"run_mode":"full","infra_error":false}
+{"instance_id":"T324","arm":"SUB-robust-baseline","resolved":false,"tool_calls":44,"duration_s":218.21738226899993,"patch_chars":782,"error":null,"test_exit_code":1,"run_mode":"full","infra_error":false}
+{"instance_id":"T272","arm":"SUB-robust-baseline","resolved":true,"tool_calls":13,"duration_s":38.43389841100009,"patch_chars":2302,"error":null,"test_exit_code":0,"run_mode":"full","infra_error":false}
+{"instance_id":"T202","arm":"SUB-robust-baseline","resolved":false,"tool_calls":42,"duration_s":117.4729912119999,"patch_chars":0,"error":null,"test_exit_code":1,"run_mode":"full","infra_error":false}
+{"instance_id":"T310","arm":"SUB-robust-baseline","resolved":false,"tool_calls":42,"duration_s":195.02766895199989,"patch_chars":1702,"error":null,"test_exit_code":1,"run_mode":"full","infra_error":false}
+{"instance_id":"T852","arm":"SUB-robust-baseline","resolved":false,"tool_calls":35,"duration_s":292.011361461,"patch_chars":1589,"error":"Agent exceeded session timeout (4.75 min)","test_exit_code":1,"run_mode":"full","infra_error":false}
+{"instance_id":"T049","arm":"SUB-robust-baseline","resolved":true,"tool_calls":5,"duration_s":27.190695261999736,"patch_chars":1205,"error":null,"test_exit_code":0,"run_mode":"full","infra_error":false}
+{"instance_id":"T844","arm":"SUB-robust-baseline","resolved":false,"tool_calls":18,"duration_s":289.68529797300016,"patch_chars":937,"error":"Agent exceeded session timeout (4.75 min)","test_exit_code":1,"run_mode":"full","infra_error":false}
+{"instance_id":"T354","arm":"SUB-robust-baseline","resolved":true,"tool_calls":15,"duration_s":47.636474116000045,"patch_chars":2232,"error":null,"test_exit_code":0,"run_mode":"full","infra_error":false}
+{"instance_id":"T893","arm":"SUB-robust-baseline","resolved":true,"tool_calls":15,"duration_s":76.16381516699994,"patch_chars":2407,"error":null,"test_exit_code":0,"run_mode":"full","infra_error":false}
+{"instance_id":"T029","arm":"SUB-robust-baseline","resolved":true,"tool_calls":4,"duration_s":21.46769002200017,"patch_chars":404,"error":null,"test_exit_code":0,"run_mode":"full","infra_error":false}
+{"instance_id":"T523","arm":"SUB-robust-baseline","resolved":false,"tool_calls":45,"duration_s":162.6388403359997,"patch_chars":1378,"error":null,"test_exit_code":1,"run_mode":"full","infra_error":false}

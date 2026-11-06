@@ -1,0 +1,90 @@
+{
+ "dev": {
+  "d=0|r=1": {
+   "power_or_alpha": 0.0505,
+   "sd_total_diff": 2.422026814425527
+  },
+  "d=0|r=2": {
+   "power_or_alpha": 0.04475,
+   "sd_total_diff": 1.6872460503361684
+  },
+  "d=0|r=3": {
+   "power_or_alpha": 0.04675,
+   "sd_total_diff": 1.386374345690546
+  },
+  "d=2.5|r=1": {
+   "power_or_alpha": 0.249,
+   "sd_total_diff": 2.3887438020019056
+  },
+  "d=2.5|r=2": {
+   "power_or_alpha": 0.401,
+   "sd_total_diff": 1.7019562090429943
+  },
+  "d=2.5|r=3": {
+   "power_or_alpha": 0.502,
+   "sd_total_diff": 1.3927477811665845
+  },
+  "d=5.1|r=1": {
+   "power_or_alpha": 0.63725,
+   "sd_total_diff": 2.3804014236048507
+  },
+  "d=5.1|r=2": {
+   "power_or_alpha": 0.87,
+   "sd_total_diff": 1.7194099233094475
+  },
+  "d=5.1|r=3": {
+   "power_or_alpha": 0.96075,
+   "sd_total_diff": 1.4011233191819896
+  }
+ },
+ "lb": {
+  "sd_run=1.1|n_each=1": {
+   "power_alpha05_onesided": 0.4338801666135663,
+   "se_diff_tasks": 1.5556349186104048
+  },
+  "sd_run=1.1|n_each=2": {
+   "power_alpha05_onesided": 0.6721685424071071,
+   "se_diff_tasks": 1.1
+  },
+  "sd_run=1.1|n_each=3": {
+   "power_alpha05_onesided": 0.8201220156899485,
+   "se_diff_tasks": 0.8981462390204987
+  },
+  "sd_run=1.1|n_each=5": {
+   "power_alpha05_onesided": 0.9516450393635262,
+   "se_diff_tasks": 0.6957010852370435
+  },
+  "sd_run=1.5|n_each=1": {
+   "power_alpha05_onesided": 0.2874773058433858,
+   "se_diff_tasks": 2.121320343559643
+  },
+  "sd_run=1.5|n_each=2": {
+   "power_alpha05_onesided": 0.4555438550650489,
+   "se_diff_tasks": 1.5
+  },
+  "sd_run=1.5|n_each=3": {
+   "power_alpha05_onesided": 0.5920968308065121,
+   "se_diff_tasks": 1.224744871391589
+  },
+  "sd_run=1.5|n_each=5": {
+   "power_alpha05_onesided": 0.7821317283624083,
+   "se_diff_tasks": 0.9486832980505138
+  },
+  "sd_run=2.0|n_each=1": {
+   "power_alpha05_onesided": 0.20275324378358373,
+   "se_diff_tasks": 2.8284271247461903
+  },
+  "sd_run=2.0|n_each=2": {
+   "power_alpha05_onesided": 0.31030006025448775,
+   "se_diff_tasks": 2.0
+  },
+  "sd_run=2.0|n_each=3": {
+   "power_alpha05_onesided": 0.40650551794590206,
+   "se_diff_tasks": 1.632993161855452
+  },
+  "sd_run=2.0|n_each=5": {
+   "power_alpha05_onesided": 0.5687959823720495,
+   "se_diff_tasks": 1.2649110640673518
+  }
+ }
+}

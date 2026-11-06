@@ -1,0 +1,12 @@
+{"instance_id":"T597","arm":"SUB-ladder-1-safety","resolved":true,"tool_calls":36,"duration_s":250.2916955239998,"patch_chars":1681,"error":null,"test_exit_code":0,"run_mode":"full","infra_error":false}
+{"instance_id":"T324","arm":"SUB-ladder-1-safety","resolved":false,"tool_calls":26,"duration_s":289.3366013940001,"patch_chars":853,"error":"Agent exceeded session timeout (4.75 min)","test_exit_code":1,"run_mode":"full","infra_error":false}
+{"instance_id":"T272","arm":"SUB-ladder-1-safety","resolved":true,"tool_calls":15,"duration_s":88.15090655400013,"patch_chars":2828,"error":null,"test_exit_code":0,"run_mode":"full","infra_error":false}
+{"instance_id":"T202","arm":"SUB-ladder-1-safety","resolved":false,"tool_calls":15,"duration_s":285.9177710130002,"patch_chars":0,"error":"Agent exceeded session timeout (4.75 min)","test_exit_code":-1,"run_mode":"full","infra_error":false}
+{"instance_id":"T310","arm":"SUB-ladder-1-safety","resolved":true,"tool_calls":30,"duration_s":272.388619072,"patch_chars":1143,"error":null,"test_exit_code":0,"run_mode":"full","infra_error":false}
+{"instance_id":"T852","arm":"SUB-ladder-1-safety","resolved":true,"tool_calls":45,"duration_s":289.29860152599986,"patch_chars":5658,"error":null,"test_exit_code":0,"run_mode":"full","infra_error":false}
+{"instance_id":"T049","arm":"SUB-ladder-1-safety","resolved":true,"tool_calls":15,"duration_s":169.01919746600015,"patch_chars":595,"error":null,"test_exit_code":0,"run_mode":"full","infra_error":false}
+{"instance_id":"T844","arm":"SUB-ladder-1-safety","resolved":true,"tool_calls":13,"duration_s":288.25106242599986,"patch_chars":2688,"error":null,"test_exit_code":0,"run_mode":"full","infra_error":false}
+{"instance_id":"T354","arm":"SUB-ladder-1-safety","resolved":true,"tool_calls":14,"duration_s":88.46485867000001,"patch_chars":558,"error":null,"test_exit_code":0,"run_mode":"full","infra_error":false}
+{"instance_id":"T893","arm":"SUB-ladder-1-safety","resolved":true,"tool_calls":17,"duration_s":194.60363268799938,"patch_chars":791,"error":null,"test_exit_code":0,"run_mode":"full","infra_error":false}
+{"instance_id":"T029","arm":"SUB-ladder-1-safety","resolved":true,"tool_calls":9,"duration_s":55.55867192799997,"patch_chars":404,"error":null,"test_exit_code":0,"run_mode":"full","infra_error":false}
+{"instance_id":"T523","arm":"SUB-ladder-1-safety","resolved":true,"tool_calls":16,"duration_s":221.58760862999952,"patch_chars":826,"error":null,"test_exit_code":0,"run_mode":"full","infra_error":false}

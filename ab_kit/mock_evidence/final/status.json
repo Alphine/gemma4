@@ -1,0 +1,381 @@
+{
+ "started": "2026-10-09 13:54:11",
+ "mode": "mock",
+ "events": [
+  {
+   "t_min": 0.02,
+   "msg": "mode=mock arms=['edit-early-v6-locate', 'edit-early-v7-decide-nt', 'edit-early-v7-lean-nt'] ckpt=/kaggle/input/datasets/<kaggle-owner>/gemma4-lb-eval-ckpt-mockaudit dataset launch_id='lbeval-mockaudit-0001'"
+  },
+  {
+   "t_min": 0.02,
+   "msg": "tasks=3 prior_rows=0 done=0 todo=9 in 3 task groups; arm order perm6: first groups T354:ly-v6-locate>v7-decide-nt>y-v7-lean-nt; T523:ly-v6-locate>y-v7-lean-nt>v7-decide-nt; T205:v7-decide-nt>ly-v6-locate>y-v7-lean-nt"
+  },
+  {
+   "t_min": 1.28,
+   "msg": "wheelhouse installed"
+  },
+  {
+   "t_min": 1.28,
+   "msg": "versions: {\"swegemma\": \"0.2.10\", \"adk-submission\": \"0.2.13\", \"google-adk\": \"1.36.1\", \"adk-eval-core\": \"0.1.0\", \"litellm\": \"1.82.4\", \"openai\": \"2.32.0\", \"httpx\": \"0.28.1\", \"vllm\": \"0.19.1\", \"transformers\": \"5.13.1\", \"tokenizers\": \"0.22.2\", \"torch\": \"2.10.0+cu128\"}"
+  },
+  {
+   "t_min": 2.05,
+   "msg": "arm edit-early-v6-locate: budget {'timeout_seconds': 300, 'max_tool_calls': 60, 'max_time_minutes': 5.5, 'max_turns': 120} (from {'timeout_seconds': 'eval_config.yaml', 'max_tool_calls': 'eval_config.yaml', 'max_time_minutes': 'eval_config.yaml', 'max_turns': 'eval_config.yaml'}); expected request sampling {'max_output_tokens': 4096, 'thinking_budget': 4096, 'seed': 0, 'temperature': 0.2, 'top_p': 0.95}"
+  },
+  {
+   "t_min": 2.05,
+   "msg": "arm edit-early-v7-decide-nt: budget {'timeout_seconds': 300, 'max_tool_calls': 60, 'max_time_minutes': 5.5, 'max_turns': 120} (from {'timeout_seconds': 'eval_config.yaml', 'max_tool_calls': 'eval_config.yaml', 'max_time_minutes': 'eval_config.yaml', 'max_turns': 'eval_config.yaml'}); expected request sampling {'max_output_tokens': 4096, 'thinking_budget': 4096, 'seed': 0, 'temperature': 0.2, 'top_p': 0.95}"
+  },
+  {
+   "t_min": 2.06,
+   "msg": "arm edit-early-v7-lean-nt: budget {'timeout_seconds': 300, 'max_tool_calls': 60, 'max_time_minutes': 5.5, 'max_turns': 120} (from {'timeout_seconds': 'eval_config.yaml', 'max_tool_calls': 'eval_config.yaml', 'max_time_minutes': 'eval_config.yaml', 'max_turns': 'eval_config.yaml'}); expected request sampling {'max_output_tokens': 2560, 'thinking_budget': 1024, 'seed': 0, 'temperature': 0.2, 'top_p': 0.95}"
+  },
+  {
+   "t_min": 2.06,
+   "msg": "arm parity: files differing between arms = ['agent.yaml', 'configs/sampling.yaml', 'prompts/system.md']"
+  },
+  {
+   "t_min": 2.06,
+   "msg": "mock LLM at http://127.0.0.1:38217/v1"
+  },
+  {
+   "t_min": 2.69,
+   "msg": "recorder tokenizer: hf:2"
+  },
+  {
+   "t_min": 2.8,
+   "msg": "wheels for sandbox: /tmp/wheels_sandbox (dropped other-ABI: ['<wheel>', '<wheel>', '<wheel>', '<wheel>'])"
+  },
+  {
+   "t_min": 2.8,
+   "msg": "emulation: host python 3.12.13, sandbox python HOST (mismatch!), image pkgs 18, sitecustomize neutralized ['/etc/python3.10/sitecustomize.py', '/etc/python3.12/sitecustomize.py', '/usr/lib/python3.10/sitecustomize.py', '/usr/lib/python3.12/sitecustomize.py']"
+  },
+  {
+   "t_min": 3.09,
+   "msg": "[1/9] edit-early-v6-locate     T354       solvable pos=0 resolved=True  cls=none agent=0.047m phaseA=0.163m total=0.293m calls=4 ct=912 firstEdit=None rsnMax=110 lenCalls=0 http400=0 mismatch=no"
+  },
+  {
+   "t_min": 3.34,
+   "msg": "[2/9] edit-early-v7-decide-nt  T354       solvable pos=1 resolved=True  cls=none agent=0.028m phaseA=0.115m total=0.244m calls=4 ct=912 firstEdit=None rsnMax=110 lenCalls=0 http400=0 mismatch=no"
+  },
+  {
+   "t_min": 3.59,
+   "msg": "[3/9] edit-early-v7-lean-nt    T354       solvable pos=2 resolved=True  cls=none agent=0.03m phaseA=0.118m total=0.249m calls=4 ct=912 firstEdit=None rsnMax=110 lenCalls=0 http400=0 mismatch=no"
+  },
+  {
+   "t_min": 3.93,
+   "msg": "[4/9] edit-early-v6-locate     T523   dead     pos=0 resolved=False cls=none agent=0.015m phaseA=0.165m total=0.343m calls=2 ct=608 firstEdit=None rsnMax=110 lenCalls=0 http400=0 mismatch=no"
+  },
+  {
+   "t_min": 4.24,
+   "msg": "[5/9] edit-early-v7-lean-nt    T523   dead     pos=1 resolved=False cls=none agent=0.015m phaseA=0.128m total=0.307m calls=2 ct=608 firstEdit=None rsnMax=110 lenCalls=0 http400=0 mismatch=no"
+  },
+  {
+   "t_min": 4.55,
+   "msg": "[6/9] edit-early-v7-decide-nt  T523   dead     pos=2 resolved=False cls=none agent=0.015m phaseA=0.13m total=0.307m calls=2 ct=608 firstEdit=None rsnMax=110 lenCalls=0 http400=0 mismatch=no"
+  },
+  {
+   "t_min": 5.17,
+   "msg": "[7/9] edit-early-v7-decide-nt  T205   free     pos=0 resolved=False cls=none agent=0.028m phaseA=0.208m total=0.626m calls=2 ct=608 firstEdit=None rsnMax=110 lenCalls=0 http400=0 mismatch=no"
+  },
+  {
+   "t_min": 5.64,
+   "msg": "[8/9] edit-early-v6-locate     T205   free     pos=1 resolved=False cls=none agent=0.03m phaseA=0.215m total=0.471m calls=2 ct=608 firstEdit=None rsnMax=110 lenCalls=0 http400=0 mismatch=no"
+  },
+  {
+   "t_min": 6.11,
+   "msg": "[9/9] edit-early-v7-lean-nt    T205   free     pos=2 resolved=False cls=none agent=0.028m phaseA=0.21m total=0.47m calls=2 ct=608 firstEdit=None rsnMax=110 lenCalls=0 http400=0 mismatch=no"
+  },
+  {
+   "t_min": 6.12,
+   "msg": "SUMMARY edit-early-v6-locate: resolved 1/1 (partial) projLB=0.3101 dead_early_exit=1.0 dead_mean=0.015m proj120=0.33h worst120=11.3h errors={'none': 3} | ct_atif=709.333 M1max=110 lenFrac=0.0 M2edit=None M2rg=0.0 cls={'none': 3}"
+  },
+  {
+   "t_min": 6.12,
+   "msg": "SUMMARY edit-early-v7-decide-nt: resolved 1/1 (partial) projLB=0.3101 dead_early_exit=1.0 dead_mean=0.015m proj120=0.25h worst120=11.25h errors={'none': 3} | ct_atif=709.333 M1max=110 lenFrac=0.0 M2edit=None M2rg=0.0 cls={'none': 3}"
+  },
+  {
+   "t_min": 6.12,
+   "msg": "SUMMARY edit-early-v7-lean-nt: resolved 1/1 (partial) projLB=0.3101 dead_early_exit=1.0 dead_mean=0.015m proj120=0.25h worst120=11.26h errors={'none': 3} | ct_atif=709.333 M1max=110 lenFrac=0.0 M2edit=None M2rg=0.0 cls={'none': 3}"
+  },
+  {
+   "t_min": 6.12,
+   "msg": "PAIRED {\"edit-early-v7-decide-nt\": {\"n_pairs\": 3, \"resolve\": {\"control_only\": 0, \"arm_only\": 0, \"both\": 1, \"neither\": 2}, \"time_cap\": {\"control\": 0, \"arm\": 0}, \"M2_pass\": false, \"M1_pass\": true}, \"edit-early-v7-lean-nt\": {\"n_pairs\": 3, \"resolve\": {\"control_only\": 0, \"arm_only\": 0, \"both\": 1, \"neither\": 2}, \"time_cap\": {\"control\": 0, \"arm\": 0}, \"M2_pass\": false, \"M1_pass\": true}}"
+  },
+  {
+   "t_min": 6.12,
+   "msg": "CHECK PASS manager_is_emulated_ContainerManager"
+  },
+  {
+   "t_min": 6.12,
+   "msg": "CHECK PASS containerA_grader_path(base wheels injected + setup.py --fast-path, no host pth)"
+  },
+  {
+   "t_min": 6.12,
+   "msg": "CHECK PASS containerB_grader_path"
+  },
+  {
+   "t_min": 6.12,
+   "msg": "CHECK PASS agent_sees_no_host_site_packages_and_no_PYTHONPATH"
+  },
+  {
+   "t_min": 6.12,
+   "msg": "CHECK PASS fastapi_task_agent_sees_typing_inspection_collection_error"
+  },
+  {
+   "t_min": 6.12,
+   "msg": "CHECK PASS fastapi_task_early_exit"
+  },
+  {
+   "t_min": 6.12,
+   "msg": "CHECK PASS parity_solvable_tasks_resolved_with_gold (gold-control: 40/40)"
+  },
+  {
+   "t_min": 6.12,
+   "msg": "CHECK PASS gold_resolves_every_solvable_task (40/40 under this sandbox python; mock or direct verify_task)"
+  },
+  {
+   "t_min": 6.12,
+   "msg": "CHECK PASS free_tasks_resolved_with_nonempty_gold_patch"
+  },
+  {
+   "t_min": 6.12,
+   "msg": "CHECK PASS empty_submission_scores_0_like_grader (Evaluator alone would score it)"
+  },
+  {
+   "t_min": 6.12,
+   "msg": "CHECK PASS parity_dead_tasks_not_resolved (gold-control: 0/10)"
+  },
+  {
+   "t_min": 6.12,
+   "msg": "CHECK PASS parity_typing_inspection_tasks_show_error_to_agent"
+  },
+  {
+   "t_min": 6.12,
+   "msg": "CHECK PASS rich_gold_fix_resolved_through_full_pipeline"
+  },
+  {
+   "t_min": 6.12,
+   "msg": "CHECK PASS budgets_from_each_arms_eval_config (identical across arms in the paired A/B)"
+  },
+  {
+   "t_min": 6.12,
+   "msg": "CHECK PASS recorder_captured_primary_requests_for_every_run"
+  },
+  {
+   "t_min": 6.12,
+   "msg": "CHECK PASS request_matches_each_arms_sampling_yaml (client side, recorder)"
+  },
+  {
+   "t_min": 6.12,
+   "msg": "CHECK PASS request_matches_each_arms_sampling_yaml (server side ground truth of the mock)"
+  },
+  {
+   "t_min": 6.12,
+   "msg": "CHECK PASS arms_have_distinct_sampling_in_requests"
+  },
+  {
+   "t_min": 6.12,
+   "msg": "CHECK PASS trace_mechanism_fields_present (ATIF digest, ct_atif, first_edit_idx key)"
+  },
+  {
+   "t_min": 6.12,
+   "msg": "CHECK PASS arm_position_rotation (each task group has distinct positions; >1 arm leads across tasks)"
+  },
+  {
+   "t_min": 6.12,
+   "msg": "CHECK PASS m1_reasoning_tokens_counted (mock reasoning words -> tokens)"
+  },
+  {
+   "t_min": 6.12,
+   "msg": "CHECK PASS err_class_present_and_config_error_false_and_no_instrumentation_error"
+  },
+  {
+   "t_min": 6.12,
+   "msg": "CHECK PASS metrics_files_written"
+  },
+  {
+   "t_min": 6.12,
+   "msg": "INFO sandbox_python_is_3.13: {'ok': False, 'detail': 'host 3.12.13, sandbox host; informational: the GPU image has no python3.13 (grader image is 3.13)'}"
+  },
+  {
+   "t_min": 6.12,
+   "msg": "INFO mock_gold_apply_failed (excluded from parity): []"
+  },
+  {
+   "t_min": 6.12,
+   "msg": "MOCK CHECKS PASS"
+  },
+  {
+   "t_min": 6.12,
+   "msg": "packed traces + calllogs -> traces_lbeval-mockaudit-0001.tar.gz (0.0 MB)"
+  },
+  {
+   "t_min": 6.12,
+   "msg": "exit"
+  }
+ ],
+ "versions": {
+  "swegemma": "0.2.10",
+  "adk-submission": "0.2.13",
+  "google-adk": "1.36.1",
+  "adk-eval-core": "0.1.0",
+  "litellm": "1.82.4",
+  "openai": "2.32.0",
+  "httpx": "0.28.1",
+  "vllm": "0.19.1",
+  "transformers": "5.13.1",
+  "tokenizers": "0.22.2",
+  "torch": "2.10.0+cu128"
+ },
+ "budgets": {
+  "edit-early-v6-locate": {
+   "timeout_seconds": 300,
+   "max_tool_calls": 60,
+   "max_time_minutes": 5.5,
+   "max_turns": 120
+  },
+  "edit-early-v7-decide-nt": {
+   "timeout_seconds": 300,
+   "max_tool_calls": 60,
+   "max_time_minutes": 5.5,
+   "max_turns": 120
+  },
+  "edit-early-v7-lean-nt": {
+   "timeout_seconds": 300,
+   "max_tool_calls": 60,
+   "max_time_minutes": 5.5,
+   "max_turns": 120
+  }
+ },
+ "expected_sampling": {
+  "edit-early-v6-locate": {
+   "max_output_tokens": 4096,
+   "thinking_budget": 4096,
+   "seed": 0,
+   "temperature": 0.2,
+   "top_p": 0.95
+  },
+  "edit-early-v7-decide-nt": {
+   "max_output_tokens": 4096,
+   "thinking_budget": 4096,
+   "seed": 0,
+   "temperature": 0.2,
+   "top_p": 0.95
+  },
+  "edit-early-v7-lean-nt": {
+   "max_output_tokens": 2560,
+   "thinking_budget": 1024,
+   "seed": 0,
+   "temperature": 0.2,
+   "top_p": 0.95
+  }
+ },
+ "arm_parity": {
+  "digests": {
+   "agent.yaml": {
+    "edit-early-v6-locate": "a5e12bb39488",
+    "edit-early-v7-decide-nt": "f9f19652befc",
+    "edit-early-v7-lean-nt": "f9f19652befc"
+   },
+   "configs/sampling.yaml": {
+    "edit-early-v6-locate": "c711f07883d8",
+    "edit-early-v7-decide-nt": "c711f07883d8",
+    "edit-early-v7-lean-nt": "11ac82a612bd"
+   },
+   "eval_config.yaml": {
+    "edit-early-v6-locate": "ba319be46458",
+    "edit-early-v7-decide-nt": "ba319be46458",
+    "edit-early-v7-lean-nt": "ba319be46458"
+   },
+   "prompts/system.md": {
+    "edit-early-v6-locate": "94a8787e69b9",
+    "edit-early-v7-decide-nt": "2ebc7b80586c",
+    "edit-early-v7-lean-nt": "2ebc7b80586c"
+   },
+   "skills/swe-tools/SKILL.md": {
+    "edit-early-v6-locate": "23963a7f2488",
+    "edit-early-v7-decide-nt": "23963a7f2488",
+    "edit-early-v7-lean-nt": "23963a7f2488"
+   },
+   "skills/swe-tools/scripts/check.py": {
+    "edit-early-v6-locate": "7f59bab780b8",
+    "edit-early-v7-decide-nt": "7f59bab780b8",
+    "edit-early-v7-lean-nt": "7f59bab780b8"
+   },
+   "skills/swe-tools/scripts/edit_lines.py": {
+    "edit-early-v6-locate": "d68d2d1f75ad",
+    "edit-early-v7-decide-nt": "d68d2d1f75ad",
+    "edit-early-v7-lean-nt": "d68d2d1f75ad"
+   },
+   "skills/swe-tools/scripts/locate.py": {
+    "edit-early-v6-locate": "ae8b6d3d83b9",
+    "edit-early-v7-decide-nt": "ae8b6d3d83b9",
+    "edit-early-v7-lean-nt": "ae8b6d3d83b9"
+   }
+  },
+  "differs": [
+   "agent.yaml",
+   "configs/sampling.yaml",
+   "prompts/system.md"
+  ]
+ },
+ "adapters": {
+  "edit-early-v6-locate": [],
+  "edit-early-v7-decide-nt": [],
+  "edit-early-v7-lean-nt": []
+ },
+ "env": {
+  "host_python": "3.12.13",
+  "sandbox_python": null,
+  "sandbox_python_is_313": false,
+  "wheels_dir": "/tmp/wheels_sandbox",
+  "wheels_symlink": true,
+  "neutralized_sitecustomize": [
+   "/etc/python3.10/sitecustomize.py",
+   "/etc/python3.12/sitecustomize.py",
+   "/usr/lib/python3.10/sitecustomize.py",
+   "/usr/lib/python3.12/sitecustomize.py"
+  ],
+  "image": {
+   "pip_target": "",
+   "host_extra": {
+    "pip": "/usr/local/lib/python3.12/dist-packages/pip",
+    "pytest_timeout": null,
+    "shellingham": "/usr/local/lib/python3.12/dist-packages/shellingham",
+    "pathspec": "/usr/local/lib/python3.12/dist-packages/pathspec",
+    "trove_classifiers": null,
+    "annotated_doc": "/usr/local/lib/python3.12/dist-packages/annotated_doc",
+    "colorama": "/usr/local/lib/python3.12/dist-packages/colorama"
+   },
+   "missing_requirements": [
+    "annotated_doc",
+    "colorama",
+    "trove_classifiers"
+   ],
+   "image_pkgs": [
+    "click-8.4.2.dist-info",
+    "editables-0.6.dist-info",
+    "flit_core-3.12.0.dist-info",
+    "hatchling-1.30.1.dist-info",
+    "iniconfig-2.3.0.dist-info",
+    "markdown_it_py-4.2.0.dist-info",
+    "mdurl-0.1.2.dist-info",
+    "packaging-26.3.dist-info",
+    "pdm_backend-2.4.9.dist-info",
+    "pluggy-1.6.0.dist-info",
+    "poetry_core-2.4.1.dist-info",
+    "pygments-2.21.0.dist-info",
+    "pytest-9.1.1.dist-info",
+    "rich-15.0.0.dist-info",
+    "setuptools-83.0.0.dist-info",
+    "typer-0.26.7.dist-info",
+    "typing_extensions-4.16.0.dist-info",
+    "wheel-0.47.0.dist-info"
+   ]
+  }
+ },
+ "host": {
+  "hostname": "633b20f849f9"
+ }
+}

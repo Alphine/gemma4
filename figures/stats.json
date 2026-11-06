@@ -1,0 +1,116 @@
+{
+ "gold_control": {
+  "fastapi": {
+   "missing wheel (typing_inspection)": 63,
+   "missing test dep (dirty_equals / attr)": 3,
+   "solvable": 1
+  },
+  "rich": {
+   "solvable": 39,
+   "other (pygments drift, SSL, version gate, collection)": 8,
+   "missing test dep (dirty_equals / attr)": 1
+  },
+  "requests": {
+   "installed wheel shadows src/": 9,
+   "other (pygments drift, SSL, version gate, collection)": 1,
+   "passes with empty patch": 3
+  },
+  "httpx": {
+   "other (pygments drift, SSL, version gate, collection)": 1
+  }
+ },
+ "lb_eval": {
+  "projected_lb": 0.1008,
+  "se_projection": 0.0228,
+  "solvable_wilson95": [
+   0.161,
+   0.428
+  ]
+ },
+ "public_lb_binomial_se_at_0.08_n58": 0.0356,
+ "triage_obedience": {
+  "n_dead": 10,
+  "env_broken_marker": 7,
+  "early_exit": 2,
+  "fastapi_dead": 7,
+  "fastapi_marker": 7,
+  "solvable_early_exit": 0
+ },
+ "taxonomy_v1": {
+  "wrong_location": 8,
+  "resolved": 13,
+  "incomplete_fix": 9,
+  "no_patch_budget": 14,
+  "only_tests_or_scratch": 2,
+  "no_patch_gave_up": 3,
+  "right_location_wrong_fix": 3
+ },
+ "code_graph": {
+  "smoke": {
+   "OFF": 3,
+   "REP": 3,
+   "NOG": 3,
+   "PIPE-BM25": 1,
+   "PIPE-DIR": 2,
+   "PIPE-UNDIR": 0
+  },
+  "loc_all": {
+   "NOG": 9,
+   "LOC-BM25": 8,
+   "LOC-DIR": 9,
+   "LOC-UNDIR": 10
+  },
+  "loc_on_solvable": {
+   "NOG": 2,
+   "LOC-BM25": 2,
+   "LOC-DIR": 2,
+   "LOC-UNDIR": 2
+  },
+  "paired": {
+   "LOC-BM25": {
+    "wins_vs_NOG": 0,
+    "losses_vs_NOG": 1
+   },
+   "LOC-DIR": {
+    "wins_vs_NOG": 1,
+    "losses_vs_NOG": 1
+   },
+   "LOC-UNDIR": {
+    "wins_vs_NOG": 1,
+    "losses_vs_NOG": 0
+   }
+  },
+  "n_solvable_in_loc_set": 4,
+  "n_solvable_in_smoke_set": 0
+ },
+ "graph_audit": {
+  "fastapi": {
+   "n_snapshots": 67,
+   "official_nodes": 3968,
+   "rep_nodes": 5085,
+   "async_nodes": 1044,
+   "official_edge_recall": 0.865
+  },
+  "rich": {
+   "n_snapshots": 47,
+   "official_nodes": 1970,
+   "rep_nodes": 2016,
+   "async_nodes": 1,
+   "official_edge_recall": 0.967
+  },
+  "requests": {
+   "n_snapshots": 12,
+   "official_nodes": 735,
+   "rep_nodes": 756,
+   "async_nodes": 0,
+   "official_edge_recall": 0.939
+  },
+  "httpx": {
+   "n_snapshots": 1,
+   "official_nodes": 740,
+   "rep_nodes": 840,
+   "async_nodes": 100,
+   "official_edge_recall": 0.759
+  }
+ }
+}

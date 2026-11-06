@@ -1,0 +1,486 @@
+{
+ "created": "2026-10-06 20:16:40",
+ "n_candidates_in": 965,
+ "n_verified": 965,
+ "n_valid": 959,
+ "n_train": 815,
+ "n_heldout": 144,
+ "heldout_repos": [
+  "PyCQA/pycodestyle",
+  "alecthomas/voluptuous"
+ ],
+ "n_heldout_functions": 44,
+ "repos": {
+  "andialbrecht/sqlparse": {
+   "licence": "BSD-3-Clause",
+   "tag": "0.6.0",
+   "commit": "2f40da99b50d81135aecf96f6b08fcfa338a96de",
+   "commit_date": "2026-08-13T21:04:24+02:00",
+   "packages": [
+    "sqlparse"
+   ],
+   "snapshot_bytes": 147471,
+   "candidates": 47,
+   "valid": 45,
+   "train": 41,
+   "heldout": 4
+  },
+  "mahmoud/boltons": {
+   "licence": "BSD-2-Clause",
+   "tag": "26.2.0",
+   "commit": "4332b35a278d694f30c99881faa61cde695c7a96",
+   "commit_date": "2026-09-07T03:42:05-07:00",
+   "packages": [
+    "boltons"
+   ],
+   "snapshot_bytes": 268746,
+   "candidates": 47,
+   "valid": 47,
+   "train": 46,
+   "heldout": 1
+  },
+  "lepture/mistune": {
+   "licence": "BSD-3-Clause",
+   "tag": "v3.3.4",
+   "commit": "69ec2b8a6d5b37ecb3c56d96df4b40b9d3004657",
+   "commit_date": "2026-07-22T13:57:02+09:00",
+   "packages": [
+    "mistune"
+   ],
+   "snapshot_bytes": 127028,
+   "candidates": 25,
+   "valid": 25,
+   "train": 23,
+   "heldout": 2
+  },
+  "pyparsing/pyparsing": {
+   "licence": "MIT",
+   "tag": "3.3.3",
+   "commit": "d90d38b283efaece7ac7cace7050ba55cb82abe5",
+   "commit_date": "2026-09-20T14:45:18-05:00",
+   "packages": [
+    "pyparsing"
+   ],
+   "snapshot_bytes": 6860369,
+   "candidates": 47,
+   "valid": 47,
+   "train": 43,
+   "heldout": 4
+  },
+  "pytoolz/toolz": {
+   "licence": "BSD-3-Clause",
+   "tag": "1.1.0",
+   "commit": "568c2b8393973cd172a466546c9d95779c452438",
+   "commit_date": "2025-10-16T22:29:39-05:00",
+   "packages": [
+    "toolz",
+    "tlz"
+   ],
+   "snapshot_bytes": 78754,
+   "candidates": 47,
+   "valid": 47,
+   "train": 45,
+   "heldout": 2
+  },
+  "python-poetry/tomlkit": {
+   "licence": "MIT",
+   "tag": "0.15.1",
+   "commit": "1bd7e3bc5bcc957d359a6c4d8e420163f32ac009",
+   "commit_date": "2026-07-17T09:44:29+08:00",
+   "packages": [
+    "tomlkit"
+   ],
+   "snapshot_bytes": 119426,
+   "candidates": 47,
+   "valid": 47,
+   "train": 44,
+   "heldout": 3
+  },
+  "r1chardj0n3s/parse": {
+   "licence": "MIT",
+   "tag": "1.22.2",
+   "commit": "529dc2e01a0d882ec55d673304253b40eb4d38b2",
+   "commit_date": "2026-09-18T11:42:43-05:00",
+   "packages": [
+    "parse"
+   ],
+   "snapshot_bytes": 31595,
+   "candidates": 37,
+   "valid": 37,
+   "train": 35,
+   "heldout": 2
+  },
+  "tkem/cachetools": {
+   "licence": "MIT",
+   "tag": "v7.2.1",
+   "commit": "9976f1a8076631560f49c5b0dfda7e4d00ee0a4a",
+   "commit_date": "2026-10-05T20:29:09+02:00",
+   "packages": [
+    "cachetools"
+   ],
+   "snapshot_bytes": 46279,
+   "candidates": 36,
+   "valid": 36,
+   "train": 35,
+   "heldout": 1
+  },
+  "jpvanhal/inflection": {
+   "licence": "MIT",
+   "tag": "0.5.1",
+   "commit": "b00d4d348b32ef5823221b20ee4cbd1d2d924462",
+   "commit_date": "2020-08-22T11:13:03+03:00",
+   "packages": [
+    "inflection"
+   ],
+   "snapshot_bytes": 14297,
+   "candidates": 5,
+   "valid": 5,
+   "train": 3,
+   "heldout": 2
+  },
+  "jmespath/jmespath.py": {
+   "licence": "MIT",
+   "tag": "1.1.0",
+   "commit": "6ff419a8b171d055a9bfc6904605bceb8b7a80ef",
+   "commit_date": "2026-01-22T11:28:53-05:00",
+   "packages": [
+    "jmespath"
+   ],
+   "snapshot_bytes": 53558,
+   "candidates": 47,
+   "valid": 47,
+   "heldout": 8,
+   "train": 39
+  },
+  "astanin/python-tabulate": {
+   "licence": "MIT",
+   "tag": "v0.10.0",
+   "commit": "3b4cd509820e4c45cd2aaba833aa585ea6308b94",
+   "commit_date": "2026-03-04T19:10:09+01:00",
+   "packages": [
+    "tabulate"
+   ],
+   "snapshot_bytes": 67551,
+   "candidates": 47,
+   "valid": 47,
+   "train": 43,
+   "heldout": 4
+  },
+  "martinblech/xmltodict": {
+   "licence": "MIT",
+   "tag": "v1.0.4",
+   "commit": "8d7f1fdb2251b5dc3b98df447850cb8229defc32",
+   "commit_date": "2026-02-21T22:45:55-03:00",
+   "packages": [
+    "xmltodict"
+   ],
+   "snapshot_bytes": 31026,
+   "candidates": 27,
+   "valid": 27,
+   "train": 27
+  },
+  "PyCQA/pyflakes": {
+   "licence": "MIT",
+   "tag": "4.0.2",
+   "commit": "4756a379502d8692cc5023f1b19aa92d190bfb3d",
+   "commit_date": "2026-10-03T17:12:59-04:00",
+   "packages": [
+    "pyflakes"
+   ],
+   "snapshot_bytes": 65940,
+   "candidates": 47,
+   "valid": 47,
+   "heldout": 3,
+   "train": 44
+  },
+  "Python-Markdown/markdown": {
+   "licence": "BSD-3-Clause",
+   "tag": "3.11.0",
+   "commit": "0ffbf00cf667971d46f43aafba825e8d25098bc5",
+   "commit_date": "2026-09-25T09:39:28-04:00",
+   "packages": [
+    "markdown"
+   ],
+   "snapshot_bytes": 540845,
+   "candidates": 47,
+   "valid": 47,
+   "train": 44,
+   "heldout": 3
+  },
+  "python-semver/python-semver": {
+   "licence": "BSD-3-Clause",
+   "tag": "3.1.0",
+   "commit": "642d1bc8949d38cca7922df478d0f2c06513f99d",
+   "commit_date": "2026-09-12T20:25:54+02:00",
+   "packages": [
+    "semver"
+   ],
+   "snapshot_bytes": 295262,
+   "candidates": 10,
+   "valid": 10,
+   "train": 10
+  },
+  "marshmallow-code/marshmallow": {
+   "licence": "MIT",
+   "tag": "4.3.1",
+   "commit": "c7b559a1fa3aba57ca6dba0ab336841c5038a782",
+   "commit_date": "2026-08-08T10:26:10-04:00",
+   "packages": [
+    "marshmallow"
+   ],
+   "snapshot_bytes": 295242,
+   "candidates": 47,
+   "valid": 47,
+   "train": 41,
+   "heldout": 6
+  },
+  "msiemens/tinydb": {
+   "licence": "MIT",
+   "tag": "v4.9.0",
+   "commit": "1e39ad3a2d9eca57efd9019fd089b5a04676da95",
+   "commit_date": "2026-08-06T16:59:00+02:00",
+   "packages": [
+    "tinydb"
+   ],
+   "snapshot_bytes": 141757,
+   "candidates": 47,
+   "valid": 43,
+   "train": 41,
+   "heldout": 2
+  },
+  "dgilland/pydash": {
+   "licence": "MIT",
+   "tag": "v8.1.0",
+   "commit": "f46de3669742c075e5379c1e193c86c1c2c70dc2",
+   "commit_date": "2026-08-29T16:12:14-04:00",
+   "packages": [
+    "pydash"
+   ],
+   "snapshot_bytes": 170358,
+   "candidates": 47,
+   "valid": 47,
+   "train": 45,
+   "heldout": 2
+  },
+  "hukkin/tomli": {
+   "licence": "MIT",
+   "tag": "2.4.1",
+   "commit": "c5f44690c68c5ed29534faa8f9df18882113728c",
+   "commit_date": "2026-03-25T22:11:29+02:00",
+   "packages": [
+    "tomli"
+   ],
+   "snapshot_bytes": 90102,
+   "candidates": 47,
+   "valid": 47,
+   "train": 45,
+   "heldout": 2
+  },
+  "dbader/schedule": {
+   "licence": "MIT",
+   "tag": "1.2.2",
+   "commit": "82a43db1b938d8fdf60103bd41f329e06c8d3651",
+   "commit_date": "2024-05-25T20:40:33+02:00",
+   "packages": [
+    "schedule"
+   ],
+   "snapshot_bytes": 42400,
+   "candidates": 47,
+   "valid": 47,
+   "train": 37,
+   "heldout": 10
+  },
+  "scrapy/w3lib": {
+   "licence": "BSD-3-Clause",
+   "tag": "v2.5.0",
+   "commit": "537c5d46455ae8b2c67b53fc03b36ef1da8c4837",
+   "commit_date": "2026-09-30T12:09:03+02:00",
+   "packages": [
+    "w3lib"
+   ],
+   "snapshot_bytes": 391399,
+   "candidates": 23,
+   "valid": 23,
+   "train": 23
+  },
+  "PyCQA/pycodestyle": {
+   "licence": "MIT",
+   "tag": "2.15.0",
+   "commit": "9647851c7c9f9b901ca8a14e508f9546c6f6fd49",
+   "commit_date": "2026-09-22T18:14:26-04:00",
+   "packages": [
+    "pycodestyle"
+   ],
+   "snapshot_bytes": 83614,
+   "candidates": 34,
+   "valid": 34,
+   "heldout": 34
+  },
+  "stefankoegl/python-json-pointer": {
+   "licence": "BSD-2-Clause",
+   "tag": "v3.1.1",
+   "commit": "ada0cade3bcd21d5726dd701d092c7d0d1ce8c41",
+   "commit_date": "2026-03-23T23:36:08+01:00",
+   "packages": [
+    "jsonpointer"
+   ],
+   "snapshot_bytes": 16511,
+   "candidates": 16,
+   "valid": 16,
+   "train": 16
+  },
+  "Suor/funcy": {
+   "licence": "BSD-3-Clause",
+   "tag": "2.1",
+   "commit": "04aafae9a7390cce610b45b5dca3a630e43c1713",
+   "commit_date": "2026-09-10T12:34:09+07:00",
+   "packages": [
+    "funcy"
+   ],
+   "snapshot_bytes": 80882,
+   "candidates": 47,
+   "valid": 47,
+   "train": 45,
+   "heldout": 2
+  },
+  "alecthomas/voluptuous": {
+   "licence": "BSD-3-Clause",
+   "tag": "0.16.0",
+   "commit": "87825d6dbdab8830fcc6d559ecb3b88bdf68af6d",
+   "commit_date": "2025-12-18T20:00:01+01:00",
+   "packages": [
+    "voluptuous"
+   ],
+   "snapshot_bytes": 50138,
+   "candidates": 47,
+   "valid": 47,
+   "heldout": 47
+  }
+ },
+ "mutation_ops": {
+  "remove_stmt": 105,
+  "drop_except": 94,
+  "swap_args": 92,
+  "remove_early_exit": 91,
+  "name_sibling": 81,
+  "negate_cond": 78,
+  "boolop_flip": 74,
+  "cmp_flip": 70,
+  "attr_sibling": 59,
+  "const_off_by_one": 55,
+  "binop_flip": 52,
+  "augassign_flip": 43,
+  "bound_off_by_one": 41,
+  "default_value": 41,
+  "return_bool_flip": 41,
+  "index_flip": 38,
+  "break_continue": 37,
+  "kw_bool_flip": 32
+ },
+ "kinds": {
+  "single": 794,
+  "pair": 165
+ },
+ "pair_same_file": 96,
+ "f2p_counts": {
+  "1": 347,
+  "2": 201,
+  "3": 127,
+  "4": 86,
+  "5": 56,
+  "6": 46,
+  "7": 41,
+  "8": 55
+ },
+ "styles": {
+  "observed": 441,
+  "repro": 190,
+  "terse": 328
+ },
+ "style_share": {
+  "observed": 0.46,
+  "repro": 0.198,
+  "terse": 0.342
+ },
+ "fail_exc_types": {
+  "AssertionError": 620,
+  "TypeError": 152,
+  "AttributeError": 82,
+  "ValueError": 61,
+  "KeyError": 52,
+  "Failed": 38,
+  "IndexError": 26,
+  "TOMLDecodeError": 23,
+  "MultipleInvalid": 17,
+  "SystemExit": 10,
+  "JsonPointerException": 9,
+  "ParseException": 8
+ },
+ "gold_lines_changed": {
+  "1": 47,
+  "2": 697,
+  "3": 24,
+  "4": 153,
+  "5": 17,
+  "6": 12,
+  "7": 2,
+  "8": 3,
+  "9": 1,
+  "11": 1,
+  "15": 1,
+  "17": 1
+ },
+ "validation": {
+  "gold_resolved": 961,
+  "empty_resolved": 2,
+  "drop_reasons": {
+   "empty_resolved": 2,
+   "gold_not_resolved": 4
+  },
+  "gold_verify_s": {
+   "p50": 12.8,
+   "p90": 24.3,
+   "max": 34.4
+  },
+  "empty_verify_s": {
+   "p50": 12.9,
+   "p90": 24.2,
+   "max": 34.5
+  },
+  "agent_view_checked": 96,
+  "agent_view_ok": 96,
+  "concurrency": 4
+ },
+ "config": {
+  "SOURCE": "candidates",
+  "ONLY": null,
+  "LIMIT": null,
+  "CONCURRENCY": 4,
+  "TASK_TIMEOUT_S": 600,
+  "MAX_VERIFY_S": 60.0,
+  "AGENT_VIEW_SAMPLE": 0.08,
+  "HELDOUT_FRACTION": 0.15,
+  "HELDOUT_REPOS": 2,
+  "SESSION_MINUTES": 690,
+  "SEED": 20261006,
+  "WRITE_DATASET": true
+ },
+ "dataset_bytes": 18114095,
+ "wheels": {
+  "files": [
+   "hypothesis-6.155.7-py3-none-any.whl",
+   "more_itertools-11.1.0-py3-none-any.whl",
+   "railroad_diagrams-3.0.1-py3-none-any.whl",
+   "simplejson-4.2.0-py3-none-any.whl",
+   "sortedcontainers-2.4.0-py2.py3-none-any.whl",
+   "wcwidth-0.9.2-py3-none-any.whl",
+   "whatever-0.7-py3-none-any.whl"
+  ],
+  "bytes": 1041335
+ },
+ "postprocess": {
+  "statements_changed_by_postprocess_statement": 27,
+  "path_leak_check": 0,
+  "competition_link_or_path_hits": 0
+ }
+}

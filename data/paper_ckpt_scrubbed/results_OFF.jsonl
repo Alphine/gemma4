@@ -1,0 +1,6 @@
+{"instance_id":"T814","arm":"OFF","resolved":false,"tool_calls":21,"duration_s":927.8456745650003,"patch_chars":332,"error":"Agent exceeded session timeout (15 min)","test_exit_code":2,"run_mode":"smoke","infra_error":false,"run_id":"20260926-224313"}
+{"instance_id":"T272","arm":"OFF","resolved":true,"tool_calls":21,"duration_s":235.37242742500007,"patch_chars":2828,"error":null,"test_exit_code":0,"run_mode":"smoke","infra_error":false,"run_id":"20260926-224313"}
+{"instance_id":"T083","arm":"OFF","resolved":false,"tool_calls":12,"duration_s":398.49426707,"patch_chars":2602,"error":null,"test_exit_code":2,"run_mode":"smoke","infra_error":false,"run_id":"20260926-224313"}
+{"instance_id":"T523","arm":"OFF","resolved":true,"tool_calls":10,"duration_s":309.089475021,"patch_chars":1928,"error":null,"test_exit_code":0,"run_mode":"smoke","infra_error":false,"run_id":"20260926-224313"}
+{"instance_id":"T144","arm":"OFF","resolved":false,"tool_calls":38,"duration_s":928.3659045750001,"patch_chars":5712,"error":"Agent exceeded session timeout (15 min)","test_exit_code":2,"run_mode":"smoke","infra_error":false,"run_id":"20260926-224313"}
+{"instance_id":"T852","arm":"OFF","resolved":true,"tool_calls":32,"duration_s":499.09612892199993,"patch_chars":3796,"error":null,"test_exit_code":0,"run_mode":"smoke","infra_error":false,"run_id":"20260926-224313"}

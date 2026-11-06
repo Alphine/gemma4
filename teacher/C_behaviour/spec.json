@@ -1,0 +1,219 @@
+{
+ "version": 1,
+ "pass": 0.8,
+ "required": [
+  "submitted",
+  "edited"
+ ],
+ "reference": {
+  "n": 48,
+  "agent_min_q1_threshold": 1.33075,
+  "sources": "resolved non-timeout, fastest quartile"
+ },
+ "limits": {
+  "n_counted": [
+   15.25,
+   38.0
+  ],
+  "calls_to_good_edit": [
+   9.0,
+   23.5
+  ],
+  "est_sec_kaggle_c1": [
+   88.49,
+   317.2
+  ],
+  "max_turn_tokens": [
+   697.5,
+   1652.0
+  ],
+  "mean_turn_tokens": [
+   158.74,
+   266.32
+  ],
+  "repeat_exact": [
+   0.0,
+   3.0
+  ],
+  "repeat_read": [
+   0.0,
+   3.0
+  ],
+  "failed_calls": [
+   3.0,
+   6.0
+  ],
+  "malformed_calls": [
+   0.0,
+   3.0
+  ],
+  "verify_after_edit": [
+   3.0,
+   6.0
+  ],
+  "scratch_writes": [
+   1.0,
+   4.0
+  ]
+ },
+ "weights": {
+  "n_counted": 2,
+  "calls_to_good_edit": 3,
+  "est_sec_kaggle_c1": 3,
+  "max_turn_tokens": 2,
+  "mean_turn_tokens": 2,
+  "repeat_exact": 1,
+  "repeat_read": 1,
+  "failed_calls": 1,
+  "malformed_calls": 0.5,
+  "verify_after_edit": 1,
+  "scratch_writes": 0.5
+ },
+ "table": {
+  "n_counted": {
+   "ref_p25": 10.0,
+   "ref_median": 13.0,
+   "ref_p75": 15.25,
+   "ref_p90": 17.300000000000004,
+   "timeout_median": 38.0,
+   "timeout_p25": 27.0,
+   "auc_ref_vs_timeout": 0.9811698717948718
+  },
+  "calls_to_good_edit": {
+   "ref_p25": 4.0,
+   "ref_median": 6.0,
+   "ref_p75": 9.0,
+   "ref_p90": 10.300000000000004,
+   "timeout_median": 23.5,
+   "timeout_p25": 17.5,
+   "auc_ref_vs_timeout": 0.9818672839506173
+  },
+  "est_sec_kaggle_c1": {
+   "ref_p25": 63.53193,
+   "ref_median": 74.66454,
+   "ref_p75": 88.48631,
+   "ref_p90": 95.72344000000001,
+   "timeout_median": 317.19926000000004,
+   "timeout_p25": 290.12695,
+   "auc_ref_vs_timeout": 1.0
+  },
+  "max_turn_tokens": {
+   "ref_p25": 398.5,
+   "ref_median": 513.0,
+   "ref_p75": 697.5,
+   "ref_p90": 867.0,
+   "timeout_median": 1652.0,
+   "timeout_p25": 1254.5,
+   "auc_ref_vs_timeout": 0.9641025641025641
+  },
+  "mean_turn_tokens": {
+   "ref_p25": 120.85345818014706,
+   "ref_median": 142.19742063492063,
+   "ref_p75": 158.7373046875,
+   "ref_p90": 183.436953125,
+   "timeout_median": 266.31666666666666,
+   "timeout_p25": 194.64505762411346,
+   "auc_ref_vs_timeout": 0.9259615384615385
+  },
+  "repeat_exact": {
+   "ref_p25": 0.0,
+   "ref_median": 0.0,
+   "ref_p75": 0.0,
+   "ref_p90": 1.0,
+   "timeout_median": 3.0,
+   "timeout_p25": 0.0,
+   "auc_ref_vs_timeout": 0.7217948717948718
+  },
+  "repeat_read": {
+   "ref_p25": 0.0,
+   "ref_median": 0.0,
+   "ref_p75": 0.0,
+   "ref_p90": 1.0,
+   "timeout_median": 3.0,
+   "timeout_p25": 0.0,
+   "auc_ref_vs_timeout": 0.7600961538461538
+  },
+  "failed_calls": {
+   "ref_p25": 1.0,
+   "ref_median": 1.0,
+   "ref_p75": 3.0,
+   "ref_p90": 4.0,
+   "timeout_median": 6.0,
+   "timeout_p25": 2.0,
+   "auc_ref_vs_timeout": 0.7569711538461539
+  },
+  "malformed_calls": {
+   "ref_p25": 0.0,
+   "ref_median": 0.0,
+   "ref_p75": 0.0,
+   "ref_p90": 1.0,
+   "timeout_median": 3.0,
+   "timeout_p25": 0.0,
+   "auc_ref_vs_timeout": 0.48854166666666665
+  },
+  "verify_after_edit": {
+   "ref_p25": 2.0,
+   "ref_median": 3.0,
+   "ref_p75": 3.0,
+   "ref_p90": 5.0,
+   "timeout_median": 6.0,
+   "timeout_p25": 0.0,
+   "auc_ref_vs_timeout": 0.2162660256410256
+  },
+  "scratch_writes": {
+   "ref_p25": 0.0,
+   "ref_median": 0.0,
+   "ref_p75": 1.0,
+   "ref_p90": 1.3000000000000043,
+   "timeout_median": 4.0,
+   "timeout_p25": 0.0,
+   "auc_ref_vs_timeout": 0.7383814102564102
+  }
+ },
+ "limits_relaxed": {
+  "n_counted": [
+   30.0,
+   38.0
+  ],
+  "calls_to_good_edit": [
+   19.0,
+   23.5
+  ],
+  "est_sec_kaggle_c1": [
+   229.58,
+   317.2
+  ],
+  "max_turn_tokens": [
+   1225.75,
+   1652.0
+  ],
+  "mean_turn_tokens": [
+   221.96,
+   266.35
+  ],
+  "repeat_exact": [
+   1.0,
+   4.0
+  ],
+  "repeat_read": [
+   1.0,
+   4.0
+  ],
+  "failed_calls": [
+   4.0,
+   7.0
+  ],
+  "malformed_calls": [
+   0.0,
+   3.0
+  ],
+  "verify_after_edit": [
+   5.0,
+   8.0
+  ],
+  "scratch_writes": [
+   2.0,
+   5.0
+  ]
+ }
+}

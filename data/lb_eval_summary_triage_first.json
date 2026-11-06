@@ -1,0 +1,59 @@
+{
+ "generated": "2026-10-05 03:53:57",
+ "mode": "real",
+ "launch_id": "lbeval-20261004-init",
+ "n_solvable_planned": 40,
+ "n_dead_planned": 10,
+ "n_free_planned": 3,
+ "solvable_share": 0.3101,
+ "free_share": 0.0233,
+ "arms": {
+  "triage-first": {
+   "budget": {
+    "timeout_seconds": 90,
+    "max_tool_calls": 60,
+    "max_time_minutes": 6.0,
+    "max_turns": 120
+   },
+   "n_runs": 53,
+   "n_solvable_done": 40,
+   "n_dead_done": 10,
+   "n_free_done": 3,
+   "resolved_solvable": 11,
+   "resolved_of_40": "11/40",
+   "resolved_frac": 0.275,
+   "resolved_free": "2/3",
+   "projected_lb": 0.1008,
+   "projected_lb_solvable_only": 0.0853,
+   "projected_lb_note": null,
+   "resolved_dead": 0,
+   "dead_early_exit_rate": 0.2,
+   "dead_env_broken_marker_rate": 0.7,
+   "visible_env_dead_early_exit_rate": 0.25,
+   "dead_mean_agent_min": 3.71,
+   "dead_mean_phaseA_min": 3.933,
+   "solvable_mean_agent_min": 4.85,
+   "mean_agent_min": 4.567,
+   "total_agent_min": 242.07,
+   "mean_setup_min": 0.147,
+   "mean_verify_min": 0.165,
+   "mean_tool_calls": 23.075,
+   "phaseA_min_by_category": {
+    "solvable": 4.978,
+    "free_if_nonempty": 3.812,
+    "env_dead_visible": 3.768,
+    "dead_other": 4.59
+   },
+   "projected_120_task_h": 8.53,
+   "worst_case_120_task_h": 12.29,
+   "projected_over_11_5h": false,
+   "worst_case_over_11_5h": true,
+   "errors_by_type": {
+    "none": 30,
+    "Agent exceeded session timeout (6.0 min)": 22,
+    "Failed to apply test_patch: git apply /tmp/swegemma_sandbox_": 1
+   },
+   "infra_errors": 0
+  }
+ }
+}

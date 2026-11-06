@@ -1,0 +1,10 @@
+# edit-early-v3 = edit-early-v2 budget (unchanged): cap 5.5 = "balanced pick" of research/schedule-sim/FINDINGS.md.
+# timeout_seconds 300 (was 90): it is ALSO the pytest timeout of the hidden verification run
+# (swegemma verification.py uses config.harness.command_timeout_seconds). In lb-eval v9 requests test files
+# took 76-83 s on our faster-than-grader sandbox, so 90 s risks scoring correct patches as timeouts.
+# Agent-side hangs are bounded by the prompt rule (L6): every python/pytest command runs under timeout 20/60.
+evaluation:
+  timeout_seconds: 300
+  max_tool_calls: 60
+  max_time_minutes: 5.5
+  max_turns: 120

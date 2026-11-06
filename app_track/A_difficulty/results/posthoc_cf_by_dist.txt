@@ -1,0 +1,24 @@
+POST-HOC (not pre-registered): c2 (neutralise the failing-test symbol) hit@5 loss by exact d_sym
+v6 d_sym= 0 n 155 orig hit 0.994 cf hit 0.413 loss 0.581
+v6 d_sym= 1 n 71 orig hit 0.606 cf hit 0.296 loss 0.31
+v6 d_sym= 2 n 40 orig hit 0.25 cf hit 0.3 loss -0.05
+v6 d_sym= 3 n 15 orig hit 0.333 cf hit 0.467 loss -0.133
+v6 d_sym>=4 n 10 loss -0.1
+v6 d_sym NA n 434 loss 0.023
+bm25 d_sym= 0 n 155 orig hit 0.961 cf hit 0.426 loss 0.535
+bm25 d_sym= 1 n 71 orig hit 0.437 cf hit 0.31 loss 0.127
+bm25 d_sym= 2 n 40 orig hit 0.325 cf hit 0.4 loss -0.075
+bm25 d_sym= 3 n 15 orig hit 0.333 cf hit 0.4 loss -0.067
+bm25 d_sym>=4 n 10 loss -0.1
+bm25 d_sym NA n 434 loss 0.014
+c1 by d_test exact
+v6 orig hit among changed 0.866 cf 0.377
+v6 unchanged (name not in 60-word query) n 691 orig hit 0.285
+bm25 orig hit among changed 0.802 cf 0.384
+bm25 unchanged (name not in 60-word query) n 691 orig hit 0.305
+name in 60w query share 0.2794577685088634 name_in_stmt 0.30761209593326383
+name not in stmt: n 664 v6 func@5 0.267 bm25 0.289
+  name not in stmt, d_test=1 n 101 v6@5 0.396 bm25@5 0.337
+  name not in stmt, d_test=2 n 93 v6@5 0.376 bm25@5 0.366
+  name not in stmt, d_test>=3 n 123 v6@5 0.195 bm25@5 0.268
+  name not in stmt, d_test NA n 347 v6@5 0.225 bm25@5 0.262

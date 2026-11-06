@@ -1,0 +1,76 @@
+== pre-edit class counts (all runs; calls before first edit attempt; never-edited runs count all calls) ==
+v6 230 {'grep': 56, 'repro': 41, 'read_gold': 40, 'read_other': 35, 'write_scratch': 24, 'locate': 14, 'ls_other': 6, 'git': 5, 'edit_file': 3, 'nocall': 3, 'run_test': 2, 'read_test': 1}
+decide 187 {'read_gold': 59, 'grep': 55, 'repro': 21, 'locate': 14, 'read_other': 12, 'git': 11, 'nocall': 5, 'skill:edit_lines.py': 4, 'ls_other': 3, 'write_scratch': 3}
+lean 180 {'grep': 46, 'read_gold': 46, 'repro': 27, 'read_other': 18, 'locate': 12, 'ls_other': 11, 'git': 9, 'run_test': 5, 'write_scratch': 3, 'nocall': 1, 'skill:edit_lines.py': 1, 'skill:locate(malformed)': 1}
+ALL 597 {'grep': 157, 'read_gold': 145, 'repro': 89, 'read_other': 65, 'locate': 40, 'write_scratch': 30, 'git': 25, 'ls_other': 20, 'nocall': 9, 'run_test': 7, 'skill:edit_lines.py': 5, 'edit_file': 3, 'read_test': 1, 'skill:locate(malformed)': 1}
+mean pre-edit calls per run: 14.925
+runs with an edit attempt: 32 mean idx 11.71875 median 10.0 mean t_first_edit_s 102.80489668995142
+redundant pre-edit calls: 105 / 597 = 17.6%
+   by class: Counter({'read_gold': 37, 'repro': 25, 'read_other': 22, 'grep': 13, 'locate': 3, 'git': 3, 'ls_other': 2})
+   retry (invalid-args/usage) pre-edit: 9
+   lat spent on redundant calls: 677s of 5179s pre-edit LLM
+   doubt marker in reasoning: 370 / 597; recheck marker: 163
+v6 pre calls 230 redundant 38 retry 2 doubt 123 recheck 56
+decide pre calls 187 redundant 28 retry 4 doubt 122 recheck 48
+lean pre calls 180 redundant 39 retry 3 doubt 125 recheck 59
+latency by class (s):  {'read_other': (65, 6.6, 431), 'grep': (157, 5.7, 898), 'ls_other': (20, 7.9, 158), 'locate': (40, 6.6, 263), 'read_gold': (145, 5.2, 749), 'repro': (89, 10.9, 966), 'write_scratch': (30, 15.3, 460), 'edit_file': (3, 9.8, 29), 'run_test': (7, 18.2, 127), 'nocall': (9, 95.1, 856), 'git': (25, 6.3, 157), 'read_test': (1, 2.4, 2), 'skill:edit_lines.py': (5, 12.9, 64), 'skill:locate(malformed)': (1, 17.2, 17)}
+== first edit placement ==
+edited runs 32 with gold info 30 gold file hit 29 func hit (where range known) 13 / 15
+   v6 T205 run_skill_script src/requests/utils.py gold_file True
+   v6 T760 edit_file rich/table.py gold_file None
+   v6 T386 run_skill_script rich/style.py gold_file True
+   v6 T354 run_skill_script rich/repr.py gold_file True
+   v6 T755 run_skill_script scripts/edit_lines.py NOTGOLD None
+   v6 T886 run_skill_script rich/prompt.py gold_file True
+   v6 T519 run_skill_script rich/text.py gold_file True
+   v6 T768 run_skill_script rich/highlighter.py gold_file True
+   v6 T844 edit_file rich/ansi.py gold_file None
+   v6 T711 edit_file rich/highlighter.py gold_file None
+   decide T059 edit_file scripts/add_latest_release_date.py nogold None
+   decide T205 run_skill_script src/requests/utils.py gold_file True
+   decide T760 run_skill_script rich/table.py gold_file True
+   decide T386 edit_file rich/style.py gold_file None
+   decide T354 edit_file rich/repr.py gold_file None
+   decide T755 run_skill_script rich/_export_format.py gold_file False
+   decide T886 run_skill_script rich/prompt.py gold_file None
+   decide T519 run_skill_script rich/text.py gold_file True
+   decide T768 edit_file rich/highlighter.py gold_file None
+   decide T844 edit_file rich/ansi.py gold_file None
+   lean T059 write_file scripts/release.py nogold None
+   lean T205 run_skill_script src/requests/utils.py gold_file True
+   lean T760 edit_file rich/table.py gold_file None
+   lean T386 run_skill_script rich/style.py gold_file True
+   lean T354 run_skill_script rich/repr.py gold_file True
+   lean T755 run_skill_script rich/_export_format.py gold_file False
+   lean T886 edit_file rich/prompt.py gold_file None
+   lean T519 run_skill_script rich/text.py gold_file True
+   lean T537 edit_file rich/markup.py gold_file None
+   lean T768 edit_file rich/highlighter.py gold_file None
+   lean T927 edit_file rich/cells.py gold_file None
+   lean T844 edit_file rich/ansi.py gold_file None
+== examples of redundant calls ==
+   v6 T059 k=9 read_other reread_cov100% | <reasoning excerpt withheld>
+   v6 T059 k=10 read_other reread_cov100% | <reasoning excerpt withheld>
+   v6 T059 k=11 read_other reread_cov100% | <reasoning excerpt withheld>
+   v6 T059 k=15 read_other reread_cov100% | <reasoning excerpt withheld>
+   v6 T059 k=16 read_other reread_cov100% | <reasoning excerpt withheld>
+   v6 T059 k=17 read_other reread_cov100% | <reasoning excerpt withheld>
+   v6 T059 k=23 read_other reread_cov100% | <reasoning excerpt withheld>
+   v6 T059 k=24 read_other reread_cov100% | <reasoning excerpt withheld>
+   v6 T205 k=4 repro same_cmd | <reasoning excerpt withheld>
+   v6 T205 k=5 read_gold reread_cov100% | <reasoning excerpt withheld>
+   v6 T205 k=9 repro same_cmd | <reasoning excerpt withheld>
+   v6 T760 k=16 repro same_cmd | <reasoning excerpt withheld>
+   v6 T760 k=20 repro same_cmd | <reasoning excerpt withheld>
+   v6 T760 k=22 read_gold reread_cov100% | <reasoning excerpt withheld>
+   v6 T760 k=23 read_gold reread_cov100% | <reasoning excerpt withheld>
+   v6 T760 k=24 read_gold reread_cov100% | <reasoning excerpt withheld>
+   v6 T354 k=10 repro same_cmd | <reasoning excerpt withheld>
+   v6 T354 k=13 repro same_cmd | <reasoning excerpt withheld>
+   v6 T519 k=12 locate same_cmd | <reasoning excerpt withheld>
+   v6 T537 k=16 repro same_cmd | <reasoning excerpt withheld>
+   v6 T537 k=19 repro same_cmd | <reasoning excerpt withheld>
+   v6 T537 k=21 repro same_cmd | <reasoning excerpt withheld>
+   v6 T537 k=23 repro same_cmd | <reasoning excerpt withheld>
+   v6 T537 k=26 repro same_cmd | <reasoning excerpt withheld>
+   v6 T537 k=28 repro same_cmd | <reasoning excerpt withheld>

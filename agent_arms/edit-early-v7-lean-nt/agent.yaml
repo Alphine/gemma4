@@ -1,0 +1,27 @@
+# edit-early-v7-decide = edit-early-v6-locate with ONLY prompt only (system.md); sampling byte-identical to v6-locate changed; eval_config.yaml and skills untouched (research/top10/token-economy/REPORT.md).
+name: swe_agent
+model: gemma-4-31b-it-qat-w4a16-ct
+# edit-early-v6-locate = edit-early-v5 with ONLY skills/swe-tools/scripts/locate.py (v6 ranking + "More candidates" list) and its SKILL.md row
+#   changed (research/locate-improve/REPORT.md). prompts, sampling, other scripts are byte-identical to v5.
+# edit-early-v5 = edit-early-v4 + skill-usage fixes from lb-eval v10 traces (research/edit-early-v5/README.md):
+#   lenient edit_lines expect (relocates an off-by-N block), plain-ASCII skill call line, no backtick-wrapped values,
+#   tests_for.py / issue_example.py dropped (0 calls in 43 runs), no-repeat / no-code-in-reasoning rules.
+# edit-early-v4 = edit-early-v3 + generalized swe-tools locate.py/tests_for.py (research/swe-tools/RESULTS.md).
+# The description is pasted verbatim into the system prompt by ADK, so it is kept short (context audit).
+description: "edit-early-v5 software engineering agent."   # unchanged on purpose: the prompt stays byte-identical to v5
+instruction: !include prompts/system.md
+tools:
+  - run_command
+  - read_file
+  - edit_file
+  - write_file
+  - get_status
+  - submit_patch
+  # advertised by the harness prompt when graph data exists; declared so a call cannot crash the run
+  - get_code_neighbors
+  - search_similar_code
+  - get_code_subgraph
+generate_content_config: !include configs/sampling.yaml
+# deterministic helper scripts run via run_skill_script (1 tool call each, in the task container)
+skills:
+  - skills/swe-tools

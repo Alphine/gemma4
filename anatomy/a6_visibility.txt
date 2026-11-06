@@ -1,0 +1,28 @@
+v6 T205 fe 10 visible_at 2 calls between 7 sec 51 ngl 9 True
+v6 T760 fe 25 visible_at 5 calls between 19 sec 114 ngl 6 False
+v6 T386 fe 12 visible_at 4 calls between 7 sec 40 ngl 1 True
+v6 T354 fe 14 visible_at 4 calls between 9 sec 81 ngl 1 True
+v6 T886 fe 3 visible_at 2 calls between 0 sec 0 ngl 14 False
+v6 T519 fe 19 visible_at 3 calls between 15 sec 132 ngl 27 False
+v6 T844 fe 4 visible_at 1 calls between 2 sec 214 ngl 1 True
+v6 T711 fe 9 visible_at 1 calls between 7 sec 29 ngl 1 False
+decide T205 fe 2 visible_at 1 calls between 0 sec 0 ngl 9 True
+decide T760 fe 7 visible_at 2 calls between 4 sec 141 ngl 6 True
+decide T386 fe 41 visible_at 9 calls between 31 sec 137 ngl 1 True
+decide T354 fe 12 visible_at 7 calls between 4 sec 49 ngl 1 True
+decide T755 fe 6 visible_at 1 calls between 4 sec 46 ngl 1 True
+decide T519 fe 10 visible_at 1 calls between 8 sec 119 ngl 27 False
+decide T768 fe 5 visible_at 3 calls between 1 sec 5 ngl 1 True
+decide T844 fe 4 visible_at 1 calls between 2 sec 54 ngl 1 True
+lean T205 fe 2 visible_at 1 calls between 0 sec 0 ngl 9 True
+lean T760 fe 14 visible_at 3 calls between 10 sec 97 ngl 6 True
+lean T386 fe 16 visible_at 10 calls between 5 sec 30 ngl 1 True
+lean T354 fe 10 visible_at 4 calls between 5 sec 35 ngl 1 True
+lean T755 fe 3 visible_at 1 calls between 1 sec 8 ngl 1 False
+lean T886 fe 10 visible_at 5 calls between 4 sec 13 ngl 14 False
+lean T537 fe 24 visible_at 1 calls between 22 sec 231 ngl 2 True
+lean T768 fe 5 visible_at 2 calls between 2 sec 7 ngl 1 True
+lean T927 fe 20 visible_at 5 calls between 14 sec 245 ngl 19 False
+lean T844 fe 8 visible_at 1 calls between 6 sec 114 ngl 1 False
+runs with gold info & edit: 26 gold region seen before edit: 26  mean calls between visible and edit: 7.3, mean sec 77; median calls 5.0
+  k_visible mean 3.1 ; fe mean 11.3

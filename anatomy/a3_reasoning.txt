@@ -1,0 +1,83 @@
+== reasoning tokens per call (primary calls) ==
+v6 {'n': 378, 'mean': 194.376, 'median': 44.0, 'p75': 149.75, 'p90': 449.8, 'p95': 762.05, 'max': 4093, 'share_gt1000_calls': 0.037, 'share_gt1000_tokens': 0.416, 'share_gt400_tokens': 0.657, 'sec_gt1000': 927.892, 'sec_total': 3010.871, 'n_len': 3, 'sec_len': 352.454, 'n_nocall': 8, 'n_ge_budget': 3}
+     rsn 0-50       n= 199 tok=  4135 sec=   535 (18% of llm s)
+     rsn 50-150     n=  84 tok=  7432 sec=   440 (15% of llm s)
+     rsn 150-400    n=  53 tok= 13602 sec=   538 (18% of llm s)
+     rsn 400-1000   n=  28 tok= 17775 sec=   570 (19% of llm s)
+     rsn 1000-2000  n=   8 tok=  9482 sec=   308 (10% of llm s)
+     rsn 2000-4000  n=   3 tok=  8774 sec=   268 (9% of llm s)
+     rsn 4000-10000 n=   3 tok= 12274 sec=   352 (12% of llm s)
+decide {'n': 300, 'mean': 235.81, 'median': 62.0, 'p75': 176.5, 'p90': 505.7, 'p95': 809.05, 'max': 4093, 'share_gt1000_calls': 0.04, 'share_gt1000_tokens': 0.45, 'share_gt400_tokens': 0.711, 'sec_gt1000': 986.863, 'sec_total': 2745.131, 'n_len': 4, 'sec_len': 473.099, 'n_nocall': 11, 'n_ge_budget': 3}
+     rsn 0-50       n= 133 tok=  3018 sec=   408 (15% of llm s)
+     rsn 50-150     n=  81 tok=  7291 sec=   345 (13% of llm s)
+     rsn 150-400    n=  43 tok= 10153 sec=   388 (14% of llm s)
+     rsn 400-1000   n=  31 tok= 18464 sec=   616 (22% of llm s)
+     rsn 1000-2000  n=   5 tok=  7388 sec=   254 (9% of llm s)
+     rsn 2000-4000  n=   4 tok= 12150 sec=   379 (14% of llm s)
+     rsn 4000-10000 n=   3 tok= 12279 sec=   354 (13% of llm s)
+lean {'n': 331, 'mean': 201.517, 'median': 73.0, 'p75': 220.5, 'p90': 667.0, 'p95': 1022.0, 'max': 1042, 'share_gt1000_calls': 0.057, 'share_gt1000_tokens': 0.291, 'share_gt400_tokens': 0.629, 'sec_gt1000': 593.868, 'sec_total': 2604.011, 'n_len': 0, 'sec_len': 0, 'n_nocall': 7, 'n_ge_budget': 20}
+     rsn 0-50       n= 126 tok=  2671 sec=   320 (12% of llm s)
+     rsn 50-150     n=  93 tok=  8144 sec=   411 (16% of llm s)
+     rsn 150-400    n=  58 tok= 13934 sec=   548 (21% of llm s)
+     rsn 400-1000   n=  35 tok= 22513 sec=   731 (28% of llm s)
+     rsn 1000-2000  n=  19 tok= 19440 sec=   594 (23% of llm s)
+     rsn 2000-4000  n=   0 tok=     0 sec=     0 (0% of llm s)
+     rsn 4000-10000 n=   0 tok=     0 sec=     0 (0% of llm s)
+ALL {'n': 1009, 'mean': 209.038, 'median': 61.0, 'p75': 185.0, 'p90': 537.0, 'p95': 937.0, 'max': 4093, 'share_gt1000_calls': 0.045, 'share_gt1000_tokens': 0.388, 'share_gt400_tokens': 0.666, 'sec_gt1000': 2508.623, 'sec_total': 8360.013, 'n_len': 7, 'sec_len': 825.553, 'n_nocall': 26, 'n_ge_budget': 26}
+     rsn 0-50       n= 458 tok=  9824 sec=  1263 (15% of llm s)
+     rsn 50-150     n= 258 tok= 22867 sec=  1196 (14% of llm s)
+     rsn 150-400    n= 154 tok= 37689 sec=  1474 (18% of llm s)
+     rsn 400-1000   n=  94 tok= 58752 sec=  1918 (23% of llm s)
+     rsn 1000-2000  n=  32 tok= 36310 sec=  1155 (14% of llm s)
+     rsn 2000-4000  n=   7 tok= 20924 sec=   647 (8% of llm s)
+     rsn 4000-10000 n=   6 tok= 24553 sec=   706 (8% of llm s)
+== mean reasoning tokens by tool kind ==
+  python                 n= 168 mean=   228 median=   36 sum=  38284
+  grep_find              n= 211 mean=   159 median=   75 sum=  33531
+  None                   n=  26 mean=  1141 median=   48 sum=  29672
+  read_file              n= 194 mean=   126 median=   38 sum=  24533
+  sed_cat                n=  94 mean=   176 median=   57 sum=  16520
+  edit_file              n=  66 mean=   233 median=   84 sum=  15386
+  write_file             n=  43 mean=   280 median=   37 sum=  12049
+  skill:edit_lines(malformed) n=  18 mean=   454 median=  168 sum=   8174
+  pytest                 n=  19 mean=   362 median=   68 sum=   6887
+  skill:locate.py        n=  40 mean=   130 median=   91 sum=   5187
+  skill:edit_lines.py    n=  28 mean=   182 median=  134 sum=   5094
+  git                    n=  30 mean=   137 median=  106 sum=   4116
+  ls                     n=  14 mean=   271 median=   64 sum=   3796
+  submit_patch           n=  18 mean=   170 median=   26 sum=   3061
+  other_shell            n=  16 mean=   157 median=   66 sum=   2517
+  skill:check.py         n=  18 mean=    64 median=   29 sum=   1155
+  skill:locate(malformed) n=   1 mean=   485 median=  485 sum=    485
+  sed_i                  n=   4 mean=    89 median=   90 sum=    356
+  other                  n=   1 mean=   116 median=  116 sum=    116
+== long thoughts (>1000 rsn tokens): n=45 ==
+  mean rep_frac(6-gram)=0.09  code_frac=0.24  waits/1k tok=6.5  opts=0.1/thought  contains PLAN=9
+  short (<=400): rep_frac=0.00 code_frac=0.03 waits/1k tok=7.2
+  degenerate-ish (rep_frac>0.25 & rsn>500): n=2 tokens=4901 sec=155
+   wait/second-guess          n= 19 tokens= 26698 sec=   839
+   re-reads code in thought   n= 14 tokens= 21200 sec=   669
+   length-cut                 n=  7 tokens= 28204 sec=   826
+   other                      n=  5 tokens=  5685 sec=   175
+  long thoughts end in: {'python': 15, None: 7, 'sed_cat': 5, 'write_file': 4, 'edit_file': 4, 'grep_find': 3, 'skill:edit_lines(malformed)': 2, 'pytest': 2, 'submit_patch': 1, 'ls': 1, 'other_shell': 1}
+  long thoughts before first edit: 31 after/at: 14
+== sample long-thought openings ==
+  v6 T927 call#5 rsn=4093 lat=118s sub=None rep=0.10 code=0.23 | <reasoning excerpt withheld>
+  decide T760 call#5 rsn=4093 lat=116s sub=None rep=0.18 code=0.18 | <reasoning excerpt withheld>
+  decide T537 call#22 rsn=4093 lat=116s sub=None rep=0.13 code=0.12 | <reasoning excerpt withheld>
+  decide T426 call#26 rsn=4093 lat=122s sub=None rep=0.77 code=0.00 | <reasoning excerpt withheld>
+  v6 T844 call#2 rsn=4091 lat=117s sub=None rep=0.20 code=0.20 | <reasoning excerpt withheld>
+  v6 T537 call#31 rsn=4090 lat=118s sub=None rep=0.12 code=0.19 | <reasoning excerpt withheld>
+  decide T059 call#16 rsn=3651 lat=119s sub=None rep=0.13 code=0.49 | <reasoning excerpt withheld>
+  decide T927 call#9 rsn=3452 lat=101s sub=python rep=0.13 code=0.14 | <reasoning excerpt withheld>
+  v6 T844 call#3 rsn=3327 lat=97s sub=pytest rep=0.20 code=0.44 | <reasoning excerpt withheld>
+  v6 T537 call#32 rsn=2804 lat=85s sub=write_file rep=0.07 code=0.20 | <reasoning excerpt withheld>
+  decide T519 call#10 rsn=2761 lat=91s sub=skill:edit_lines(malformed) rep=0.19 code=0.54 | <reasoning excerpt withheld>
+  v6 T927 call#6 rsn=2643 lat=85s sub=python rep=0.05 code=0.28 | <reasoning excerpt withheld>
+== lean arm budget behaviour ==
+  thinking budget values: Counter({1024: 331}) max_comp: Counter({2560: 331})
+  rsn quantiles [73, 220, 667, 1022, 1022] max 1042  n>=1000: 19  n in 1000..1040: 18
+  finish counts lean: Counter({'tool_calls': 324, 'stop': 7})
+  finish counts v6 Counter({'tool_calls': 370, 'stop': 5, 'length': 3})
+  finish counts decide Counter({'tool_calls': 289, 'stop': 7, 'length': 4})
+  finish counts lean Counter({'tool_calls': 324, 'stop': 7})

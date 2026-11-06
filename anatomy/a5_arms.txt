@@ -1,0 +1,37 @@
+== arm summary ==
+v6 {'n': 14, 'resolved': 6, 'never_edited': 4, 'time_cap': 9, 'mean_wall': 269.14714285714285, 'mean_calls': 27.0, 'mean_ct': 7112.785714285715, 'finished_early': 5, 'mean_wall_finished': 159.58800000000002, 'nudges': 3, 'cancelled_inflight': 9}
+decide {'n': 13, 'resolved': 7, 'never_edited': 3, 'time_cap': 7, 'mean_wall': 250.71230769230772, 'mean_calls': 23.076923076923077, 'mean_ct': 7029.076923076923, 'finished_early': 6, 'mean_wall_finished': 158.21, 'nudges': 5, 'cancelled_inflight': 7}
+lean {'n': 13, 'resolved': 6, 'never_edited': 1, 'time_cap': 7, 'mean_wall': 234.14307692307693, 'mean_calls': 25.46153846153846, 'mean_ct': 6639.923076923077, 'finished_early': 6, 'mean_wall_finished': 122.31, 'nudges': 1, 'cancelled_inflight': 7}
+== per-task matrix  (R=resolved, E=edited unresolved, N=never edited; wall s; t_first_edit; n_calls; max rsn) ==
+  T059  | N w=330 fe= -  n=27 maxr= 648 | E w=330 fe=237 n=20 maxr=3651 | E w=330 fe=275 n=27 maxr=1022
+  T205  | R w=274 fe= 64 n=27 maxr=1296 | R w=113 fe=  7 n=17 maxr= 893 | R w=111 fe= 11 n=14 maxr=1022
+  T760      | E w=330 fe=157 n=44 maxr=1375 | R w=330 fe=155 n=19 maxr=4093 | R w=330 fe=136 n=38 maxr=1022
+  T386      | R w=111 fe= 59 n=21 maxr= 509 | R w=276 fe=188 n=54 maxr= 603 | R w=104 fe= 75 n=23 maxr= 428
+  T354      | R w=130 fe=100 n=21 maxr= 758 | R w=102 fe= 80 n=20 maxr= 979 | R w= 71 fe= 47 n=19 maxr= 302
+  T755      | R w=193 fe= 24 n=21 maxr=1015 | R w=153 fe= 58 n=15 maxr= 829 | E w=330 fe= 17 n=24 maxr=1042
+  T886      | E w=330 fe= 15 n=47 maxr= 768 | E w=243 fe= 47 n=39 maxr= 566 | E w=168 fe= 32 n=27 maxr= 991
+  T519      | E w=330 fe=175 n=35 maxr=1335 | E w=330 fe=131 n=18 maxr=2761 | E w=219 fe= 89 n=14 maxr=1022
+  T537      | N w=330 fe= -  n=34 maxr=4090 | N w=330 fe= -  n=24 maxr=4093 | R w=330 fe=265 n=29 maxr=1024
+  T768      | R w= 89 fe= 61 n=28 maxr= 270 | R w= 62 fe= 21 n=15 maxr= 226 | R w= 62 fe= 19 n=15 maxr= 154
+  T426      | N w=330 fe= -  n=41 maxr= 970 | N w=330 fe= -  n=34 maxr=4093 | N w=330 fe= -  n=41 maxr= 871
+  T927      | N w=330 fe= -  n= 8 maxr=4093 | N w=330 fe= -  n=13 maxr=3452 | E w=330 fe=290 n=22 maxr=1022
+  T844      | R w=330 fe=226 n=13 maxr=4091 | R w=330 fe= 66 n=12 maxr=2286 | E w=330 fe=122 n=38 maxr=1022
+  T711      | E w=330 fe= 41 n=11 maxr= 448 | -- | --
+tasks resolved by >=1 arm: 8 by all arms: 4 by none: ['T059', 'T886', 'T519', 'T426', 'T927', 'T711']
+== decide vs lean: first divergence (identical prompt & seed; only thinking budget 4096 vs 1024 differs) ==
+  T059  identical for  0 calls (t=0s); at divergence decide rsn=568 -> grep_find | lean rsn=582 -> grep_find ; resolved decide=False lean=False
+  T205  identical for  5 calls (t=29s); at divergence decide rsn=66 -> skill:check.py | lean rsn=75 -> skill:check.py ; resolved decide=True lean=True
+  T760      identical for  0 calls (t=0s); at divergence decide rsn=152 -> skill:locate.py | lean rsn=124 -> skill:locate.py ; resolved decide=True lean=True
+  T386      identical for  3 calls (t=8s); at divergence decide rsn=31 -> grep_find | lean rsn=17 -> grep_find ; resolved decide=True lean=True
+  T354      identical for  0 calls (t=0s); at divergence decide rsn=89 -> grep_find | lean rsn=81 -> grep_find ; resolved decide=True lean=True
+  T755      identical for  2 calls (t=11s); at divergence decide rsn=294 -> sed_cat | lean rsn=255 -> sed_cat ; resolved decide=True lean=False
+  T886      identical for  3 calls (t=10s); at divergence decide rsn=47 -> sed_cat | lean rsn=81 -> sed_cat ; resolved decide=False lean=False
+  T519      identical for  4 calls (t=34s); at divergence decide rsn=724 -> grep_find | lean rsn=1022 -> sed_cat ; resolved decide=False lean=False
+  T537      identical for 14 calls (t=76s); at divergence decide rsn=134 -> python | lean rsn=1022 -> sed_cat ; resolved decide=False lean=True
+  T768      identical for  1 calls (t=5s); at divergence decide rsn=98 -> grep_find | lean rsn=80 -> grep_find ; resolved decide=True lean=True
+  T426      identical for  0 calls (t=0s); at divergence decide rsn=294 -> git | lean rsn=284 -> skill:locate.py ; resolved decide=False lean=False
+  T927      identical for  6 calls (t=15s); at divergence decide rsn=647 -> read_file | lean rsn=840 -> read_file ; resolved decide=False lean=False
+  T844      identical for  2 calls (t=12s); at divergence decide rsn=1697 -> write_file | lean rsn=950 -> sed_cat ; resolved decide=True lean=False
+== lean: calls ending at the 1024 budget: what comes next ==
+  n=19 ; follow-up tool kinds: [('python', 11), ('sed_cat', 4), ('ls', 1), ('other_shell', 1), ('pytest', 1), ('edit_file', 1)] ; failed tool-call rate 2/19
+  format-failure rate by reasoning length: {'100-400': '17/242', '400-1000': '10/93', '<=100': '32/610', '>1000': '2/38'}

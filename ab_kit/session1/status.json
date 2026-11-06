@@ -1,0 +1,469 @@
+{
+ "started": "2026-10-10 02:30:35",
+ "mode": "real",
+ "events": [
+  {
+   "t_min": 0.02,
+   "msg": "mode=real arms=['edit-early-v6-locate', 'edit-early-v7-decide-nt', 'edit-early-v7-lean-nt'] ckpt=/kaggle/input/datasets/<kaggle-owner>/gemma4-lb-eval-ckpt dataset launch_id='lbeval-20261007-043225'"
+  },
+  {
+   "t_min": 0.02,
+   "msg": "tasks=43 prior_rows=96 done=96 todo=129 in 43 task groups; arm order perm6: first groups T059:ly-v6-locate>v7-decide-nt>y-v7-lean-nt; T760:ly-v6-locate>y-v7-lean-nt>v7-decide-nt; T386:v7-decide-nt>ly-v6-locate>y-v7-lean-nt; T354:v7-decide-nt>y-v7-lean-nt>ly-v6-locate"
+  },
+  {
+   "t_min": 1.02,
+   "msg": "wheelhouse installed"
+  },
+  {
+   "t_min": 1.02,
+   "msg": "versions: {\"swegemma\": \"0.2.11\", \"adk-submission\": \"0.2.13\", \"google-adk\": \"1.36.1\", \"adk-eval-core\": \"0.1.0\", \"litellm\": \"1.82.4\", \"openai\": \"2.32.0\", \"httpx\": \"0.28.1\", \"vllm\": \"0.19.1\", \"transformers\": \"5.13.1\", \"tokenizers\": \"0.22.2\", \"torch\": \"2.10.0+cu128\"}"
+  },
+  {
+   "t_min": 1.61,
+   "msg": "arm edit-early-v6-locate: budget {'timeout_seconds': 300, 'max_tool_calls': 60, 'max_time_minutes': 5.5, 'max_turns': 120} (from {'timeout_seconds': 'eval_config.yaml', 'max_tool_calls': 'eval_config.yaml', 'max_time_minutes': 'eval_config.yaml', 'max_turns': 'eval_config.yaml'}); expected request sampling {'max_output_tokens': 4096, 'thinking_budget': 4096, 'seed': 0, 'temperature': 0.2, 'top_p': 0.95}"
+  },
+  {
+   "t_min": 1.61,
+   "msg": "arm edit-early-v7-decide-nt: budget {'timeout_seconds': 300, 'max_tool_calls': 60, 'max_time_minutes': 5.5, 'max_turns': 120} (from {'timeout_seconds': 'eval_config.yaml', 'max_tool_calls': 'eval_config.yaml', 'max_time_minutes': 'eval_config.yaml', 'max_turns': 'eval_config.yaml'}); expected request sampling {'max_output_tokens': 4096, 'thinking_budget': 4096, 'seed': 0, 'temperature': 0.2, 'top_p': 0.95}"
+  },
+  {
+   "t_min": 1.62,
+   "msg": "arm edit-early-v7-lean-nt: budget {'timeout_seconds': 300, 'max_tool_calls': 60, 'max_time_minutes': 5.5, 'max_turns': 120} (from {'timeout_seconds': 'eval_config.yaml', 'max_tool_calls': 'eval_config.yaml', 'max_time_minutes': 'eval_config.yaml', 'max_turns': 'eval_config.yaml'}); expected request sampling {'max_output_tokens': 2560, 'thinking_budget': 1024, 'seed': 0, 'temperature': 0.2, 'top_p': 0.95}"
+  },
+  {
+   "t_min": 1.62,
+   "msg": "arm parity: files differing between arms = ['agent.yaml', 'configs/sampling.yaml', 'prompts/system.md']"
+  },
+  {
+   "t_min": 1.76,
+   "msg": "vLLM cmd: /usr/bin/python3 -m vllm.entrypoints.openai.api_server --model /kaggle/input/models/google/gemma-4/other/gemma-4-31b-it-qat-w4a16-ct/2 --host 127.0.0.1 --port 8000 --max-model-len 32768 --dtype bfloat16 --gpu-memory-utilization 0.8 --tensor-parallel-size 4 --enable-auto-tool-choice --tool-call-parser gemma4 --reasoning-parser gemma4 --reasoning-config {\"reasoning_start_str\": \"<|channel>\", \"reasoning_end_str\": \"<channel|>\"} --default-chat-template-kwargs {\"enable_thinking\": true} --no-scheduler-reserve-full-isl"
+  },
+  {
+   "t_min": 7.75,
+   "msg": "vLLM started"
+  },
+  {
+   "t_min": 7.89,
+   "msg": "recorder tokenizer: hf:2"
+  },
+  {
+   "t_min": 8.25,
+   "msg": "thinking-budget self-test: ok {\"reasoning_tokens\": 46, \"budget\": 48, \"finish\": \"length\", \"usage\": {\"prompt_tokens\": 44, \"total_tokens\": 744, \"completion_tokens\": 700, \"prompt_tokens_details\": null}, \"content_head\": \"To prove that the square root of 2 ($\\\\sqrt{2}$) is irrational, we use a method called **Proof by Contradiction**. \\n\\nIn a\", \"tokenizer\": \"hf:2\"}"
+  },
+  {
+   "t_min": 8.33,
+   "msg": "wheels for sandbox: /tmp/wheels_sandbox (dropped other-ABI: ['<wheel>', '<wheel>', '<wheel>', '<wheel>'])"
+  },
+  {
+   "t_min": 8.33,
+   "msg": "emulation: host python 3.12.13, sandbox python HOST (mismatch!), image pkgs 18, sitecustomize neutralized ['/etc/python3.10/sitecustomize.py', '/etc/python3.12/sitecustomize.py', '/usr/lib/python3.10/sitecustomize.py', '/usr/lib/python3.12/sitecustomize.py']"
+  },
+  {
+   "t_min": 13.99,
+   "msg": "[1/129] edit-early-v6-locate     T059   solvable pos=0 resolved=False cls=time_cap agent=5.5m phaseA=5.667m total=5.666m calls=27 ct=7215 firstEdit=None rsnMax=648 lenCalls=0 http400=0 mismatch=no"
+  },
+  {
+   "t_min": 19.71,
+   "msg": "[2/129] edit-early-v7-decide-nt  T059   solvable pos=1 resolved=False cls=time_cap agent=5.5m phaseA=5.587m total=5.718m calls=19 ct=9439 firstEdit=16 rsnMax=3651 lenCalls=1 http400=0 mismatch=no"
+  },
+  {
+   "t_min": 25.43,
+   "msg": "[3/129] edit-early-v7-lean-nt    T059   solvable pos=2 resolved=False cls=time_cap agent=5.5m phaseA=5.585m total=5.716m calls=27 ct=8635 firstEdit=21 rsnMax=1022 lenCalls=0 http400=0 mismatch=no"
+  },
+  {
+   "t_min": 31.12,
+   "msg": "[4/129] edit-early-v6-locate     T760       solvable pos=0 resolved=False cls=time_cap agent=5.5m phaseA=5.598m total=5.695m calls=44 ct=8572 firstEdit=15 rsnMax=1375 lenCalls=0 http400=0 mismatch=no"
+  },
+  {
+   "t_min": 36.78,
+   "msg": "[5/129] edit-early-v7-lean-nt    T760       solvable pos=1 resolved=True  cls=time_cap agent=5.5m phaseA=5.563m total=5.658m calls=36 ct=9539 firstEdit=14 rsnMax=1022 lenCalls=0 http400=0 mismatch=no"
+  },
+  {
+   "t_min": 42.44,
+   "msg": "[6/129] edit-early-v7-decide-nt  T760       solvable pos=2 resolved=True  cls=time_cap agent=5.5m phaseA=5.563m total=5.658m calls=18 ct=10031 firstEdit=6 rsnMax=4093 lenCalls=1 http400=0 mismatch=no"
+  },
+  {
+   "t_min": 47.24,
+   "msg": "[7/129] edit-early-v7-decide-nt  T386       solvable pos=0 resolved=True  cls=none agent=4.607m phaseA=4.707m total=4.801m calls=51 ct=7201 firstEdit=19 rsnMax=603 lenCalls=0 http400=0 mismatch=no"
+  },
+  {
+   "t_min": 49.26,
+   "msg": "[8/129] edit-early-v6-locate     T386       solvable pos=1 resolved=True  cls=none agent=1.857m phaseA=1.92m total=2.013m calls=17 ct=3674 firstEdit=14 rsnMax=509 lenCalls=0 http400=0 mismatch=no"
+  },
+  {
+   "t_min": 51.14,
+   "msg": "[9/129] edit-early-v7-lean-nt    T386       solvable pos=2 resolved=True  cls=none agent=1.727m phaseA=1.788m total=1.882m calls=21 ct=3366 firstEdit=16 rsnMax=428 lenCalls=0 http400=0 mismatch=no"
+  },
+  {
+   "t_min": 53.01,
+   "msg": "[10/129] edit-early-v7-decide-nt  T354       solvable pos=0 resolved=True  cls=none agent=1.693m phaseA=1.77m total=1.865m calls=18 ct=3334 firstEdit=12 rsnMax=979 lenCalls=0 http400=0 mismatch=no"
+  },
+  {
+   "t_min": 54.35,
+   "msg": "[11/129] edit-early-v7-lean-nt    T354       solvable pos=1 resolved=True  cls=none agent=1.182m phaseA=1.245m total=1.339m calls=17 ct=2387 firstEdit=9 rsnMax=302 lenCalls=0 http400=0 mismatch=no"
+  },
+  {
+   "t_min": 56.67,
+   "msg": "[12/129] edit-early-v6-locate     T354       solvable pos=2 resolved=True  cls=none agent=2.167m phaseA=2.228m total=2.323m calls=19 ct=4226 firstEdit=8 rsnMax=758 lenCalls=0 http400=0 mismatch=no"
+  },
+  {
+   "t_min": 62.25,
+   "msg": "[13/129] edit-early-v7-lean-nt    T755       solvable pos=0 resolved=False cls=time_cap agent=5.5m phaseA=5.582m total=5.582m calls=23 ct=9049 firstEdit=4 rsnMax=1042 lenCalls=0 http400=0 mismatch=no"
+  },
+  {
+   "t_min": 65.63,
+   "msg": "[14/129] edit-early-v6-locate     T755       solvable pos=1 resolved=True  cls=none agent=3.218m phaseA=3.282m total=3.38m calls=18 ct=5553 firstEdit=7 rsnMax=1015 lenCalls=0 http400=0 mismatch=no"
+  },
+  {
+   "t_min": 68.34,
+   "msg": "[15/129] edit-early-v7-decide-nt  T755       solvable pos=2 resolved=True  cls=none agent=2.543m phaseA=2.605m total=2.703m calls=12 ct=4169 firstEdit=5 rsnMax=829 lenCalls=0 http400=0 mismatch=no"
+  },
+  {
+   "t_min": 71.34,
+   "msg": "[16/129] edit-early-v7-lean-nt    T886       solvable pos=0 resolved=False cls=none agent=2.8m phaseA=2.9m total=2.996m calls=22 ct=5051 firstEdit=10 rsnMax=991 lenCalls=0 http400=0 mismatch=no"
+  },
+  {
+   "t_min": 75.56,
+   "msg": "[17/129] edit-early-v7-decide-nt  T886       solvable pos=1 resolved=False cls=none agent=4.058m phaseA=4.122m total=4.217m calls=36 ct=7332 firstEdit=14 rsnMax=566 lenCalls=0 http400=0 mismatch=no"
+  },
+  {
+   "t_min": 81.22,
+   "msg": "[18/129] edit-early-v6-locate     T886       solvable pos=2 resolved=False cls=time_cap agent=5.5m phaseA=5.563m total=5.658m calls=30 ct=9256 firstEdit=5 rsnMax=768 lenCalls=0 http400=0 mismatch=no"
+  },
+  {
+   "t_min": 86.91,
+   "msg": "[19/129] edit-early-v6-locate     T519       solvable pos=0 resolved=False cls=time_cap agent=5.5m phaseA=5.592m total=5.693m calls=32 ct=9258 firstEdit=20 rsnMax=1335 lenCalls=0 http400=0 mismatch=no"
+  },
+  {
+   "t_min": 92.58,
+   "msg": "[20/129] edit-early-v7-decide-nt  T519       solvable pos=1 resolved=False cls=time_cap agent=5.5m phaseA=5.563m total=5.664m calls=17 ct=10284 firstEdit=15 rsnMax=2761 lenCalls=0 http400=0 mismatch=no"
+  },
+  {
+   "t_min": 96.39,
+   "msg": "[21/129] edit-early-v7-lean-nt    T519       solvable pos=2 resolved=False cls=none agent=3.642m phaseA=3.705m total=3.806m calls=11 ct=6786 firstEdit=7 rsnMax=1022 lenCalls=0 http400=0 mismatch=no"
+  },
+  {
+   "t_min": 101.42,
+   "msg": "[22/129] edit-early-v6-locate     T205   free     pos=0 resolved=True  cls=none agent=4.57m phaseA=4.708m total=5.031m calls=21 ct=8348 firstEdit=12 rsnMax=1296 lenCalls=0 http400=0 mismatch=no"
+  },
+  {
+   "t_min": 103.6,
+   "msg": "[23/129] edit-early-v7-lean-nt    T205   free     pos=1 resolved=True  cls=none agent=1.85m phaseA=1.985m total=2.174m calls=11 ct=3654 firstEdit=2 rsnMax=1022 lenCalls=0 http400=0 mismatch=no"
+  },
+  {
+   "t_min": 105.81,
+   "msg": "[24/129] edit-early-v7-decide-nt  T205   free     pos=2 resolved=True  cls=none agent=1.883m phaseA=2.017m total=2.209m calls=14 ct=3855 firstEdit=2 rsnMax=893 lenCalls=0 http400=0 mismatch=no"
+  },
+  {
+   "t_min": 111.38,
+   "msg": "[25/129] edit-early-v7-decide-nt  T537       solvable pos=0 resolved=False cls=time_cap agent=5.5m phaseA=5.577m total=5.576m calls=23 ct=10294 firstEdit=None rsnMax=4093 lenCalls=1 http400=0 mismatch=no"
+  },
+  {
+   "t_min": 117.05,
+   "msg": "[26/129] edit-early-v6-locate     T537       solvable pos=1 resolved=False cls=time_cap agent=5.5m phaseA=5.563m total=5.659m calls=33 ct=10733 firstEdit=None rsnMax=4090 lenCalls=1 http400=0 mismatch=no"
+  },
+  {
+   "t_min": 122.71,
+   "msg": "[27/129] edit-early-v7-lean-nt    T537       solvable pos=2 resolved=True  cls=time_cap agent=5.5m phaseA=5.563m total=5.658m calls=28 ct=9844 firstEdit=24 rsnMax=1024 lenCalls=0 http400=0 mismatch=no"
+  },
+  {
+   "t_min": 123.92,
+   "msg": "[28/129] edit-early-v7-decide-nt  T768       solvable pos=0 resolved=True  cls=none agent=1.037m phaseA=1.113m total=1.208m calls=13 ct=1928 firstEdit=5 rsnMax=226 lenCalls=0 http400=0 mismatch=no"
+  },
+  {
+   "t_min": 125.11,
+   "msg": "[29/129] edit-early-v7-lean-nt    T768       solvable pos=1 resolved=True  cls=none agent=1.03m phaseA=1.093m total=1.188m calls=13 ct=2037 firstEdit=5 rsnMax=154 lenCalls=0 http400=0 mismatch=no"
+  },
+  {
+   "t_min": 126.76,
+   "msg": "[30/129] edit-early-v6-locate     T768       solvable pos=2 resolved=True  cls=none agent=1.487m phaseA=1.548m total=1.645m calls=26 ct=2742 firstEdit=18 rsnMax=270 lenCalls=0 http400=0 mismatch=no"
+  },
+  {
+   "t_min": 132.34,
+   "msg": "[31/129] edit-early-v7-lean-nt    T426       solvable pos=0 resolved=False cls=time_cap agent=5.5m phaseA=5.58m total=5.581m calls=41 ct=6563 firstEdit=None rsnMax=871 lenCalls=0 http400=0 mismatch=no"
+  },
+  {
+   "t_min": 138.01,
+   "msg": "[32/129] edit-early-v6-locate     T426       solvable pos=1 resolved=False cls=time_cap agent=5.5m phaseA=5.563m total=5.663m calls=41 ct=7532 firstEdit=None rsnMax=970 lenCalls=0 http400=0 mismatch=no"
+  },
+  {
+   "t_min": 143.57,
+   "msg": "[33/129] edit-early-v7-decide-nt  T426       solvable pos=2 resolved=False cls=time_cap agent=5.5m phaseA=5.563m total=5.564m calls=33 ct=9252 firstEdit=None rsnMax=4093 lenCalls=1 http400=0 mismatch=no"
+  },
+  {
+   "t_min": 149.25,
+   "msg": "[34/129] edit-early-v7-lean-nt    T927       solvable pos=0 resolved=False cls=time_cap agent=5.5m phaseA=5.577m total=5.676m calls=22 ct=10193 firstEdit=20 rsnMax=1022 lenCalls=0 http400=0 mismatch=no"
+  },
+  {
+   "t_min": 154.92,
+   "msg": "[35/129] edit-early-v7-decide-nt  T927       solvable pos=1 resolved=False cls=time_cap agent=5.5m phaseA=5.563m total=5.663m calls=13 ct=7647 firstEdit=None rsnMax=3452 lenCalls=0 http400=0 mismatch=no"
+  },
+  {
+   "t_min": 160.58,
+   "msg": "[36/129] edit-early-v6-locate     T927       solvable pos=2 resolved=False cls=time_cap agent=5.5m phaseA=5.563m total=5.664m calls=7 ct=10147 firstEdit=None rsnMax=4093 lenCalls=1 http400=0 mismatch=no"
+  },
+  {
+   "t_min": 166.26,
+   "msg": "[37/129] edit-early-v6-locate     T844       solvable pos=0 resolved=True  cls=time_cap agent=5.5m phaseA=5.577m total=5.672m calls=12 ct=10406 firstEdit=4 rsnMax=4091 lenCalls=1 http400=0 mismatch=no"
+  },
+  {
+   "t_min": 171.92,
+   "msg": "[38/129] edit-early-v7-decide-nt  T844       solvable pos=1 resolved=True  cls=time_cap agent=5.5m phaseA=5.563m total=5.658m calls=12 ct=6612 firstEdit=4 rsnMax=2286 lenCalls=0 http400=0 mismatch=no"
+  },
+  {
+   "t_min": 177.58,
+   "msg": "[39/129] edit-early-v7-lean-nt    T844       solvable pos=2 resolved=False cls=time_cap agent=5.5m phaseA=5.563m total=5.658m calls=30 ct=9215 firstEdit=8 rsnMax=1022 lenCalls=0 http400=0 mismatch=no"
+  },
+  {
+   "t_min": 183.19,
+   "msg": "[40/129] edit-early-v6-locate     T711       solvable pos=0 resolved=False cls=time_cap agent=5.502m phaseA=5.603m total=5.603m calls=10 ct=1917 firstEdit=9 rsnMax=448 lenCalls=0 http400=0 mismatch=no"
+  },
+  {
+   "t_min": 183.86,
+   "msg": "ABORT: vLLM /health is not answering (server died?) before run edit-early-v7-lean-nt T711"
+  },
+  {
+   "t_min": 183.86,
+   "msg": "SUMMARY edit-early-v4: resolved 13/40 projLB=0.1163 dead_early_exit=None dead_mean=Nonem proj120=8.91h worst120=11.21h errors={'Agent exceeded session timeout (5.5 min)': 22, 'none': 21} | ct_atif=None M1max=0 lenFrac=None M2edit=None M2rg=None cls={'unclassified': 43}"
+  },
+  {
+   "t_min": 183.86,
+   "msg": "SUMMARY edit-early-v6-locate: resolved 5/13 (partial) projLB=0.1425 dead_early_exit=None dead_mean=Nonem proj120=9.12h worst120=11.17h errors={'Agent exceeded session timeout (5.5 min)': 8, 'none': 6} | ct_atif=7112.786 M1max=4093 lenFrac=0.0079 M2edit=10.5 M2rg=9.571 cls={'time_cap': 9, 'none': 5}"
+  },
+  {
+   "t_min": 183.86,
+   "msg": "SUMMARY edit-early-v7-decide-nt: resolved 6/12 (partial) projLB=0.1783 dead_early_exit=None dead_mean=Nonem proj120=8.77h worst120=11.15h errors={'none': 8, 'Agent exceeded session timeout (5.5 min)': 5} | ct_atif=7029.077 M1max=4093 lenFrac=0.0133 M2edit=9.0 M2rg=9.538 cls={'time_cap': 7, 'none': 6}"
+  },
+  {
+   "t_min": 183.86,
+   "msg": "SUMMARY edit-early-v7-lean-nt: resolved 5/12 (partial) projLB=0.1525 dead_early_exit=None dead_mean=Nonem proj120=8.19h worst120=11.15h errors={'none': 8, 'Agent exceeded session timeout (5.5 min)': 5} | ct_atif=6639.923 M1max=1042 lenFrac=0.0 M2edit=9.5 M2rg=9.769 cls={'time_cap': 7, 'none': 6}"
+  },
+  {
+   "t_min": 183.86,
+   "msg": "SUMMARY triage-first: resolved 11/40 projLB=0.1008 dead_early_exit=0.2 dead_mean=3.71m proj120=8.53h worst120=12.29h errors={'none': 30, 'Agent exceeded session timeout (6.0 min)': 22, 'Failed to apply test_patch: git apply /tmp/swegemma_sandbox_': 1} | ct_atif=None M1max=0 lenFrac=None M2edit=None M2rg=None cls={'unclassified': 53}"
+  },
+  {
+   "t_min": 183.86,
+   "msg": "PAIRED {\"edit-early-v7-decide-nt\": {\"n_pairs\": 13, \"resolve\": {\"control_only\": 0, \"arm_only\": 1, \"both\": 6, \"neither\": 6}, \"time_cap\": {\"control\": 8, \"arm\": 7}, \"M2_pass\": false, \"M1_pass\": false}, \"edit-early-v7-lean-nt\": {\"n_pairs\": 13, \"resolve\": {\"control_only\": 2, \"arm_only\": 2, \"both\": 4, \"neither\": 5}, \"time_cap\": {\"control\": 8, \"arm\": 7}, \"M2_pass\": false, \"M1_pass\": false}}"
+  },
+  {
+   "t_min": 183.86,
+   "msg": "packed traces + calllogs -> traces_lbeval-20261007-043225.tar.gz (0.7 MB)"
+  },
+  {
+   "t_min": 184.04,
+   "msg": "exit"
+  }
+ ],
+ "versions": {
+  "swegemma": "0.2.11",
+  "adk-submission": "0.2.13",
+  "google-adk": "1.36.1",
+  "adk-eval-core": "0.1.0",
+  "litellm": "1.82.4",
+  "openai": "2.32.0",
+  "httpx": "0.28.1",
+  "vllm": "0.19.1",
+  "transformers": "5.13.1",
+  "tokenizers": "0.22.2",
+  "torch": "2.10.0+cu128"
+ },
+ "budgets": {
+  "edit-early-v6-locate": {
+   "timeout_seconds": 300,
+   "max_tool_calls": 60,
+   "max_time_minutes": 5.5,
+   "max_turns": 120
+  },
+  "edit-early-v7-decide-nt": {
+   "timeout_seconds": 300,
+   "max_tool_calls": 60,
+   "max_time_minutes": 5.5,
+   "max_turns": 120
+  },
+  "edit-early-v7-lean-nt": {
+   "timeout_seconds": 300,
+   "max_tool_calls": 60,
+   "max_time_minutes": 5.5,
+   "max_turns": 120
+  }
+ },
+ "expected_sampling": {
+  "edit-early-v6-locate": {
+   "max_output_tokens": 4096,
+   "thinking_budget": 4096,
+   "seed": 0,
+   "temperature": 0.2,
+   "top_p": 0.95
+  },
+  "edit-early-v7-decide-nt": {
+   "max_output_tokens": 4096,
+   "thinking_budget": 4096,
+   "seed": 0,
+   "temperature": 0.2,
+   "top_p": 0.95
+  },
+  "edit-early-v7-lean-nt": {
+   "max_output_tokens": 2560,
+   "thinking_budget": 1024,
+   "seed": 0,
+   "temperature": 0.2,
+   "top_p": 0.95
+  }
+ },
+ "arm_parity": {
+  "digests": {
+   "agent.yaml": {
+    "edit-early-v6-locate": "a5e12bb39488",
+    "edit-early-v7-decide-nt": "f9f19652befc",
+    "edit-early-v7-lean-nt": "f9f19652befc"
+   },
+   "configs/sampling.yaml": {
+    "edit-early-v6-locate": "c711f07883d8",
+    "edit-early-v7-decide-nt": "c711f07883d8",
+    "edit-early-v7-lean-nt": "11ac82a612bd"
+   },
+   "eval_config.yaml": {
+    "edit-early-v6-locate": "ba319be46458",
+    "edit-early-v7-decide-nt": "ba319be46458",
+    "edit-early-v7-lean-nt": "ba319be46458"
+   },
+   "prompts/system.md": {
+    "edit-early-v6-locate": "94a8787e69b9",
+    "edit-early-v7-decide-nt": "2ebc7b80586c",
+    "edit-early-v7-lean-nt": "2ebc7b80586c"
+   },
+   "skills/swe-tools/SKILL.md": {
+    "edit-early-v6-locate": "23963a7f2488",
+    "edit-early-v7-decide-nt": "23963a7f2488",
+    "edit-early-v7-lean-nt": "23963a7f2488"
+   },
+   "skills/swe-tools/scripts/check.py": {
+    "edit-early-v6-locate": "7f59bab780b8",
+    "edit-early-v7-decide-nt": "7f59bab780b8",
+    "edit-early-v7-lean-nt": "7f59bab780b8"
+   },
+   "skills/swe-tools/scripts/edit_lines.py": {
+    "edit-early-v6-locate": "d68d2d1f75ad",
+    "edit-early-v7-decide-nt": "d68d2d1f75ad",
+    "edit-early-v7-lean-nt": "d68d2d1f75ad"
+   },
+   "skills/swe-tools/scripts/locate.py": {
+    "edit-early-v6-locate": "ae8b6d3d83b9",
+    "edit-early-v7-decide-nt": "ae8b6d3d83b9",
+    "edit-early-v7-lean-nt": "ae8b6d3d83b9"
+   }
+  },
+  "differs": [
+   "agent.yaml",
+   "configs/sampling.yaml",
+   "prompts/system.md"
+  ]
+ },
+ "adapters": {
+  "edit-early-v6-locate": [],
+  "edit-early-v7-decide-nt": [],
+  "edit-early-v7-lean-nt": []
+ },
+ "gpus": [
+  "NVIDIA L4",
+  "NVIDIA L4",
+  "NVIDIA L4",
+  "NVIDIA L4"
+ ],
+ "vllm_cmd": [
+  "/usr/bin/python3",
+  "-m",
+  "vllm.entrypoints.openai.api_server",
+  "--model",
+  "/kaggle/input/models/google/gemma-4/other/gemma-4-31b-it-qat-w4a16-ct/2",
+  "--host",
+  "127.0.0.1",
+  "--port",
+  "8000",
+  "--max-model-len",
+  "32768",
+  "--dtype",
+  "bfloat16",
+  "--gpu-memory-utilization",
+  "0.8",
+  "--tensor-parallel-size",
+  "4",
+  "--enable-auto-tool-choice",
+  "--tool-call-parser",
+  "gemma4",
+  "--reasoning-parser",
+  "gemma4",
+  "--reasoning-config",
+  "{\"reasoning_start_str\": \"<|channel>\", \"reasoning_end_str\": \"<channel|>\"}",
+  "--default-chat-template-kwargs",
+  "{\"enable_thinking\": true}",
+  "--no-scheduler-reserve-full-isl"
+ ],
+ "budget_selftest": {
+  "verdict": "ok",
+  "reasoning_tokens": 46,
+  "budget": 48,
+  "finish": "length",
+  "usage": {
+   "prompt_tokens": 44,
+   "total_tokens": 744,
+   "completion_tokens": 700,
+   "prompt_tokens_details": null
+  },
+  "tokenizer": "hf:2"
+ },
+ "env": {
+  "host_python": "3.12.13",
+  "sandbox_python": null,
+  "sandbox_python_is_313": false,
+  "wheels_dir": "/tmp/wheels_sandbox",
+  "wheels_symlink": true,
+  "neutralized_sitecustomize": [
+   "/etc/python3.10/sitecustomize.py",
+   "/etc/python3.12/sitecustomize.py",
+   "/usr/lib/python3.10/sitecustomize.py",
+   "/usr/lib/python3.12/sitecustomize.py"
+  ],
+  "image": {
+   "pip_target": "",
+   "host_extra": {
+    "pip": "/usr/local/lib/python3.12/dist-packages/pip",
+    "pytest_timeout": null,
+    "shellingham": "/usr/local/lib/python3.12/dist-packages/shellingham",
+    "pathspec": "/usr/local/lib/python3.12/dist-packages/pathspec",
+    "trove_classifiers": null,
+    "annotated_doc": "/usr/local/lib/python3.12/dist-packages/annotated_doc",
+    "colorama": "/usr/local/lib/python3.12/dist-packages/colorama"
+   },
+   "missing_requirements": [
+    "annotated_doc",
+    "colorama",
+    "trove_classifiers"
+   ],
+   "image_pkgs": [
+    "click-8.4.2.dist-info",
+    "editables-0.6.dist-info",
+    "flit_core-3.12.0.dist-info",
+    "hatchling-1.30.1.dist-info",
+    "iniconfig-2.3.0.dist-info",
+    "markdown_it_py-4.2.0.dist-info",
+    "mdurl-0.1.2.dist-info",
+    "packaging-26.3.dist-info",
+    "pdm_backend-2.4.9.dist-info",
+    "pluggy-1.6.0.dist-info",
+    "poetry_core-2.4.1.dist-info",
+    "pygments-2.21.0.dist-info",
+    "pytest-9.1.1.dist-info",
+    "rich-15.0.0.dist-info",
+    "setuptools-83.0.0.dist-info",
+    "typer-0.26.7.dist-info",
+    "typing_extensions-4.16.0.dist-info",
+    "wheel-0.47.0.dist-info"
+   ]
+  }
+ },
+ "host": {
+  "hostname": "b9ff1951e7ca"
+ }
+}

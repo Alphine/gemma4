@@ -1,0 +1,102 @@
+{
+ "sessions": [
+  {
+   "id": "20261007-171102-2",
+   "usd": 5.7523,
+   "updated": "2026-10-07 18:17:52",
+   "final": true,
+   "reservation": {
+    "gpu": "H100",
+    "n_gpu": 1,
+    "cpu": 16.0,
+    "mem_gib": 48.0
+   },
+   "meter": {
+    "reservation": {
+     "gpu": "H100",
+     "n_gpu": 1,
+     "cpu": 16.0,
+     "mem_gib": 48.0
+    },
+    "wall_s": 4010.5,
+    "gpu_s": 4010.5,
+    "cpu_core_s_reserved": 64167.8,
+    "cpu_core_s_used": 13764.7,
+    "ram_gib_s_reserved": 192503.4,
+    "peak_rss_gib": 41.18,
+    "peak_cores": 29.19,
+    "cost_reserved": {
+     "seconds": 4010.5,
+     "gpu_usd": 4.3995,
+     "cpu_usd": 0.8406,
+     "ram_usd": 0.4274,
+     "total_usd": 5.6675
+    },
+    "cost_est_billed": {
+     "seconds": 4010.5,
+     "gpu_usd": 4.3995,
+     "cpu_usd": 0.8406,
+     "ram_usd": 0.4274,
+     "total_usd": 5.6675
+    }
+   },
+   "split": {
+    "gpu_usd": 4.3995,
+    "cpu_usd": 0.8406,
+    "ram_usd": 0.4274
+   }
+  },
+  {
+   "id": "20261007-181956-2",
+   "usd": 9.352,
+   "updated": "2026-10-07 20:09:14",
+   "final": true,
+   "reservation": {
+    "gpu": "H100",
+    "n_gpu": 1,
+    "cpu": 16.0,
+    "mem_gib": 48.0
+   },
+   "meter": {
+    "reservation": {
+     "gpu": "H100",
+     "n_gpu": 1,
+     "cpu": 16.0,
+     "mem_gib": 48.0
+    },
+    "wall_s": 6557.8,
+    "gpu_s": 6557.8,
+    "cpu_core_s_reserved": 104924.3,
+    "cpu_core_s_used": 21135.9,
+    "ram_gib_s_reserved": 314772.9,
+    "peak_rss_gib": 41.15,
+    "peak_cores": 135.88,
+    "cost_reserved": {
+     "seconds": 6557.8,
+     "gpu_usd": 7.1939,
+     "cpu_usd": 1.3745,
+     "ram_usd": 0.6988,
+     "total_usd": 9.2672
+    },
+    "cost_est_billed": {
+     "seconds": 6557.8,
+     "gpu_usd": 7.1939,
+     "cpu_usd": 1.3745,
+     "ram_usd": 0.6988,
+     "total_usd": 9.2672
+    }
+   },
+   "split": {
+    "gpu_usd": 7.1939,
+    "cpu_usd": 1.3745,
+    "ram_usd": 0.6988
+   }
+  }
+ ],
+ "total_usd": 15.1043,
+ "total_split": {
+  "gpu_usd": 11.5934,
+  "cpu_usd": 2.2151,
+  "ram_usd": 1.1262
+ }
+}
